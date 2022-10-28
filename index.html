@@ -7,13 +7,16 @@
     <meta name="description" content="The home page of the Rainy Day website." />
     <title>Rainy Day | Home</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <a href="index.html">
         <img src="images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
       </a>
-      <label for="#">All Categories</label>
+      <label for="bars_menu"><i class="fa-solid fa-bars"></i></label>
+      <p>All Categories</p>
+      <input type="checkbox" id="bars_menu" />
       <nav>
         <ul>
           <li><a href="about.html">About</a></li>
@@ -23,14 +26,22 @@
           <li><a href="#">Canoeing</a></li>
         </ul>
       </nav>
+      <input type="search" id="search" name="search" placeholder="Search" />
+      <a href="shopping_cart.html">
+        <label for="shoppingcart_button"><i class="fa-solid fa-cart-shopping"></i></label>
+      </a>
     </header>
     <main>
       <section>
         <h1>Explore the outdoors</h1>
         <h2>Clothes for all who wanders</h2>
         <a href="#">Explore our assortment</a>
+        <img
+          src="images/nina-luong-dy4QG5c5xWQ-unsplash.jpg"
+          alt="Two people in rain gear look out across a valley towards some misty mountains, on top of a large rock."
+        />
       </section>
-      <section>
+      <section class="popular_products">
         <h3>Popular</h3>
         <div>
           <img src="images/product_img/RainyDays_Jacket1.png" alt="A thick orange, black and silver raincoat" />
@@ -48,9 +59,11 @@
           <p>3599 NOK</p>
         </div>
         <div>
-          <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-          <p>Storm jacket</p>
-          <p>990 NOK</p>
+          <a href="product_storm_jacket.html">
+            <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+            <p>Storm jacket</p>
+            <p>990 NOK</p>
+          </a>
         </div>
         <div>
           <img src="images/product_img/RainyDays_Jacket2.png" alt="Grey windproof jacket." />
@@ -58,9 +71,13 @@
           <p>1000 NOK</p>
         </div>
       </section>
-      <section>
-        <h3>Outdoors</h3>
-        <img src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg" alt="A woman enjoys a hot drink while sitting in the forest by a tent." />
+      <section class="outdoors_products">
+        <div>
+          <a href="outdoors_section.html">
+            <h3>Outdoors</h3>
+            <img src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg" alt="A woman enjoys a hot drink while sitting in the forest by a tent." />
+          </a>
+        </div>
         <div>
           <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
           <p>Scott's Snowmobile jacket</p>
@@ -87,9 +104,11 @@
           <p>999 NOK</p>
         </div>
       </section>
-      <section>
-        <h3>Skiing</h3>
-        <img src="images/chen-gang-nRIDvqLJsuU-unsplash.jpg" alt="Four people dressed in ski equipment, on top of a snowy hill." />
+      <section class="skiing_products">
+        <div>
+          <h3>Skiing</h3>
+          <img src="images/chen-gang-nRIDvqLJsuU-unsplash.jpg" alt="Four people dressed in ski equipment, on top of a snowy hill." />
+        </div>
         <div>
           <img src="images/product_img/RainyDays_Jacket5.png" alt="Grey allround biker jacket." />
           <p>Monsun jacket</p>
@@ -111,17 +130,21 @@
           <p>3599 NOK</p>
         </div>
         <div>
-          <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-          <p>Storm jacket</p>
-          <p>990 NOK</p>
+          <a href="product_storm_jacket.html">
+            <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+            <p>Storm jacket</p>
+            <p>990 NOK</p>
+          </a>
         </div>
       </section>
-      <section>
-        <h3>Canoeing</h3>
-        <img
-          src="images/kamil-kalbarczyk-lY11p3yNVxE-unsplash.jpg"
-          alt="Man in yellow raincoat canoeing on the water, with green forest in the background and a gray sky."
-        />
+      <section class="canoeing_produckts">
+        <div>
+          <h3>Canoeing</h3>
+          <img
+            src="images/kamil-kalbarczyk-lY11p3yNVxE-unsplash.jpg"
+            alt="Man in yellow raincoat canoeing on the water, with green forest in the background and a gray sky."
+          />
+        </div>
         <div>
           <img src="images/product_img/RainyDays_Jacket2.png" alt="Grey windproof jacket." />
           <p>Scott's windproof jacket</p>
@@ -133,9 +156,11 @@
           <p>3599 NOK</p>
         </div>
         <div>
-          <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-          <p>Storm jacket</p>
-          <p>990 NOK</p>
+          <a href="product_storm_jacket.html">
+            <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+            <p>Storm jacket</p>
+            <p>990 NOK</p>
+          </a>
         </div>
         <div>
           <img src="images/product_img/RainyDays_Jacket1.png" alt="A thick orange, black and silver raincoat" />

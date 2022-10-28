@@ -7,13 +7,16 @@
     <meta name="description" content="The product page for the products in the outdoor section, on the Rainy Day website." />
     <title>Rainy Day | Outdoor section</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <a href="index.html">
         <img src="images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
       </a>
-      <label for="#">All Categories</label>
+      <label for="bars_menu"><i class="fa-solid fa-bars"></i></label>
+      <p>All Categories</p>
+      <input type="checkbox" id="bars_menu" />
       <nav>
         <ul>
           <li><a href="about.html">About</a></li>
@@ -23,15 +26,54 @@
           <li><a href="#">Canoeing</a></li>
         </ul>
       </nav>
+      <input type="search" id="search" name="search" placeholder="Search" />
+      <a href="shopping_cart.html">
+        <label for="shoppingcart_button"><i class="fa-solid fa-cart-shopping"></i></label>
+      </a>
     </header>
     <main>
       <h3>Outdoors</h3>
       <img src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg" alt="A woman enjoys a hot drink while sitting in the forest by a tent." />
       <section>
-        <p>Brands</p>
-        <p>Size</p>
+        <div>
+          <p>Brands</p>
+          <input type="checkbox" name="brands" value="brands" id="brands" />
+          <label for="brands">Brand 1</label>
+          <input type="checkbox" name="brands" value="brands" id="brands" />
+          <label for="brands">Brand 2</label>
+          <input type="checkbox" name="brands" value="brands" id="brands" />
+          <label for="brands">Brand 3</label>
+          <input type="checkbox" name="brands" value="brands" id="brands" />
+          <label for="brands">Brand 4</label>
+          <input type="checkbox" name="brands" value="brands" id="brands" />
+          <label for="brands">Brand 5</label>
+          <input type="checkbox" name="brands" value="brands" id="brands" />
+          <label for="brands">Brand 6</label>
+        </div>
+        <div>
+          <p>Size</p>
+          <input type="checkbox" name="size" value="size" id="size" />
+          <label for="size">XS</label>
+          <input type="checkbox" name="size" value="size" id="size" />
+          <label for="size">S</label>
+          <input type="checkbox" name="size" value="size" id="size" />
+          <label for="size">M</label>
+          <input type="checkbox" name="size" value="size" id="size" />
+          <label for="size">L</label>
+          <input type="checkbox" name="size" value="size" id="size" />
+          <label for="size">XL</label>
+        </div>
+        <div>
+          <p>Price</p>
+          <label for="price">Price</label>
+          <input type="number" name="price" id="price" />
+          <input type="number" name="price" id="price" />
+          <div>
+            <input type="range" id="price_line" name="price_line" min="0" max="9999" />
+          </div>
+        </div>
       </section>
-      <section>
+      <section class="outdoors_section_products">
         <div>
           <img src="images/product_img/RainyDays_Jacket1.png" alt="A thick orange, black and silver raincoat" />
           <p>Float Coat</p>
@@ -48,9 +90,11 @@
           <p>3599 NOK</p>
         </div>
         <div>
-          <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-          <p>Storm jacket</p>
-          <p>990 NOK</p>
+          <a href="product_storm_jacket.html">
+            <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+            <p>Storm jacket</p>
+            <p>990 NOK</p>
+          </a>
         </div>
         <div>
           <img src="images/product_img/RainyDays_Jacket5.png" alt="Grey allround biker jacket." />
@@ -73,9 +117,11 @@
           <p>3599 NOK</p>
         </div>
         <div>
-          <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-          <p>Storm jacket</p>
-          <p>990 NOK</p>
+          <a href="product_storm_jacket.html">
+            <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+            <p>Storm jacket</p>
+            <p>990 NOK</p>
+          </a>
         </div>
         <div>
           <img src="images/product_img/RainyDays_Jacket7.png" alt="Olive colored cosy fleece." />

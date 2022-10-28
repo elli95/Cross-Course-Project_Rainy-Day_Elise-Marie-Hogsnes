@@ -7,13 +7,16 @@
     <meta name="description" content="The page with all the products added to the shopping cart, on the Rainy Day website." />
     <title>Rainy Day | Shopping cart</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <a href="index.html">
         <img src="images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
       </a>
-      <label for="#">All Categories</label>
+      <label for="bars_menu"><i class="fa-solid fa-bars"></i></label>
+      <p>All Categories</p>
+      <input type="checkbox" id="bars_menu" />
       <nav>
         <ul>
           <li><a href="about.html">About</a></li>
@@ -23,7 +26,48 @@
           <li><a href="#">Canoeing</a></li>
         </ul>
       </nav>
+      <input type="search" id="search" name="search" placeholder="Search" />
+      <a href="shopping_cart.html">
+        <label for="shoppingcart_button"><i class="fa-solid fa-cart-shopping"></i></label>
+      </a>
     </header>
+    <main>
+      <section>
+        <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+        <p>
+          About: A Storm Jacket is a stylish, waterproof, and durable jacket for active individuals. This jacket is made of high-quality materials
+          that are guaranteed to keep you dry in any weather. It is a sleek and sleek design that will keep you looking professional and stylish.
+        </p>
+      </section>
+      <section>
+        <div>
+          <p>Storm Jacket</p>
+          <p>Price:</p>
+          <p>990 NOK</p>
+        </div>
+        <div>
+          <input type="color" name="product_color" id="product_color" value="#ee0000" list="product_color" />
+          <datalist id="product_color">
+            <option>C90707</option>
+            <option>0569FF</option>
+            <option>FEE504</option>
+            <option>000000</option>
+            <option>FEE504</option>
+          </datalist>
+          <!--Ser ikke ut til å fungere akkurat nå (i firefox) :/ -->
+        </div>
+        <div>
+          <select id="product_size" name="product_size">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </div>
+        <a href="shopping_cart.html">Add to cart</a>
+      </section>
+    </main>
     <footer>
       <h4>Shortcuts</h4>
       <a href="shopping_cart.html">Shopping cart</a>
