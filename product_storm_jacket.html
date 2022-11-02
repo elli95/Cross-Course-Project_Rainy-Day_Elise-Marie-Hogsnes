@@ -7,6 +7,7 @@
     <meta name="description" content="The page with all the products added to the shopping cart, on the Rainy Day website." />
     <title>Rainy Day | Shopping cart</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/product.css" />
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -32,49 +33,59 @@
       </a>
     </header>
     <main>
-      <section>
-        <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-        <p>
-          About: A Storm Jacket is a stylish, waterproof, and durable jacket for active individuals. This jacket is made of high-quality materials
-          that are guaranteed to keep you dry in any weather. It is a sleek and sleek design that will keep you looking professional and stylish.
-        </p>
-      </section>
-      <section>
-        <div>
-          <p>Storm Jacket</p>
-          <p>Price:</p>
-          <p>990 NOK</p>
-        </div>
-        <div>
-          <input type="color" name="product_color" id="product_color" value="#ee0000" list="product_color" />
-          <datalist id="product_color">
-            <option>C90707</option>
-            <option>0569FF</option>
-            <option>FEE504</option>
-            <option>000000</option>
-            <option>FEE504</option>
-          </datalist>
-          <!--Ser ikke ut til å fungere akkurat nå (i firefox) :/ -->
-        </div>
-        <div>
-          <select id="product_size" name="product_size">
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-        </div>
-        <a href="shopping_cart.html">Add to cart</a>
+      <section class="product_page">
+        <section>
+          <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+          <div class="product_description">
+            <p>About:</p>
+            <p>A Storm Jacket is a stylish, waterproof, and durable jacket for active individuals.</p>
+            <p>This jacket is made of high-quality materials that are guaranteed to keep you dry in any weather.</p>
+            <p>It is a sleek and sleek design that will keep you looking professional and stylish.</p>
+          </div>
+        </section>
+        <section>
+          <div>
+            <p>Storm Jacket</p>
+            <p>Price:</p>
+            <p>990 NOK</p>
+          </div>
+          <div>
+            <input type="color" name="product_color" id="product_color" value="#ee0000" list="product_color" />
+            <datalist id="product_color">
+              <option>C90707</option>
+              <option>0569FF</option>
+              <option>FEE504</option>
+              <option>000000</option>
+              <option>FEE504</option>
+            </datalist>
+            <!--Ser ikke ut til å fungere akkurat nå (i firefox) :/ -->
+          </div>
+          <div>
+            <select id="product_size" name="product_size">
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
+          <a href="shopping_cart.html">Add to cart</a>
+        </section>
       </section>
     </main>
     <footer>
-      <h4>Shortcuts</h4>
-      <a href="shopping_cart.html">Shopping cart</a>
-      <h4>Information</h4>
-      <a href="about.html">About</a>
-      <h4>Support</h4>
-      <a href="contact.html">Contact</a>
+      <div>
+        <h4>Shortcuts</h4>
+        <a href="shopping_cart.html">Shopping cart</a>
+      </div>
+      <div>
+        <h4>Information</h4>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="contact.html">Contact</a>
+      </div>
     </footer>
   </body>
 </html>

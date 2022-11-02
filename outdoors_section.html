@@ -7,6 +7,8 @@
     <meta name="description" content="The product page for the products in the outdoor section, on the Rainy Day website." />
     <title>Rainy Day | Outdoor section</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/outdoors_section.css" />
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -32,125 +34,188 @@
       </a>
     </header>
     <main>
-      <div class="oudoors_titel">
-        <div class="oudoors_titel_text">
-          <h3><span>Outdoors</span></h3>
-        </div>
-        <img src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg" alt="A woman enjoys a hot drink while sitting in the forest by a tent." />
-      </div>
-      <section>
-        <div>
-          <p>Brands</p>
-          <input type="checkbox" name="brands" value="brands" id="brands" />
-          <label for="brands">Brand 1</label>
-          <input type="checkbox" name="brands" value="brands" id="brands" />
-          <label for="brands">Brand 2</label>
-          <input type="checkbox" name="brands" value="brands" id="brands" />
-          <label for="brands">Brand 3</label>
-          <input type="checkbox" name="brands" value="brands" id="brands" />
-          <label for="brands">Brand 4</label>
-          <input type="checkbox" name="brands" value="brands" id="brands" />
-          <label for="brands">Brand 5</label>
-          <input type="checkbox" name="brands" value="brands" id="brands" />
-          <label for="brands">Brand 6</label>
-        </div>
-        <div>
-          <p>Size</p>
-          <input type="checkbox" name="size" value="size" id="size" />
-          <label for="size">XS</label>
-          <input type="checkbox" name="size" value="size" id="size" />
-          <label for="size">S</label>
-          <input type="checkbox" name="size" value="size" id="size" />
-          <label for="size">M</label>
-          <input type="checkbox" name="size" value="size" id="size" />
-          <label for="size">L</label>
-          <input type="checkbox" name="size" value="size" id="size" />
-          <label for="size">XL</label>
-        </div>
-        <div>
-          <p>Price</p>
-          <label for="price">Price</label>
-          <input type="number" name="price" id="price" />
-          <input type="number" name="price" id="price" />
-          <div>
-            <input type="range" id="price_line" name="price_line" min="0" max="9999" />
+      <section class="outdoor_section">
+        <section class="outdoor_filter">
+          <div class="brands">
+            <p>Brands</p>
+            <div>
+              <input type="checkbox" name="brands" value="brands" id="brands" />
+              <label for="brands">Brand 1</label>
+            </div>
+            <div>
+              <input type="checkbox" name="brands" value="brands" id="brands" />
+              <label for="brands">Brand 2</label>
+            </div>
+            <div>
+              <input type="checkbox" name="brands" value="brands" id="brands" />
+              <label for="brands">Brand 3</label>
+            </div>
+            <div>
+              <input type="checkbox" name="brands" value="brands" id="brands" />
+              <label for="brands">Brand 4</label>
+            </div>
+            <div>
+              <input type="checkbox" name="brands" value="brands" id="brands" />
+              <label for="brands">Brand 5</label>
+            </div>
+            <div>
+              <input type="checkbox" name="brands" value="brands" id="brands" />
+              <label for="brands">Brand 6</label>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="outdoors_section_products">
-        <div class="product_style">
-          <img src="images/product_img/RainyDays_Jacket1.png" alt="A thick orange, black and silver raincoat" />
-          <p class="product_name">Float Coat</p>
-          <p class="price">2999 NOK</p>
-        </div>
-        <div class="product_style">
-          <img src="images/product_img/RainyDays_Jacket3.png" alt="Red ski jacket with black details." />
-          <p class="product_name">Mens windproof ski jacket</p>
-          <p class="price">1500 NOK</p>
-        </div>
-        <div class="product_style">
-          <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
-          <p class="product_name">Scott's Snowmobile jacket</p>
-          <p class="price">3599 NOK</p>
-        </div>
-        <div class="product_style">
-          <a href="product_storm_jacket.html">
-            <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-            <p class="product_name">Storm jacket</p>
-            <p class="price">990 NOK</p>
-          </a>
-        </div>
-        <div class="product_style">
-          <img src="images/product_img/RainyDays_Jacket5.png" alt="Grey allround biker jacket." />
-          <p class="product_name">Monsun jacket</p>
-          <p class="price">500 NOK</p>
-        </div>
-        <div class="product_style">
-          <img src="images/product_img/RainyDays_Jacket7.png" alt="Olive colored cosy fleece." />
-          <p class="product_name">Patagonia Fleece Jacket</p>
-          <p class="price">999 NOK</p>
-        </div>
-        <div class="product_style">
-          <img src="images/product_img/RainyDays_Jacket2.png" alt="Grey windproof jacket." />
-          <p class="product_name">Scott's windproof jacket</p>
-          <p class="price">1000 NOK</p>
-        </div>
-        <div class="product_style">
-          <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
-          <p class="product_name">Scott's Snowmobile jacket</p>
-          <p class="price">3599 NOK</p>
-        </div>
-        <div class="product_style">
-          <a href="product_storm_jacket.html">
-            <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-            <p class="product_name">Storm jacket</p>
-            <p class="price">990 NOK</p>
-          </a>
-        </div>
-        <div class="product_style">
-          <img src="images/product_img/RainyDays_Jacket7.png" alt="Olive colored cosy fleece." />
-          <p class="product_name">Patagonia Fleece Jacket</p>
-          <p class="price">999 NOK</p>
-        </div>
-        <div class="product_style">
-          <img src="images/product_img/RainyDays_Jacket3.png" alt="Red ski jacket with black details." />
-          <p class="product_name">Mens windproof ski jacket</p>
-          <p class="price">1500 NOK</p>
-        </div>
-        <div class="product_style">
-          <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
-          <p class="product_name">Scott's Snowmobile jacket</p>
-          <p class="price">3599 NOK</p>
-        </div>
+          <div class="size">
+            <p>Size</p>
+            <div>
+              <input type="checkbox" name="size" value="size" id="size" />
+              <label for="size">XS</label>
+            </div>
+            <div>
+              <input type="checkbox" name="size" value="size" id="size" />
+              <label for="size">S</label>
+            </div>
+            <div>
+              <input type="checkbox" name="size" value="size" id="size" />
+              <label for="size">M</label>
+            </div>
+            <div>
+              <input type="checkbox" name="size" value="size" id="size" />
+              <label for="size">L</label>
+            </div>
+            <div>
+              <input type="checkbox" name="size" value="size" id="size" />
+              <label for="size">XL</label>
+            </div>
+          </div>
+          <div>
+            <p>Price</p>
+            <div class="price_field">
+              <input class="price_field_area 1" type="number" name="price" id="price" placeholder="0" />
+              <input class="price_field_area 2" type="number" name="price" id="price" placeholder="9999" />
+            </div>
+            <div>
+              <input type="range" id="price_line" name="price_line" min="0" max="9999" />
+            </div>
+          </div>
+        </section>
+        <section class="outdoor_section_items">
+          <div class="oudoors_titel outdoorsection">
+            <div class="oudoors_titel_text">
+              <h3><span>Outdoors</span></h3>
+            </div>
+            <img
+              class="outdoor_cropped"
+              src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
+              alt="A woman enjoys a hot drink while sitting in the forest by a tent."
+            />
+          </div>
+          <section class="outdoors_section_products">
+            <div class="product_style">
+              <div class="product_image">
+                <img src="images/product_img/RainyDays_Jacket1.png" alt="A thick orange, black and silver raincoat" />
+              </div>
+              <div class="product_info">
+                <p class="product_name">Float Coat</p>
+                <p class="price">2999 NOK</p>
+              </div>
+            </div>
+            <div class="product_style">
+              <div class="product_image">
+                <img src="images/product_img/RainyDays_Jacket3.png" alt="Red ski jacket with black details." />
+              </div>
+              <p class="product_name">Mens windproof ski jacket</p>
+              <p class="price">1500 NOK</p>
+            </div>
+            <div class="product_style">
+              <div class="product_image">
+                <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
+              </div>
+              <p class="product_name">Scott's Snowmobile jacket</p>
+              <p class="price">3599 NOK</p>
+            </div>
+            <div class="product_style">
+              <a href="product_storm_jacket.html">
+                <div class="product_image">
+                  <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+                </div>
+                <p class="product_name">Storm jacket</p>
+                <p class="price">990 NOK</p>
+              </a>
+            </div>
+            <div class="product_style">
+              <div class="product_image">
+                <img src="images/product_img/RainyDays_Jacket5.png" alt="Grey allround biker jacket." />
+              </div>
+              <p class="product_name">Monsun jacket</p>
+              <p class="price">500 NOK</p>
+            </div>
+            <div class="product_style">
+              <div class="product_image">
+                <img src="images/product_img/RainyDays_Jacket7.png" alt="Olive colored cosy fleece." />
+              </div>
+              <p class="product_name">Patagonia Fleece Jacket</p>
+              <p class="price">999 NOK</p>
+            </div>
+            <div class="product_style">
+              <div class="product_image">
+                <img src="images/product_img/RainyDays_Jacket2.png" alt="Grey windproof jacket." />
+              </div>
+              <p class="product_name">Scott's windproof jacket</p>
+              <p class="price">1000 NOK</p>
+            </div>
+            <div class="product_style">
+              <div class="product_image">
+                <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
+              </div>
+              <p class="product_name">Scott's Snowmobile jacket</p>
+              <p class="price">3599 NOK</p>
+            </div>
+            <div class="product_style">
+              <a href="product_storm_jacket.html">
+                <div class="product_image">
+                  <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+                </div>
+                <p class="product_name">Storm jacket</p>
+                <p class="price">990 NOK</p>
+              </a>
+            </div>
+            <div class="product_style">
+              <div class="product_image">
+                <img src="images/product_img/RainyDays_Jacket7.png" alt="Olive colored cosy fleece." />
+              </div>
+              <p class="product_name">Patagonia Fleece Jacket</p>
+              <p class="price">999 NOK</p>
+            </div>
+            <div class="product_style">
+              <div class="product_image">
+                <img src="images/product_img/RainyDays_Jacket3.png" alt="Red ski jacket with black details." />
+              </div>
+              <p class="product_name">Mens windproof ski jacket</p>
+              <p class="price">1500 NOK</p>
+            </div>
+            <div class="product_style">
+              <div class="product_image">
+                <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
+              </div>
+              <p class="product_name">Scott's Snowmobile jacket</p>
+              <p class="price">3599 NOK</p>
+            </div>
+          </section>
+        </section>
       </section>
     </main>
     <footer>
-      <h4>Shortcuts</h4>
-      <a href="shopping_cart.html">Shopping cart</a>
-      <h4>Information</h4>
-      <a href="about.html">About</a>
-      <h4>Support</h4>
-      <a href="contact.html">Contact</a>
+      <div>
+        <h4>Shortcuts</h4>
+        <a href="shopping_cart.html">Shopping cart</a>
+      </div>
+      <div>
+        <h4>Information</h4>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="contact.html">Contact</a>
+      </div>
     </footer>
   </body>
 </html>

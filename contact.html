@@ -7,6 +7,7 @@
     <meta name="description" content="The contact page of the Rainy Day website." />
     <title>Rainy Day | Contact</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -32,37 +33,57 @@
       </a>
     </header>
     <main>
-      <h3>Do you have questions or need any help? We are happy to help!</h3>
-      <p>Please call us at</p>
-      <p>(+12) 34 56 78 90</p>
-      <p>Mondey - friday 08:00-19:00</p>
-      <p>Or fill in our form and we will contact you as soon as possible</p>
-      <form method="post">
-        <section>
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" />
-          <label for="email">Email</label>
-          <input type="text" name="email" id="email" />
-          <label for="subject">Subject</label>
-          <select id="subject" name="Subject">
-            <option value="Damage item">Damage item</option>
-            <option value="Not delivered">Not delivered</option>
-            <option value="Other">Other</option>
-          </select>
-          <label for="message">Message</label>
-          <textarea name="message" id="message" cols="30" rows="3"></textarea>
-        </section>
-        <input type="submit" value="Send Now" />
-      </form>
-      <p>And of course we are always happy to help you at our local stores</p>
+      <section class="contact_page">
+        <h3>Do you have questions or need any help? We are happy to help!</h3>
+        <p>Please call us at</p>
+        <p>(+12) 34 56 78 90</p>
+        <p>Mondey - friday 08:00-19:00</p>
+        <p>Or fill in our form and we will contact you as soon as possible</p>
+        <form method="post">
+          <section>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+            <label for="subject">Subject</label>
+            <select id="subject" name="Subject">
+              <option value="Damage item">Damage item</option>
+              <option value="Not delivered">Not delivered</option>
+              <option value="Other">Other</option>
+            </select>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="3"></textarea>
+          </section>
+          <input type="submit" value="Send Now" />
+        </form>
+        <p>And of course we are always happy to help you at our local stores</p>
+        <div class="contact_page_map">
+          <!-- reference: https://www.geeksforgeeks.org/how-to-add-google-map-inside-html-page-without-using-api-key/ -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16001.98108988292!2d10.722717588332394!3d59.91143743587507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e61f267f039%3A0x7e92605fd3231e9a!2sOslo!5e0!3m2!1sno!2sno!4v1667404795933!5m2!1sno!2sno"
+            width="320"
+            height="320"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
     </main>
     <footer>
-      <h4>Shortcuts</h4>
-      <a href="shopping_cart.html">Shopping cart</a>
-      <h4>Information</h4>
-      <a href="about.html">About</a>
-      <h4>Support</h4>
-      <a href="contact.html">Contact</a>
+      <div>
+        <h4>Shortcuts</h4>
+        <a href="shopping_cart.html">Shopping cart</a>
+      </div>
+      <div>
+        <h4>Information</h4>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="contact.html">Contact</a>
+      </div>
     </footer>
   </body>
 </html>

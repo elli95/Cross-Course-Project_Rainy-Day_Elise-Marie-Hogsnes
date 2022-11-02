@@ -1,3 +1,5 @@
+
+
 img {
     width: 100%;
 }
@@ -6,13 +8,21 @@ a {
     color: #000000;
 }
 
-body {
+/*
+main {
     background-image: url(../images/tony-reid-eMaS4mzaksU-unsplash.jpg);
-    background-size: contain;
-    backdrop-filter: blur(5px);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
 }
+
+.image_filter {
+    backdrop-filter: blur(5px);
+    background-image: url(../images/peter-conrad-lPJwSo7VeXM-unsplash.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    opacity: 0.33;
+}*/
 
 body {
     display: grid;
@@ -76,157 +86,4 @@ nav li {
 
 #bars_menu:checked ~ nav {
     display: block;
-}
-
-/*Index page*/
-
-.top_img_index {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.top_img_index > * {
-    flex: 1;
-}
-
-.top_img_index img{
-    border-radius: 20px;
-    outline: 2px solid #A7B5BF;
-}
-
-.top_img_index_text_1,
-.top_img_index_text_2,
-.top_img_index_text_3 {
-    position: absolute;
-    text-align: left;
-}
-
-.top_img_index_text_1 {
-    color: #D9D9D9;
-    left: 31%;
-    font-size: 2.5rem;
-    top: 20%;
-    transform: translate(-50%, -50%);
-}
-
-.top_img_index_text_2 {
-    color: #D9D9D9;
-    left: 21.2%;
-    font-size: 1.2rem;
-    top: 30%;
-    transform: translate(-50%, -50%);
-}
-
-.top_img_index_text_3 {
-    left: 20%;
-    font-size: 1.5rem;
-    top: 38%;
-    transform: translate(-50%, -50%);
-}
-
-.top_img_index h3 {
-    text-align: center;
-}
-
-.popular_titel {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.popular_titel span{
-    background-color: #d9d9d9b2;
-    padding: 5px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.oudoors_titel,
-.skiing_titel,
-.canoeing_titel {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.oudoors_titel > *,
-.skiing_titel > *,
-.canoeing_titel > * {
-    flex: 1;
-}
-
-.oudoors_titel img,
-.skiing_titel img,
-.canoeing_titel img{
-    border-radius: 20px;
-    outline: 2px solid #A7B5BF;
-}
-
-.oudoors_titel_text,
-.skiing_titel_text,
-.canoeing_titel_text {
-    position: absolute;
-    left: 50%;
-    font-size: 3rem;
-    top: 8%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.oudoors_titel_text span,
-.skiing_titel_text span,
-.canoeing_titel_text span{
-    background-color: #d9d9d9b2;
-    padding: 5px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.popular_products,
-.outdoors_products,
-.skiing_products,
-.canoeing_produckts {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-}
-
-.product_style {
-    background-color: #BCBCBC;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-.product_style img {
-    background-color: #D9D9D9;
-    border-radius: 10px;
-}
-
-.product_style p {
-    font-size: 2rem;
-    margin: 10px;
-    max-height: 35px;
-}
-
-.product_name {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.price {
-    text-align: right;
-    padding-right: 10px;
-    font-weight: bold;
-}
-
-/*Outdoors section*/
-
-.outdoors_section_products {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
 }

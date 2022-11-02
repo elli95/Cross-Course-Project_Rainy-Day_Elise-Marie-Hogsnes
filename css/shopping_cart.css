@@ -1,0 +1,47 @@
+/*.main_shopping_cart {
+    display: grid;
+}
+
+.sum_products {}*/
+
+main {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    margin: 20px auto;
+    outline: 2px solid #A7B5BF;
+}
+
+.main_shopping_cart {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    position: relative;
+}
+
+.main_shopping_cart > * {
+    flex: 1;
+}
+
+.main_shopping_cart p {
+    max-width: 60%;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.products_in_cart {  
+    display: flex;
+    flex-direction: column;
+}
+
+.products_in_cart_items,
+.sum_products_items,
+.sum_products_pricing,
+.sum_products_total {
+    display: flex;
+}
+
+.delivery_address,
+.payment_method {
+    flex-direction: column;
+    display: flex;
+ }

@@ -32,7 +32,7 @@
         <label for="shoppingcart_button"><i class="fa-solid fa-cart-shopping"></i></label>
       </a>
     </header>
-    <main>
+    <main class="image_filter">
       <section class="about_info">
         <h3>About Us</h3>
         <p>
@@ -42,20 +42,34 @@
           We are established in 20 stores through Norway and strive to provide the best customer service and are willing to help to the best of our
           ability.
         </p>
-        <h3>Our Locations</h3>
-        <a
-          href="https://www.google.com/maps/place/Oslo/@59.8937806,10.6450355,11z/data=!3m1!4b1!4m6!3m5!1s0x46416e61f267f039:0x7e92605fd3231e9a!8m2!3d59.9138688!4d10.7522454!16zL20vMDVsNjQ"
-          ><img src="images/map1.PNG" alt="A map of central Oslo."
-        /></a>
+        <div class="about_map">
+          <h3>Our Locations</h3>
+          <!-- reference: https://www.geeksforgeeks.org/how-to-add-google-map-inside-html-page-without-using-api-key/ -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16001.98108988292!2d10.722717588332394!3d59.91143743587507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e61f267f039%3A0x7e92605fd3231e9a!2sOslo!5e0!3m2!1sno!2sno!4v1667404795933!5m2!1sno!2sno"
+            width="320"
+            height="320"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </section>
     </main>
     <footer>
-      <h4>Shortcuts</h4>
-      <a href="shopping_cart.html">Shopping cart</a>
-      <h4>Information</h4>
-      <a href="about.html">About</a>
-      <h4>Support</h4>
-      <a href="contact.html">Contact</a>
+      <div>
+        <h4>Shortcuts</h4>
+        <a href="shopping_cart.html">Shopping cart</a>
+      </div>
+      <div>
+        <h4>Information</h4>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="contact.html">Contact</a>
+      </div>
     </footer>
   </body>
 </html>

@@ -1,0 +1,68 @@
+/*Outdoors section*/
+
+.outdoor_section {
+    display: grid;
+}
+
+.outdoor_filter {
+    grid-area: 1 / 1 / row1-start / last-line;
+    display: flex;
+    margin: 25px;
+    flex-direction: column;
+    background-color: #BCBCBC;
+    border-radius: 5px;
+    outline: 2px solid #A19A8F;
+    padding: 10px;
+    max-width: 170px;
+    max-height: 500px;
+    margin-top: 50px;
+}
+
+.brands,
+.size {
+}
+
+.outdoors_section_products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 70px;
+    margin: 20px;
+    margin-bottom: 100px;
+    justify-items: center;
+}
+
+.outdoor_section_items {
+    grid-area: 1 / 5 / row1-start / last-line;
+    margin-right: 100px;
+}
+
+.outdoorsection {  
+    margin-bottom: 30px;
+    max-width: 1800px;
+    display: grid;
+}
+
+/* reference: https://www.educative.io/answers/how-to-crop-an-image-in-css */
+.outdoor_cropped {  
+    width: 1800px;
+    height: 385px;
+    object-fit: cover;
+    object-position: 0px 0px;
+}
+
+.product_info {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.price_field {
+    display: flex;  
+    justify-content: space-between;
+}
+
+
+.price_field_area {
+    max-width: 65px;
+    border-radius: 5px;
+    box-decoration-break: clone;
+}

@@ -7,6 +7,7 @@
     <meta name="description" content="The page with all the products added to the shopping cart, on the Rainy Day website." />
     <title>Rainy Day | Shopping cart</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/shopping_cart.css" />
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -33,83 +34,93 @@
     </header>
     <main>
       <h3>My Cart</h3>
-      <section>
-        <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-        <p>Storm Jacket</p>
-        <p>990 NOK</p>
-        <select id="product_quantity" name="product_quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <section>
-          <p>Delivery address</p>
-          <label for="first_name">First Name</label>
-          <input type="text" name="first_name" id="first_name" />
-          <label for="last_name">Last Name</label>
-          <input type="text" name="last_name" id="last_name" />
-          <label for="phone_number">Phone Number</label>
-          <input type="tel" name="phone_number" id="phone_number" />
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
-          <label for="address">Address</label>
-          <input type="text" name="address" id="address" />
-          <label for="city">City</label>
-          <input type="text" name="city" id="city" />
-          <label for="country">Country</label>
-          <input type="text" name="country" id="country" />
-          <label for="postal_code">Postal Code</label>
-          <input type="number" name="postal_code" id="postal_code" />
-        </section>
-        <section>
-          <p>Payment method</p>
-          <div>
-            <input type="radio" name="payment" value="payment" id="payment" />
-            <label for="payment">Card</label>
-            <input type="radio" name="payment" value="payment" id="payment" />
-            <label for="payment">PayPal</label>
+      <section class="main_shopping_cart">
+        <section class="products_in_cart">
+          <div class="products_in_cart_items">
+            <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+            <p>Storm Jacket</p>
+            <p>990 NOK</p>
+            <select id="product_quantity" name="product_quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
           </div>
-          <div>
-            <label for="card_number">Card Number</label>
-            <input type="number" name="card_number" id="card_number" />
-            <label for="expiration_date">Expiration Date</label>
-            <input type="date" name="expiration_date" id="expiration_date" />
-            <label for="cvv_code">CVV code</label>
-            <input type="number" name="cvv_code" id="cvv_code" />
-          </div>
+          <section class="delivery_address">
+            <p>Delivery address</p>
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name" />
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name" />
+            <label for="phone_number">Phone Number</label>
+            <input type="tel" name="phone_number" id="phone_number" />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" />
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" />
+            <label for="country">Country</label>
+            <input type="text" name="country" id="country" />
+            <label for="postal_code">Postal Code</label>
+            <input type="number" name="postal_code" id="postal_code" />
+          </section>
+          <section class="payment_method">
+            <p>Payment method</p>
+            <div>
+              <input type="radio" name="payment" value="payment" id="payment" />
+              <label for="payment">Card</label>
+              <input type="radio" name="payment" value="payment" id="payment" />
+              <label for="payment">PayPal</label>
+            </div>
+            <div class="payment_method fill_in">
+              <label for="card_number">Card Number</label>
+              <input type="number" name="card_number" id="card_number" />
+              <label for="expiration_date">Expiration Date</label>
+              <input type="date" name="expiration_date" id="expiration_date" />
+              <label for="cvv_code">CVV code</label>
+              <input type="number" name="cvv_code" id="cvv_code" />
+            </div>
+          </section>
         </section>
-      </section>
-      <section>
-        <div>
-          <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-          <p>Storm Jacket</p>
-          <p>990 NOK</p>
-        </div>
-        <div>
-          <p>Sub total</p>
-          <p>990 NOK</p>
-          <p>Shipping</p>
-          <p>Free</p>
-        </div>
-        <div>
-          <p>Total</p>
-          <p>990 NOK</p>
-        </div>
-      </section>
-      <section>
-        <a href="checkout_success.html">Checkout</a>
-        <a href="index.html">Continue shopping</a>
+        <section class="sum_products">
+          <div class="sum_products_items">
+            <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+            <p>Storm Jacket</p>
+            <p>990 NOK</p>
+          </div>
+          <div class="sum_products_pricing">
+            <p>Sub total</p>
+            <p>990 NOK</p>
+            <p>Shipping</p>
+            <p>Free</p>
+          </div>
+          <div class="sum_products_total">
+            <p>Total</p>
+            <p>990 NOK</p>
+          </div>
+          <section>
+            <a href="checkout_success.html">Checkout</a>
+            <a href="index.html">Continue shopping</a>
+          </section>
+        </section>
       </section>
     </main>
     <footer>
-      <h4>Shortcuts</h4>
-      <a href="shopping_cart.html">Shopping cart</a>
-      <h4>Information</h4>
-      <a href="about.html">About</a>
-      <h4>Support</h4>
-      <a href="contact.html">Contact</a>
+      <div>
+        <h4>Shortcuts</h4>
+        <a href="shopping_cart.html">Shopping cart</a>
+      </div>
+      <div>
+        <h4>Information</h4>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="contact.html">Contact</a>
+      </div>
     </footer>
   </body>
 </html>
