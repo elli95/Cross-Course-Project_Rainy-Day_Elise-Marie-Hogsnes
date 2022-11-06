@@ -1,6 +1,4 @@
-.success_info {
-    background-color: #D9D9D9;
-    border-radius: 10px;
+.main_content {
     justify-content: center;
     text-align: center;
     display: flex;
@@ -9,15 +7,14 @@
     max-width: 500px;
     min-height: 650px;
     margin: 20px auto;
-    box-shadow: 0px 5px 10px 1px gray;
     padding: 15px;
 }
 
-.success_info > * {
+.main_content > * {
     flex: 1;
 }
 
-.success_info h3{
+.main_content h3{
     font-size: 20px;
 }
 
@@ -28,18 +25,12 @@
 }
 
 .order_product {
-    border-bottom: 2px solid black;
     align-items: end;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-left: 60px;
     margin-right: 60px;
     margin-bottom: 30px;
-}
-
-.price {
-    font-weight: bold;
-    padding-left: 45px;
 }
 
 .delivery_info {

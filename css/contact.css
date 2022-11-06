@@ -1,6 +1,4 @@
-.contact_page {
-    background-color: #D9D9D9;
-    border-radius: 10px;
+.main_content {
     justify-content: center;
     text-align: center;
     display: flex;
@@ -9,18 +7,27 @@
     max-width: 500px;
     margin: 20px auto;
     min-height: 250px;
-    outline: 2px solid #A7B5BF;
-    box-shadow: 0px 5px 10px 1px gray;
 }
 
-.contact_page > * {
-    flex: 1;
+.main_content h3 {
+    padding-top: 35px;
+    max-width: 355px;
+    align-self: center;
 }
 
-.contact_page p {
+.main_content p {
     max-width: 60%;  
     margin-left: auto;
     margin-right: auto;
+}
+
+.contact_info{
+    width: 200px;
+    align-self: center;
+}
+
+.form_invite {
+    width: 255px;
 }
 
 .contact_form {
@@ -40,7 +47,7 @@
 form {
     display: none;
     position: absolute;
-    top: 335px;
+    top: 357px;
     left: 90px;
     background: #BCBCBC;
     height: auto;
@@ -56,23 +63,11 @@ form :is(input, select, textarea) {
     border-radius: 5px;
 }
 
-/*
-form div {
-    display: block;
-    padding: 20px 30px;
-    padding-top: 0;
-}*/
-
 .form_content {
     display: block;
     padding: 20px 30px;
     padding-top: 0;
 }
-
-/*
-.form_content label {
-    text-align: left;
-}*/
 
 #contact_menu {
     display: none;

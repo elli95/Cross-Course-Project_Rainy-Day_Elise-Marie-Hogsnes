@@ -5,10 +5,7 @@
 }
 
 .outdoor_filter {
-    grid-area: 1 / 1 / row1-start / last-line;
-    display: flex;
     margin: 25px;
-    flex-direction: column;
     background-color: #BCBCBC;
     border-radius: 5px;
     outline: 2px solid #A19A8F;
@@ -18,17 +15,10 @@
     margin-top: 50px;
 }
 
-.brands,
-.size {
-}
-
-.outdoors_section_products {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-gap: 70px;
-    margin: 20px;
-    margin-bottom: 100px;
-    justify-items: center;
+.price_field_area {
+    max-width: 65px;
+    border-radius: 5px;
+    box-decoration-break: clone;
 }
 
 .outdoor_section_items {
@@ -50,19 +40,11 @@
     object-position: 0px 0px;
 }
 
-.product_info {
-    font-size: 1.5rem;
-    margin: 10px;
-}
-
-.price_field {
-    display: flex;  
-    justify-content: space-between;
-}
-
-
-.price_field_area {
-    max-width: 65px;
-    border-radius: 5px;
-    box-decoration-break: clone;
+.outdoors_section_products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 70px;
+    margin: 20px;
+    margin-bottom: 100px;
+    justify-items: center;
 }

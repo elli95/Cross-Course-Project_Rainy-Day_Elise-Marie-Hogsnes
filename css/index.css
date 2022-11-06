@@ -1,15 +1,9 @@
 /*Index page*/
 
 .top_img_index {
-    display: flex;
-    flex-direction: column;
     position: relative;
     max-width: 1000px;
     margin: 40px auto;
-}
-
-.top_img_index > * {
-    flex: 1;
 }
 
 .top_img_index img{
@@ -22,31 +16,27 @@
 .top_img_index_text_2,
 .top_img_index_text_3 {
     position: absolute;
-    text-align: left;
     font-family: "Bebas Neue";
+    color: #D9D9D9;
+    transform: translate(-50%, -50%);
 }
 
 .top_img_index_text_1 {
-    color: #D9D9D9;
     left: 28%;
-    font-size: 3.3rem;
     top: 30%;
-    transform: translate(-50%, -50%);
+    font-size: 3.3rem;
     text-shadow: 0px 5px 5px #303030;
 }
 
 .top_img_index_text_2 {
-    color: #D9D9D9;
     left: 19.5%;
-    font-size: 1.2rem;
     top: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
 }
 
 .top_img_index_text_3 {  
     left: 18.3%;
     top: 70%;
-    transform: translate(-50%, -50%); 
 }
 
 .top_img_button {
@@ -76,26 +66,47 @@
 .popular_titel span{
     background-color: #d9d9d9b2;
     padding: 5px;
-    overflow: hidden;
     border-radius: 10px;
+}
+
+.popular_products,
+.outdoors_products,
+.skiing_products,
+.canoeing_produckts {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    grid-gap: 80px;
+}
+
+.product_style img {
+    max-height: 150px;
+    max-width: 120px;
+}
+
+.product_style p {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.product_name {
+    padding-left: 10px;
+}
+
+.price {
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
 }
 
 .oudoors_titel,
 .skiing_titel,
 .canoeing_titel {
-    display: flex;
-    flex-direction: column;
     position: relative;
     max-width: 1000px;
     margin: auto;
     margin-top: 45px;
     margin-bottom: -10px;
-}
-
-.oudoors_titel > *,
-.skiing_titel > *,
-.canoeing_titel > * {
-    flex: 1;
 }
 
 .oudoors_titel img,
@@ -113,7 +124,6 @@
     font-size: 3rem;
     top: 13%;
     transform: translate(-50%, -50%);
-    text-align: center;
 }
 
 .oudoors_titel_text span,
@@ -121,20 +131,7 @@
 .canoeing_titel_text span{
     background-color: #d9d9d9b2;
     padding: 5px;
-    overflow: hidden;
     border-radius: 10px;
-}
-
-.popular_products,
-.outdoors_products,
-.skiing_products,
-.canoeing_produckts {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 20px;
-    font-family: "Open Sans";
-    grid-gap: 80px;
 }
 
 .product_style {
@@ -144,14 +141,6 @@
     min-width: 300px;
 }
 
-.product_style img {
-    background-color: black;
-    max-height: fit-content;
-    max-height: 150px;
-    max-width: 120px;
-    
-}
-
 .product_image {
     display: flex;
     justify-content: center;
@@ -159,23 +148,4 @@
     border-radius: 10px;
     min-width: 250px;
     padding: 20px;
-}
-
-.product_style p {
-    font-size: 1.5rem;
-    margin: 10px;
-    max-height: 35px;
-}
-
-.product_name {
-    text-align: left;
-    padding-left: 10px;
-    margin: 0;
-}
-
-.price {
-    text-align: right;
-    padding-right: 10px;
-    font-weight: bold;
-    margin: 0;
 }

@@ -1,13 +1,10 @@
-.product_page {
-    background-color: #D9D9D9;
-    border-radius: 10px;
+.main_content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 80px;
-    min-width: 1200px;
+    max-width: 1200px;
     margin: 70px auto;
     padding: 20px;
-    box-shadow: 0px 5px 10px 1px gray;
 }
 
 .collum_one {
@@ -31,13 +28,21 @@
     justify-content: center;
 }
 
+.collum_two{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: repeat(4,auto 1fr);
+}
+
 .product_name,
 .product_price,
 .color_selection,
 .colors,
+.size_bar,
 .add_to_cart_button  {
     display: flex;
     grid-gap: 10px;
+    justify-content: center;
 }
 
 .product_price {
@@ -48,42 +53,65 @@
     padding-top: 0;
 }
 
-.collum_two{
-    display: grid;
-    grid-gap: 20px;
-    grid-template-rows: repeat(4,auto 1fr);
-}
-
-.product_name,
-.color_selection,
-.size_bar,
-.add_to_cart_button {
-    justify-content: center;
-}   
-
-/*
-.color_selection {
-    scale: 3.5;
-    align-self: baseline;
-}*/
-
-.product_color {
-    display: flex;
-    align-items: center;
+.color_selection input,
+.size_bar input {
+    position: absolute;
+    opacity: 0;
 }
 
 .color_selection :is(label, input) {
     display: flex;
     border-radius: 10px;
     padding: 30px;
-    max-height: 20px;
-    max-width: 20px;
+}
+
+.color_selection input:checked + label {
+    box-shadow: 0px 5px 10px 1px gray;
+    border: 1px solid #000000;   
+    position: inherit;
+}
+
+.color_red label{
+   background-color: #C90707;
+}
+
+.color_blue label{
+    background-color: #0569FF;
+}
+
+.color_yellow label{
+    background-color: #FEE504;
+}
+
+.color_black label{
+    background-color: #000000;
+}
+
+.color_orange label{
+    background-color: #D66700;
 }
 
 .color_selection p {
     display: flex;
     justify-content: center;
     margin-top: 5px;
+}
+  
+.check { 
+    display: flex;
+    border-bottom: 8px solid black;
+    border-right: 8px solid black;
+    height: 45px;
+    width: 21px;
+    transform: rotate(40deg);
+    position: absolute;
+    z-index: 1;
+    margin-left: 16px;
+}
+
+.lblack {
+  border-bottom: 8px solid white;
+  border-right: 8px solid white;
 }
 
 .color_red label,
@@ -95,47 +123,10 @@
    z-index: 3;
 }
 
-.color_red label{
-   background-color: #C90707;
-}
-
-.color_blue label{
-    background-color: #0569FF;
- }
-
- .color_yellow label{
-    background-color: #FEE504;
- }
-
- .color_black label{
-    background-color: #000000;
- }
-
- .color_orange label{
-    background-color: #D66700;
- }
-
-.color_selection input,
-.size_bar input {
-    position: absolute;
-    opacity: 0;
-}
-
-.color_selection input:checked + label {
-    box-shadow: 0px 5px 10px 1px gray;
-    border: 1px solid #000000;   
-    position: inherit;
-}
-
-.color_selection input::before + label {
-    position: absolute;
-    background-color: purple;
-}
-
-
 .size_bar {
     display: grid;
     padding-top: 20px;
+    grid-gap: 0;
 }
 
 .size_bar_name,
@@ -149,21 +140,16 @@
     border-radius: 5px;
 }
 
-.bar_middle{
-    border-radius: 0px;
-}
-
 .bar_start {
     border-radius: 5px 5px 0px 0px;
 }
 
-.bar_end {
-    border-radius: 0px 0px 5px 5px;
+.bar_middle{
+    border-radius: 0px;
 }
 
-.size_bar input:checked + label {
-    background-color: #B6D982;
-    box-shadow: 0px 5px 10px 1px gray;
+.bar_end {
+    border-radius: 0px 0px 5px 5px;
 }
 
 .size_bar_name_option:hover {
@@ -171,47 +157,7 @@
     box-shadow: 0px 5px 10px 1px gray;
 }
 
-
-
-  
-  .check {  
-    position: absolute;
-    z-index: 1;
-    display: inline-block;
-    transform: rotate(40deg);
-    height: 45px;
-    width: 21px;
-    border-bottom: 8px solid black;
-    border-right: 8px solid black;
-  }
-
- .posison-- {
-    left: 15px;
-    bottom: 10px;
-  }
-
-  .position {
-    top: 336px;
-  }
-
-  .lred {
-    left: 1332px; 
-  }
-  
-  .lblue {
-    left: 1401px;
-  }
-
-  .yellow {
-    left: 1471px;
-  }
-
-  .lblack {
-    border-bottom: 8px solid white;
-    border-right: 8px solid white;
-    left: 1542px;
-  }
-
-  .lorange {
-    left: 1612px;
-  }
+.size_bar input:checked + label {
+    background-color: #B6D982;
+    box-shadow: 0px 5px 10px 1px gray;
+}
