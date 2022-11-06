@@ -6,35 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The page with all the products added to the shopping cart, on the Rainy Day website." />
     <title>Rainy Day | Shopping cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/product.css" />
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
-      <a href="index.html">
-        <img src="images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
-      </a>
-      <label for="bars_menu"><i class="fa-solid fa-bars"></i></label>
-      <p>All Categories</p>
-      <input type="checkbox" id="bars_menu" />
-      <nav>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="outdoors_section.html">Outdoors</a></li>
-          <li><a href="#">Skiing</a></li>
-          <li><a href="#">Canoeing</a></li>
-        </ul>
-      </nav>
-      <input type="search" id="search" name="search" placeholder="Search" />
-      <a href="shopping_cart.html">
+      <div class="logo_menu">
+        <a href="index.html">
+          <img src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
+        </a>
+        <div>
+          <label for="bars_menu"><i class="fa-solid fa-bars"> All Categories</i></label>
+          <input type="checkbox" id="bars_menu" />
+          <nav>
+            <section class="menu_grid">
+              <div>
+                <ul>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="product_menu_grid">
+                <div>
+                  <a href="outdoors_section.html">
+                    Outdoors
+                    <img
+                      src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
+                      alt="A woman enjoys a hot drink while sitting in the forest by a tent."
+                    />
+                  </a>
+                </div>
+                <div>
+                  <a href="#"
+                    >Skiing
+                    <img src="images/chen-gang-nRIDvqLJsuU-unsplash.jpg" alt="Four people dressed in ski equipment, on top of a snowy hill." />
+                  </a>
+                </div>
+                <div>
+                  <a href="#"
+                    >Canoeing
+                    <img
+                      src="images/kamil-kalbarczyk-lY11p3yNVxE-unsplash.jpg"
+                      alt="Man in yellow raincoat canoeing on the water, with green forest in the background and a gray sky."
+                    />
+                  </a>
+                </div>
+              </div>
+            </section>
+          </nav>
+        </div>
+      </div>
+      <input type="search" id="search" name="search" placeholder="Search" class="searchbar" />
+      <a href="shopping_cart.html" class="shop_cart_icon">
         <label for="shoppingcart_button"><i class="fa-solid fa-cart-shopping"></i></label>
       </a>
     </header>
     <main>
       <section class="product_page">
-        <section>
+        <section class="collum_one">
           <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
           <div class="product_description">
             <p>About:</p>
@@ -43,33 +76,74 @@
             <p>It is a sleek and sleek design that will keep you looking professional and stylish.</p>
           </div>
         </section>
-        <section>
-          <div>
-            <p>Storm Jacket</p>
-            <p>Price:</p>
-            <p>990 NOK</p>
+        <section class="collum_two">
+          <div class="Product_info">
+            <div class="product_name">
+              <p>Storm Jacket</p>
+            </div>
+            <div class="product_price">
+              <p>Price:</p>
+              <p>990 NOK</p>
+            </div>
           </div>
-          <div>
-            <input type="color" name="product_color" id="product_color" value="#ee0000" list="product_color" />
-            <datalist id="product_color">
-              <option>C90707</option>
-              <option>0569FF</option>
-              <option>FEE504</option>
-              <option>000000</option>
-              <option>FEE504</option>
-            </datalist>
-            <!--Ser ikke ut til å fungere akkurat nå (i firefox) :/ -->
+          <div class="color_selection">
+            <div class="color_red">
+              <input type="radio" name="product_color" value="red" id="red" />
+              <label for="red"></label>
+              <p>Red</p>
+            </div>
+            <div class="check position lred"></div>
+            <div class="color_blue">
+              <input type="radio" name="product_color" value="blue" id="blue" />
+              <label for="blue"></label>
+              <p>Blue</p>
+            </div>
+            <div class="check position lblue"></div>
+            <div class="color_yellow">
+              <input type="radio" name="product_color" value="yellow" id="yellow" />
+              <label for="yellow"></label>
+              <p>Yellow</p>
+            </div>
+            <div class="check position lyellow"></div>
+            <div class="color_black">
+              <input type="radio" name="product_color" value="black" id="black" />
+              <label for="black" checked></label>
+              <p>Black</p>
+            </div>
+            <div class="check position lblack"></div>
+            <div class="color_orange">
+              <input type="radio" name="product_color" value="orange" id="orange" />
+              <label for="orange"></label>
+              <p>Orange</p>
+            </div>
+            <div class="check position lorange"></div>
           </div>
-          <div>
-            <select id="product_size" name="product_size">
-              <option value="XS">XS</option>
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
-            </select>
+          <div class="size_bar">
+            <label for="product_size" class="size_bar_name">Choose a size *</label>
+            <div>
+              <input type="radio" name="product_size" value="xs" id="xs" />
+              <label class="size_bar_name_option bar_start" for="xs">XS</label>
+            </div>
+            <div>
+              <input type="radio" name="product_size" value="s" id="s" />
+              <label class="size_bar_name_option bar_middle" for="s">S</label>
+            </div>
+            <div>
+              <input type="radio" name="product_size" value="m" id="m" />
+              <label class="size_bar_name_option bar_middle" for="m">M</label>
+            </div>
+            <div>
+              <input type="radio" name="product_size" value="black" id="l" />
+              <label class="size_bar_name_option bar_middle" for="l">L</label>
+            </div>
+            <div>
+              <input type="radio" name="product_size" value="orange" id="xl" />
+              <label class="size_bar_name_option bar_end" for="xl">XL</label>
+            </div>
           </div>
-          <a href="shopping_cart.html">Add to cart</a>
+          <div class="add_to_cart_button">
+            <a href="shopping_cart.html" class="button button_confirm">Add to cart</a>
+          </div>
         </section>
       </section>
     </main>

@@ -12,23 +12,53 @@
   </head>
   <body>
     <header>
-      <a href="index.html">
-        <img src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
-      </a>
-      <label for="bars_menu"><i class="fa-solid fa-bars"></i></label>
-      <p>All Categories</p>
-      <input type="checkbox" id="bars_menu" />
-      <nav>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="outdoors_section.html">Outdoors</a></li>
-          <li><a href="#">Skiing</a></li>
-          <li><a href="#">Canoeing</a></li>
-        </ul>
-      </nav>
-      <input type="search" id="search" name="search" placeholder="Search" />
-      <a href="shopping_cart.html">
+      <div class="logo_menu">
+        <a href="index.html">
+          <img src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
+        </a>
+        <div>
+          <label for="bars_menu"><i class="fa-solid fa-bars"> All Categories</i></label>
+          <input type="checkbox" id="bars_menu" />
+          <nav>
+            <section class="menu_grid">
+              <div>
+                <ul>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="product_menu_grid">
+                <div>
+                  <a href="outdoors_section.html">
+                    Outdoors
+                    <img
+                      src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
+                      alt="A woman enjoys a hot drink while sitting in the forest by a tent."
+                    />
+                  </a>
+                </div>
+                <div>
+                  <a href="#"
+                    >Skiing
+                    <img src="images/chen-gang-nRIDvqLJsuU-unsplash.jpg" alt="Four people dressed in ski equipment, on top of a snowy hill." />
+                  </a>
+                </div>
+                <div>
+                  <a href="#"
+                    >Canoeing
+                    <img
+                      src="images/kamil-kalbarczyk-lY11p3yNVxE-unsplash.jpg"
+                      alt="Man in yellow raincoat canoeing on the water, with green forest in the background and a gray sky."
+                    />
+                  </a>
+                </div>
+              </div>
+            </section>
+          </nav>
+        </div>
+      </div>
+      <input type="search" id="search" name="search" placeholder="Search" class="searchbar" />
+      <a href="shopping_cart.html" class="shop_cart_icon">
         <label for="shoppingcart_button"><i class="fa-solid fa-cart-shopping"></i></label>
       </a>
     </header>

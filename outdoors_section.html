@@ -13,23 +13,53 @@
   </head>
   <body>
     <header>
-      <a href="index.html">
-        <img src="images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
-      </a>
-      <label for="bars_menu"><i class="fa-solid fa-bars"></i></label>
-      <p>All Categories</p>
-      <input type="checkbox" id="bars_menu" />
-      <nav>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="outdoors_section.html">Outdoors</a></li>
-          <li><a href="#">Skiing</a></li>
-          <li><a href="#">Canoeing</a></li>
-        </ul>
-      </nav>
-      <input type="search" id="search" name="search" placeholder="Search" />
-      <a href="shopping_cart.html">
+      <div class="logo_menu">
+        <a href="index.html">
+          <img src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
+        </a>
+        <div>
+          <label for="bars_menu"><i class="fa-solid fa-bars"> All Categories</i></label>
+          <input type="checkbox" id="bars_menu" />
+          <nav>
+            <section class="menu_grid">
+              <div>
+                <ul>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="product_menu_grid">
+                <div>
+                  <a href="outdoors_section.html">
+                    Outdoors
+                    <img
+                      src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
+                      alt="A woman enjoys a hot drink while sitting in the forest by a tent."
+                    />
+                  </a>
+                </div>
+                <div>
+                  <a href="#"
+                    >Skiing
+                    <img src="images/chen-gang-nRIDvqLJsuU-unsplash.jpg" alt="Four people dressed in ski equipment, on top of a snowy hill." />
+                  </a>
+                </div>
+                <div>
+                  <a href="#"
+                    >Canoeing
+                    <img
+                      src="images/kamil-kalbarczyk-lY11p3yNVxE-unsplash.jpg"
+                      alt="Man in yellow raincoat canoeing on the water, with green forest in the background and a gray sky."
+                    />
+                  </a>
+                </div>
+              </div>
+            </section>
+          </nav>
+        </div>
+      </div>
+      <input type="search" id="search" name="search" placeholder="Search" class="searchbar" />
+      <a href="shopping_cart.html" class="shop_cart_icon">
         <label for="shoppingcart_button"><i class="fa-solid fa-cart-shopping"></i></label>
       </a>
     </header>
@@ -39,51 +69,51 @@
           <div class="brands">
             <p>Brands</p>
             <div>
-              <input type="checkbox" name="brands" value="brands" id="brands" />
-              <label for="brands">Brand 1</label>
+              <input type="checkbox" name="brands" value="brands" id="brand1" />
+              <label for="brand1">Brand 1</label>
             </div>
             <div>
-              <input type="checkbox" name="brands" value="brands" id="brands" />
-              <label for="brands">Brand 2</label>
+              <input type="checkbox" name="brands" value="brands" id="brand2" />
+              <label for="brand2">Brand 2</label>
             </div>
             <div>
-              <input type="checkbox" name="brands" value="brands" id="brands" />
-              <label for="brands">Brand 3</label>
+              <input type="checkbox" name="brands" value="brands" id="brand3" />
+              <label for="brand3">Brand 3</label>
             </div>
             <div>
-              <input type="checkbox" name="brands" value="brands" id="brands" />
-              <label for="brands">Brand 4</label>
+              <input type="checkbox" name="brands" value="brands" id="brand4" />
+              <label for="brand4">Brand 4</label>
             </div>
             <div>
-              <input type="checkbox" name="brands" value="brands" id="brands" />
-              <label for="brands">Brand 5</label>
+              <input type="checkbox" name="brands" value="brands" id="brand5" />
+              <label for="brand5">Brand 5</label>
             </div>
             <div>
-              <input type="checkbox" name="brands" value="brands" id="brands" />
-              <label for="brands">Brand 6</label>
+              <input type="checkbox" name="brands" value="brands" id="brand6" />
+              <label for="brand6">Brand 6</label>
             </div>
           </div>
           <div class="size">
             <p>Size</p>
             <div>
-              <input type="checkbox" name="size" value="size" id="size" />
-              <label for="size">XS</label>
+              <input type="checkbox" name="size" value="size" id="xs" />
+              <label for="xs">XS</label>
             </div>
             <div>
-              <input type="checkbox" name="size" value="size" id="size" />
-              <label for="size">S</label>
+              <input type="checkbox" name="size" value="size" id="s" />
+              <label for="s">S</label>
             </div>
             <div>
-              <input type="checkbox" name="size" value="size" id="size" />
-              <label for="size">M</label>
+              <input type="checkbox" name="size" value="size" id="m" />
+              <label for="m">M</label>
             </div>
             <div>
-              <input type="checkbox" name="size" value="size" id="size" />
-              <label for="size">L</label>
+              <input type="checkbox" name="size" value="size" id="l" />
+              <label for="l">L</label>
             </div>
             <div>
-              <input type="checkbox" name="size" value="size" id="size" />
-              <label for="size">XL</label>
+              <input type="checkbox" name="size" value="size" id="xl" />
+              <label for="xl">XL</label>
             </div>
           </div>
           <div>

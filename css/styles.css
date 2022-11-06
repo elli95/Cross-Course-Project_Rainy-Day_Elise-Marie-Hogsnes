@@ -8,21 +8,33 @@ a {
     color: #000000;
 }
 
+
+.background_image {
+    backdrop-filter: blur(3px);
+    background-image: url(../images/peter-conrad-lPJwSo7VeXM-unsplash.png);
+    /*
+    background-image: url(../images/peter-conrad-lPJwSo7VeXM-unsplash.jpg);*/
+}
+
 /*
+.image_filter {
+    backdrop-filter: blur(5px);
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(../images/peter-conrad-lPJwSo7VeXM-unsplash.jpg#filter);
+    background-size: contain;
+    background-repeat: repeat;
+    opacity: 0.33;
+    z-index: 1;
+}*/
+
 main {
+    display: grid;
+    align-content: center;
     background-image: url(../images/tony-reid-eMaS4mzaksU-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    z-index: 2;
 }
-
-.image_filter {
-    backdrop-filter: blur(5px);
-    background-image: url(../images/peter-conrad-lPJwSo7VeXM-unsplash.jpg);
-    background-size: contain;
-    background-repeat: repeat;
-    opacity: 0.33;
-}*/
 
 body {
     display: grid;
@@ -32,9 +44,9 @@ body {
 }
 
 header{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    display: flex;
-    justify-content: space-evenly;
 }
 header img {
     max-width: 200px;
@@ -61,6 +73,24 @@ h4 {
 
 /*Navigation*/
 
+.logo_menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 50px;
+    padding-left: 50px;
+    padding-right: 410px;
+}
+
+.searchbar {
+    max-width: 500px;
+}
+
+.shop_cart_icon {
+    padding-right: 100px;
+    font-size: 30px;
+}
+
 nav{
     display: none;
     position: absolute;
@@ -69,15 +99,43 @@ nav{
     background: #D9D9D9;
     width: 100%;
     height: auto;
+    z-index: 3;
+}
+
+.menu_grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.product_menu_grid {  
+    display: grid;
+    grid-template-columns: repeat(3,max-content);
+    grid-gap: 50px;
+    padding-left: 150px;
+    align-content: center;
+}
+
+.product_menu_grid a {
+    display: grid;
+    background-color: #9D9D9D;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.product_menu_grid img {
+    border-radius: 0px 0px 10px 10px;
 }
 
 nav ul{
     padding: 0px;
+    padding-left: 500px;
+    
 }
 
 nav li {
     display: block;
     padding: 20px 30px;
+    font-size: 24px;
 }
 
 #bars_menu {
@@ -86,4 +144,29 @@ nav li {
 
 #bars_menu:checked ~ nav {
     display: block;
+}
+
+/* buttons*/
+
+.button {
+    border: 1px solid #4B6721;
+    box-shadow: 0px 5px 10px 1px gray;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    min-width: 160px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.button_confirm {
+background-color: #60DB2E;
+font-family: "Bebas Neue";
+font-size: 24px;
+}
+
+.button_continue {
+background-color: #B6D982;
 }

@@ -7,23 +7,47 @@
     flex-direction: column;
     position: relative;
     max-width: 500px;
+    min-height: 650px;
     margin: 20px auto;
+    box-shadow: 0px 5px 10px 1px gray;
+    padding: 15px;
 }
 
 .success_info > * {
     flex: 1;
 }
 
-.order_nr {
-    
+.success_info h3{
+    font-size: 20px;
 }
 
-.success_info p {
+.order_nr {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.order_product {
+    border-bottom: 2px solid black;
+    align-items: end;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 30px;
+}
+
+.price {
+    font-weight: bold;
+    padding-left: 45px;
+}
+
+.delivery_info {
     max-width: 60%;  
     margin-left: auto;
     margin-right: auto;
 }
 
-.success_info img {
-    margin: auto;
+.continue_button {
+    align-self: center;
 }

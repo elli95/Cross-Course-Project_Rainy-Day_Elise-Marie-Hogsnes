@@ -1,29 +1,217 @@
 .product_page {
     background-color: #D9D9D9;
     border-radius: 10px;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+    min-width: 1200px;
     margin: 70px auto;
     padding: 20px;
+    box-shadow: 0px 5px 10px 1px gray;
 }
 
-.product_page > * {
-    flex: 1;
+.collum_one {
+    display: grid;
+    justify-content: center;
+}
+
+.collum_one img {
+    padding: 10px;
 }
 
 .product_description {
-    margin-left: auto;
-    margin-right: auto;
     background-color: #BCBCBC;
     border-radius: 10px;
     padding: 10px;
-    text-align: left;
+    max-width: 340px;
 }
 
-.product_page img {
-    border-radius: 50px;
-    margin: auto;
+.Product_info {
+    display: grid;
+    justify-content: center;
 }
+
+.product_name,
+.product_price,
+.color_selection,
+.colors,
+.add_to_cart_button  {
+    display: flex;
+    grid-gap: 10px;
+}
+
+.product_price {
+    border-top: 2px solid black;
+    grid-gap: 250px;
+    padding: 10px;
+    padding-top: 10px;
+    padding-top: 0;
+}
+
+.collum_two{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: repeat(4,auto 1fr);
+}
+
+.product_name,
+.color_selection,
+.size_bar,
+.add_to_cart_button {
+    justify-content: center;
+}   
+
+/*
+.color_selection {
+    scale: 3.5;
+    align-self: baseline;
+}*/
+
+.product_color {
+    display: flex;
+    align-items: center;
+}
+
+.color_selection :is(label, input) {
+    display: flex;
+    border-radius: 10px;
+    padding: 30px;
+    max-height: 20px;
+    max-width: 20px;
+}
+
+.color_selection p {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.color_red label,
+.color_blue label,
+.color_yellow label,
+.color_black label,
+.color_orange label {
+   position: relative;
+   z-index: 3;
+}
+
+.color_red label{
+   background-color: #C90707;
+}
+
+.color_blue label{
+    background-color: #0569FF;
+ }
+
+ .color_yellow label{
+    background-color: #FEE504;
+ }
+
+ .color_black label{
+    background-color: #000000;
+ }
+
+ .color_orange label{
+    background-color: #D66700;
+ }
+
+.color_selection input,
+.size_bar input {
+    position: absolute;
+    opacity: 0;
+}
+
+.color_selection input:checked + label {
+    box-shadow: 0px 5px 10px 1px gray;
+    border: 1px solid #000000;   
+    position: inherit;
+}
+
+.color_selection input::before + label {
+    position: absolute;
+    background-color: purple;
+}
+
+
+.size_bar {
+    display: grid;
+    padding-top: 20px;
+}
+
+.size_bar_name,
+.size_bar_sizes,
+.size_bar_name_option {    
+    display: block;
+    min-width: 125px;
+    text-align: center;
+    background-color: #BCBCBC;
+    border: 1px solid #707070;
+    border-radius: 5px;
+}
+
+.bar_middle{
+    border-radius: 0px;
+}
+
+.bar_start {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.bar_end {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.size_bar input:checked + label {
+    background-color: #B6D982;
+    box-shadow: 0px 5px 10px 1px gray;
+}
+
+.size_bar_name_option:hover {
+    background-color: #B6D982;
+    box-shadow: 0px 5px 10px 1px gray;
+}
+
+
+
+  
+  .check {  
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+    transform: rotate(40deg);
+    height: 45px;
+    width: 21px;
+    border-bottom: 8px solid black;
+    border-right: 8px solid black;
+  }
+
+ .posison-- {
+    left: 15px;
+    bottom: 10px;
+  }
+
+  .position {
+    top: 336px;
+  }
+
+  .lred {
+    left: 1332px; 
+  }
+  
+  .lblue {
+    left: 1401px;
+  }
+
+  .yellow {
+    left: 1471px;
+  }
+
+  .lblack {
+    border-bottom: 8px solid white;
+    border-right: 8px solid white;
+    left: 1542px;
+  }
+
+  .lorange {
+    left: 1612px;
+  }
