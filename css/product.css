@@ -96,7 +96,8 @@
     justify-content: center;
     margin-top: 5px;
 }
-  
+
+/* reference: https://www.tutorialspoint.com/how-to-create-a-checkmark-tick-with-css */
 .check { 
     display: flex;
     border-bottom: 8px solid black;
