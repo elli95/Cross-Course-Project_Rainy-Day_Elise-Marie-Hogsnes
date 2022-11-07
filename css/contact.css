@@ -1,11 +1,11 @@
-.main_content {
+.contact_content {
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     position: relative;
     max-width: 500px;
-    margin: 20px auto;
+    margin: 130px auto;
     min-height: 250px;
 }
 
@@ -16,17 +16,15 @@
 }
 
 .main_content p {
-    max-width: 60%;  
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact_info{
-    width: 200px;
     align-self: center;
 }
 
-.form_invite {
+.contact_info{  
+    width: 116px;
+    align-self: center;
+}
+
+.other_p {
     width: 255px;
 }
 
@@ -47,8 +45,9 @@
 form {
     display: none;
     position: absolute;
-    top: 357px;
-    left: 90px;
+    top: 63.5%;
+    left: 250px;
+    transform: translate(-50%, -50%);
     background: #BCBCBC;
     height: auto;
     z-index: 3;
@@ -59,7 +58,7 @@ form {
 }
 
 form :is(input, select, textarea) {
-    width: 200px;
+    width: 250px;
     border-radius: 5px;
 }
 

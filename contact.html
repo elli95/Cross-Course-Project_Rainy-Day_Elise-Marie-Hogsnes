@@ -8,6 +8,7 @@
     <title>Rainy Day | Contact</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/media.css" />
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -17,12 +18,16 @@
           <img src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
         </a>
         <div>
-          <label for="bars_menu"><i class="fa-solid fa-bars"> All Categories</i></label>
+          <label for="bars_menu" class="menu_button_text"
+            ><i class="fa-solid fa-bars"></i>
+            <p>All Categories</p></label
+          >
           <input type="checkbox" id="bars_menu" />
           <nav>
             <section class="menu_grid">
               <div>
                 <ul>
+                  <li class="home"><a href="index.html">Home</a></li>
                   <li><a href="about.html">About</a></li>
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -57,21 +62,21 @@
           </nav>
         </div>
       </div>
-      <input type="search" id="search" name="search" placeholder="Search" class="searchbar" />
+      <input type="search" id="search" name="search" placeholder="Search" class="searchbar no_searchbar" />
       <a href="shopping_cart.html" class="shop_cart_icon">
         <label for="shoppingcart_button"><i class="fa-solid fa-cart-shopping"></i></label>
       </a>
     </header>
     <main>
       <section class="background_image">
-        <section class="main_content">
+        <section class="main_content contact_content">
           <h3>Do you have questions or need any help? We are happy to help!</h3>
           <div class="contact_info">
             <p>Please call us at</p>
-            <p>(+12) 34 56 78 90</p>
+            <p class="bold">(+12) 34 56 78 90</p>
             <p>Mondey - friday 08:00-19:00</p>
           </div>
-          <p class="form_invite">Or fill in our form and we will contact you as soon as possible</p>
+          <p class="other_p">Or fill in our form and we will contact you as soon as possible</p>
           <section class="contact_form">
             <label for="contact_menu" class="contact_form_titel">Contact Form</label>
             <input type="checkbox" id="contact_menu" />
@@ -103,7 +108,7 @@
               </div>
             </form>
           </section>
-          <p>And of course we are always happy to help you at our local stores</p>
+          <p class="other_p">And of course we are always happy to help you at our local stores</p>
           <div class="contact_page_map">
             <!-- reference: https://www.geeksforgeeks.org/how-to-add-google-map-inside-html-page-without-using-api-key/ -->
             <iframe

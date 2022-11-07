@@ -1,11 +1,11 @@
-.main_content {
+.about_content {
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     position: relative;
     max-width: 500px;
-    margin: 20px auto;
+    margin: 130px auto;
     min-height: 250px;
 }
 
