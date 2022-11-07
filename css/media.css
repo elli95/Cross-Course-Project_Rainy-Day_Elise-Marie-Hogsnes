@@ -1,3 +1,21 @@
+@media (max-width: 520px){
+    .about_content,
+    .contact_content {
+        margin: 130px 10px 10px 10px;
+    }
+
+    .contact_form_titel {
+        width: 270px;
+    }
+
+    form {
+        max-width: 260px;
+    }
+
+    form :is(input, select, textarea) {
+        width: 190px;
+    }
+}
 
 @media (min-width: 600px){
 
@@ -24,7 +42,7 @@
     }
 
     nav {
-        top: 15%;
+        top: 125px;
         left: 0;
         max-width: 100%;
         width: 100%;
@@ -151,10 +169,5 @@
 
 @media (min-width: 900px){
 
-    nav{
-        top: 15%;
-        left: 0;
-        width: 100%;
-    }
     
 }

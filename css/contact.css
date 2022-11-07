@@ -46,7 +46,7 @@ form {
     display: none;
     position: absolute;
     top: 63.5%;
-    left: 250px;
+    left: 50%;
     transform: translate(-50%, -50%);
     background: #BCBCBC;
     height: auto;
