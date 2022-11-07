@@ -19,10 +19,7 @@
           <img src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
         </a>
         <div>
-          <label for="bars_menu" class="menu_button_text"
-            ><i class="fa-solid fa-bars"></i>
-            <p>All Categories</p></label
-          >
+          <label for="bars_menu" class="menu_button_text"><i class="fa-solid fa-bars"></i> All Categories</label>
           <input type="checkbox" id="bars_menu" />
           <nav>
             <section class="menu_grid">
@@ -63,10 +60,10 @@
           </nav>
         </div>
       </div>
-      <input type="search" id="search" name="search" placeholder="Search" class="searchbar" />
-      <a href="shopping_cart.html" class="shop_cart_icon">
-        <label for="shoppingcart_button"><i class="fa-solid fa-cart-shopping"></i></label>
-      </a>
+      <input type="search" id="search" name="search" placeholder="Search" class="searchbar no_searchbar" />
+      <label
+        ><a href="shopping_cart.html" class="shop_cart_icon"><i class="fa-solid fa-cart-shopping"></i> </a
+      ></label>
     </header>
     <main>
       <section class="background_image">
@@ -125,8 +122,8 @@
             <div>
               <p>Price</p>
               <div class="price_field">
-                <input class="price_field_area 1" type="number" name="price" id="price" placeholder="0" />
-                <input class="price_field_area 2" type="number" name="price" id="price" placeholder="9999" />
+                <input class="price_field_area 1" type="number" name="price_min" id="price_min" placeholder="0" />
+                <input class="price_field_area 2" type="number" name="price_max" id="price_max" placeholder="9999" />
               </div>
               <div>
                 <input type="range" id="price_line" name="price_line" min="0" max="9999" />

@@ -1,11 +1,4 @@
-.about_content {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    max-width: 500px;
-    margin: 130px auto;
+.main_content {
     min-height: 250px;
 }
 

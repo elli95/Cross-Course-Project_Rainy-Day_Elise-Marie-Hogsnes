@@ -63,6 +63,13 @@ footer {
 }
 
 .main_content {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 500px;
+    margin: 130px auto;
     background-color: #D9D9D9;
     border-radius: 10px;
     outline: 2px solid #A7B5BF;

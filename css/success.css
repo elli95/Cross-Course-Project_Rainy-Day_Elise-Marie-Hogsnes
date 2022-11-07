@@ -1,13 +1,5 @@
 .main_content {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    max-width: 500px;
     min-height: 650px;
-    margin: 20px auto;
-    padding: 15px;
 }
 
 .main_content > * {

@@ -1,6 +1,5 @@
 @media (max-width: 520px){
-    .about_content,
-    .contact_content {
+    .main_content {
         margin: 130px 10px 10px 10px;
     }
 
@@ -155,6 +154,10 @@
         text-align: center;
     }
 
+    /*shopping cart*/
+    .main_shopping_cart {
+        flex-direction: row;
+    }
     /*contact*/
     .main_content {
         margin: 20px auto;
