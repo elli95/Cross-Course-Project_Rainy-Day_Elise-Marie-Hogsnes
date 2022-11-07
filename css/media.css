@@ -51,7 +51,8 @@
     .menu_button_text {
     display: flex;
     align-items: center;
-    grid-gap: 7px; 
+    grid-gap: 7px;   
+    font-size: 1.1rem;
     }
 
     .menu_button_text p{
@@ -169,5 +170,7 @@
 
 @media (min-width: 900px){
 
-    
+    .menu_button_text {
+        font-size: 2rem;
+        }
 }
