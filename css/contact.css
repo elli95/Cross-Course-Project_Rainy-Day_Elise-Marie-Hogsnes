@@ -1,14 +1,14 @@
-.main_content {
+.main_content_about_contact_success {
     min-height: 250px;
 }
 
-.main_content h3 {
+.main_content_about_contact_success h3 {
     padding-top: 35px;
     max-width: 355px;
     align-self: center;
 }
 
-.main_content p {
+.main_content_about_contact_success p {
     align-self: center;
 }
 

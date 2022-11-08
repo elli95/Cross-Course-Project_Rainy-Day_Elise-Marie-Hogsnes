@@ -1,12 +1,12 @@
-.main_content {
+.main_content_about_contact_success {
     min-height: 250px;
 }
 
-.main_content > * {
+.main_content_about_contact_success > * {
     flex: 1;
 }
 
-.main_content p {
+.main_content_about_contact_success p {
     max-width: 60%;  
     margin-left: auto;
     margin-right: auto;

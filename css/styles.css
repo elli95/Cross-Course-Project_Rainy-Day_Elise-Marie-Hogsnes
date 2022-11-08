@@ -62,14 +62,17 @@ footer {
     display: none
 }
 
-.main_content {
+.main_content_about_contact_success {
+    max-width: 500px;
+    margin: 130px auto;
+}
+
+.content_background {
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     position: relative;
-    max-width: 500px;
-    margin: 130px auto;
     background-color: #D9D9D9;
     border-radius: 10px;
     outline: 2px solid #A7B5BF;
@@ -176,8 +179,59 @@ font-size: 24px;
 
 .button_continue {
 background-color: #B6D982;
+font-family: 'Open Sans', sans-serif, Verdana, Tahoma;
 }
 
+/*font type*/
+
+.sanse_font {
+    font-family: 'Open Sans', sans-serif, Verdana, Tahoma;
+}
+
+.bebas_font {
+font-family: "Bebas Neue";
+}
+
+/*grid cells*/
+.grid_a {
+    grid-area: a;
+}
+
+.grid_b {
+    grid-area: b;
+}
+
+.grid_c {
+    grid-area: c;
+}
+
+.grid_e {
+    grid-area: e;
+}
+
+.grid_f {
+    grid-area: f;
+}
+
+.grid_g {
+    grid-area: g;
+}
+
+.grid_h {
+    grid-area: h;
+}
+
+.grid_i {
+    grid-area: i;
+}
+
+.grid_k {
+    grid-area: k;
+}
+
+.grid_l {
+    grid-area: l;
+}
 
 /*
 .background_image {

@@ -1,15 +1,21 @@
 /*shopping cart*/
 
-.main_content {
+.main_content_cart {
     margin: 100px 400px;
     padding: 15px;
     margin: 130px auto;
 }
 
+.main_content_cart h3 {
+    font-family: "Bebas Neue";
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
 .main_shopping_cart {
     text-align: center;
     display: flex;
-    grid-gap: 100px;
+    grid-gap: 50px;
     flex-direction: column;
 }
 
@@ -17,19 +23,20 @@
     flex: 1;
 }
 
+
 .products_in_cart {  
     display: grid;
-    grid-template-rows: repeat(3,1fr auto);
     align-items: center;
     grid-gap: 30px;
 }
 
 .products_in_cart_items {
-    align-items: end;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 35px;
-    margin-right: 100px;
-    margin-left: 100px;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: "a b c d";
+    align-content: space-between;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 .sum_products_items,
@@ -45,15 +52,14 @@
 }
 
 .left_items {
-    margin-right: 0px;
-    margin-left: 0px;
+    display: flex;  
+    justify-content: center;
 }
 
 .products_image {
     display: flex;
-    position: absolute;
     margin: 5px;
-    width: 2.5%;
+    width: 45px;
 }
 
 .nr_list {
@@ -65,11 +71,14 @@
     min-height: 40px;
 }
 
-.delivery_address,
-.payment_method {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
+.delivery_address {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "a" "b";
+    align-content: space-between;
+    padding-right: 5%;
+    padding-left: 5%;  
+    grid-gap: 6px;
 }
 
 .delivery_form_titel,
@@ -77,7 +86,7 @@
     background: #BCBCBC;
     border: 1px solid #707070;
     border-radius: 5px;
-    width: 450px;
+    min-width: 85%;
     padding: 5px;
 }
 
@@ -102,9 +111,8 @@
 .card {
     display: none;
     position: absolute;
-    top: 288px;
     background: #BCBCBC;
-    width: 440px;
+    width: 78%;
     height: auto;
     z-index: 3;
     border: 1px solid #707070;
@@ -118,7 +126,7 @@
 }
 
 .payment_menu {
-    top: 411px;
+    top: 249px;
 }
 
 .radio_card {
@@ -128,20 +136,21 @@
 .card_paypal {
     display: flex;
     width: 0;
-    padding-left: 75px;
+    padding-left: 30%;
 }
 
 .card {
-    top: 35px;
-    left: -1px;
     border-top: none;
     border-radius: 0px 0px 5px 5px;
+    width: 93%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 90px;
 }
 
 .delivery_menu input,
-.payment_menu input,
 .card input {
-    width: 270px;
+    width: 55%;
     border-radius: 5px;
 }
 
@@ -150,15 +159,28 @@
     grid-template-rows: auto 1fr 1fr auto;
 }
 
-.right_items {
-    margin-right: 100px;
-    margin-left: 100px;
+.sum_products h3 {
+    font-size: 1.8rem;
 }
 
-.products_pricing,
-.sum_products_pricing,
-.sum_products_total {
-    grid-template-columns: 1fr 1fr;
+.right_items {
+    margin: 5%;
+}
+
+.sum_info {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: "a b c" "d e f" "g h i" "j k l";
+    align-content: space-between;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.cart_info_style {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    font-size: 1.1rem;
 }
 
 .sum_products_pricing {

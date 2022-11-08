@@ -1,20 +1,45 @@
-.main_content {
+.main_content_about_contact_success {
     min-height: 650px;
 }
 
-.main_content > * {
+.main_content_about_contact_success > * {
     flex: 1;
 }
 
-.main_content h3{
+.main_content_about_contact_success h3{
     font-size: 20px;
 }
 
+/*
 .order_nr {
     display: flex;
     justify-content: space-evenly;
     font-size: 20px;
+}*/
+
+.success_nr_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a b";
+    padding-right: 5%;
+    padding-left: 5%;
+    align-content: end;
 }
+
+.success_product_grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: "a b c";
+    padding: 10%;
+    align-content: end;
+}
+
+.success_grid_style{
+   display: grid;
+   align-content: end;
+    
+}
+
 
 .order_product {
     align-items: end;
