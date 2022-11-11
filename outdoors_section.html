@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The product page for the products in the outdoor section, on the Rainy Day website." />
     <title>Rainy Day | Outdoor section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/outdoors_section.css" />
+    <link rel="stylesheet" href="css/media.css" />
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -19,237 +25,189 @@
           <img src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
         </a>
         <div>
-          <label for="bars_menu" class="menu_button_text"><i class="fa-solid fa-bars"></i> All Categories</label>
+          <label for="bars_menu" class="menu-button"><i class="fa-solid fa-bars"></i></label>
           <input type="checkbox" id="bars_menu" />
           <nav>
-            <section class="menu_grid">
-              <div>
-                <ul>
-                  <li class="home"><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
-              <div class="product_menu_grid">
-                <div>
-                  <a href="outdoors_section.html">
-                    Outdoors
-                    <img
-                      src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
-                      alt="A woman enjoys a hot drink while sitting in the forest by a tent."
-                    />
-                  </a>
-                </div>
-                <div>
-                  <a href="#"
-                    >Skiing
-                    <img src="images/chen-gang-nRIDvqLJsuU-unsplash.jpg" alt="Four people dressed in ski equipment, on top of a snowy hill." />
-                  </a>
-                </div>
-                <div>
-                  <a href="#"
-                    >Canoeing
-                    <img
-                      src="images/kamil-kalbarczyk-lY11p3yNVxE-unsplash.jpg"
-                      alt="Man in yellow raincoat canoeing on the water, with green forest in the background and a gray sky."
-                    />
-                  </a>
-                </div>
-              </div>
+            <section class="menu_grid sanse_font">
+              <a class="home" href="index.html">Home</a>
+              <div class="border-left"></div>
+              <a href="about.html">About</a>
+              <div class="border-left"></div>
+              <a href="contact.html">Contact</a>
+              <div class="border-left"></div>
+              <a href="outdoors_section.html"> Outdoors </a>
+              <div class="border-left"></div>
+              <a href="#">Skiing</a>
+              <div class="border-left"></div>
+              <a href="#">Canoeing </a>
             </section>
           </nav>
         </div>
       </div>
-      <input type="search" id="search" name="search" placeholder="Search" class="searchbar no_searchbar" />
+      <div class="searchbar-group no-searchbar">
+        <form action="" class="search-form">
+          <input type="search" id="search" name="search" placeholder="Search" class="searchbar grid_b" />
+          <button type="submit" class="magnifying-glass grid_a"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
       <label
-        ><a href="shopping_cart.html" alt="The shopping cart button, shaped like a shopping cart." class="shop_cart_icon"
-          ><i class="fa-solid fa-cart-shopping"></i> </a
+        ><a href="shopping_cart.html" class="shop_cart_icon"><i class="fa-solid fa-cart-shopping"></i></a
       ></label>
     </header>
     <main>
-      <section class="background_image">
-        <section class="outdoor_section">
-          <section class="outdoor_filter">
+      <section class="background_color">
+        <section class="outdoor_section outdoor_margin sanse_font">
+          <section class="grid_a filter-search">
             <div>
-              <p>Brands</p>
-              <div>
-                <input type="checkbox" name="brands" value="brands" id="brand1" />
-                <label for="brand1">Brand 1</label>
-              </div>
-              <div>
-                <input type="checkbox" name="brands" value="brands" id="brand2" />
-                <label for="brand2">Brand 2</label>
-              </div>
-              <div>
-                <input type="checkbox" name="brands" value="brands" id="brand3" />
-                <label for="brand3">Brand 3</label>
-              </div>
-              <div>
-                <input type="checkbox" name="brands" value="brands" id="brand4" />
-                <label for="brand4">Brand 4</label>
-              </div>
-              <div>
-                <input type="checkbox" name="brands" value="brands" id="brand5" />
-                <label for="brand5">Brand 5</label>
-              </div>
-              <div>
-                <input type="checkbox" name="brands" value="brands" id="brand6" />
-                <label for="brand6">Brand 6</label>
+              <label for="dropdown_menu" class="Filter_style">Filter</label>
+              <input type="checkbox" id="dropdown_menu" />
+              <div class="outdoor_filter">
+                <div>
+                  <p>Brands</p>
+                  <div>
+                    <input type="checkbox" name="brands" value="brands" id="brand1" />
+                    <label for="brand1">Brand 1</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="brands" value="brands" id="brand2" />
+                    <label for="brand2">Brand 2</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="brands" value="brands" id="brand3" />
+                    <label for="brand3">Brand 3</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="brands" value="brands" id="brand4" />
+                    <label for="brand4">Brand 4</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="brands" value="brands" id="brand5" />
+                    <label for="brand5">Brand 5</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="brands" value="brands" id="brand6" />
+                    <label for="brand6">Brand 6</label>
+                  </div>
+                </div>
+                <div>
+                  <p>Size</p>
+                  <div>
+                    <input type="checkbox" name="size" value="size" id="xs" />
+                    <label for="xs">XS</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="size" value="size" id="s" />
+                    <label for="s">S</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="size" value="size" id="m" />
+                    <label for="m">M</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="size" value="size" id="l" />
+                    <label for="l">L</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="size" value="size" id="xl" />
+                    <label for="xl">XL</label>
+                  </div>
+                </div>
+                <div>
+                  <p>Price</p>
+                  <div class="price_field">
+                    <input class="price_field_area 1" type="number" name="price_min" id="price_min" placeholder="0" />
+                    <input class="price_field_area 2" type="number" name="price_max" id="price_max" placeholder="9999" />
+                  </div>
+                  <div class="price-range">
+                    <input type="range" id="price_line" name="price_line" min="0" max="9999" class="range-bar" />
+                  </div>
+                </div>
               </div>
             </div>
-            <div>
-              <p>Size</p>
-              <div>
-                <input type="checkbox" name="size" value="size" id="xs" />
-                <label for="xs">XS</label>
-              </div>
-              <div>
-                <input type="checkbox" name="size" value="size" id="s" />
-                <label for="s">S</label>
-              </div>
-              <div>
-                <input type="checkbox" name="size" value="size" id="m" />
-                <label for="m">M</label>
-              </div>
-              <div>
-                <input type="checkbox" name="size" value="size" id="l" />
-                <label for="l">L</label>
-              </div>
-              <div>
-                <input type="checkbox" name="size" value="size" id="xl" />
-                <label for="xl">XL</label>
-              </div>
-            </div>
-            <div>
-              <p>Price</p>
-              <div class="price_field">
-                <input class="price_field_area 1" type="number" name="price_min" id="price_min" placeholder="0" />
-                <input class="price_field_area 2" type="number" name="price_max" id="price_max" placeholder="9999" />
-              </div>
-              <div>
-                <input type="range" id="price_line" name="price_line" min="0" max="9999" />
-              </div>
+            <div class="searchbar-group outdoor-search">
+              <form action="" class="search-form">
+                <input type="search" id="search" name="search" placeholder="Search" class="searchbar outdoor-searchbar grid_b" />
+                <button type="submit" class="magnifying-glass grid_a"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
             </div>
           </section>
-          <section class="outdoor_section_items">
-            <div class="oudoors_titel outdoorsection">
-              <div class="oudoors_titel_text">
-                <h3><span>Outdoors</span></h3>
-              </div>
-              <img
-                class="outdoor_cropped"
-                src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
-                alt="A woman enjoys a hot drink while sitting in the forest by a tent."
-              />
+
+          <section class="oudoors_titel outdoorsection grid_b">
+            <div class="oudoors_titel_text outdoor_img_text bebas_font">
+              <h3><span>Outdoors</span></h3>
             </div>
-            <section class="outdoors_section_products">
-              <div class="product_style">
-                <div class="product_image">
-                  <img src="images/product_img/RainyDays_Jacket1.png" alt="A thick orange, black and silver raincoat" />
-                </div>
-                <div class="product_style">
-                  <p class="product_name">Float Coat</p>
-                  <p class="price">2999 NOK</p>
-                </div>
+            <img
+              class="outdoor_cropped"
+              src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
+              alt="A woman enjoys a hot drink while sitting in the forest by a tent."
+            />
+          </section>
+          <section class="outdoors_section_products grid_c">
+            <div class="product_style">
+              <div class="product_image grid_a">
+                <img src="images/product_img/RainyDays_Jacket1.png" alt="A thick orange, black and silver raincoat" />
               </div>
-              <div class="product_style">
-                <div class="product_image">
-                  <img src="images/product_img/RainyDays_Jacket3.png" alt="Red ski jacket with black details." />
-                </div>
-                <p class="product_name">Mens windproof ski jacket</p>
-                <p class="price">1500 NOK</p>
+              <p class="product_name grid_b">Float Coat</p>
+              <p class="price brid_c">2999 NOK</p>
+            </div>
+            <div class="product_style">
+              <div class="product_image grid_a">
+                <img src="images/product_img/RainyDays_Jacket2.png" alt="Grey windproof jacket." />
               </div>
-              <div class="product_style">
-                <div class="product_image">
-                  <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
-                </div>
-                <p class="product_name">Scott's Snowmobile jacket</p>
-                <p class="price">3599 NOK</p>
+              <p class="product_name grid_b">Scott's windproof jacket</p>
+              <p class="price brid_c">1000 NOK</p>
+            </div>
+            <div class="product_style">
+              <div class="product_image grid_a">
+                <img src="images/product_img/RainyDays_Jacket3.png" alt="Red ski jacket with black details." />
               </div>
-              <div class="product_style">
-                <a href="product_storm_jacket.html">
-                  <div class="product_image">
-                    <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-                  </div>
-                  <p class="product_name">Storm jacket</p>
-                  <p class="price">990 NOK</p>
-                </a>
+              <p class="product_name grid_b">Mens windproof ski jacket</p>
+              <p class="price brid_c">1500 NOK</p>
+            </div>
+            <div class="product_style">
+              <div class="product_image grid_a">
+                <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
               </div>
-              <div class="product_style">
-                <div class="product_image">
-                  <img src="images/product_img/RainyDays_Jacket5.png" alt="Grey allround biker jacket." />
-                </div>
-                <p class="product_name">Monsun jacket</p>
-                <p class="price">500 NOK</p>
+              <p class="product_name grid_b">Scott's Snowmobile jacket</p>
+              <p class="price brid_c">3599 NOK</p>
+            </div>
+            <div class="product_style">
+              <div class="product_image grid_a">
+                <img src="images/product_img/RainyDays_Jacket5.png" alt="Grey allround biker jacket." />
               </div>
-              <div class="product_style">
-                <div class="product_image">
-                  <img src="images/product_img/RainyDays_Jacket7.png" alt="Olive colored cosy fleece." />
-                </div>
-                <p class="product_name">Patagonia Fleece Jacket</p>
-                <p class="price">999 NOK</p>
+              <p class="product_name grid_b">Monsun jacket</p>
+              <p class="price brid_c">500 NOK</p>
+            </div>
+            <a class="product_style" href="product_storm_jacket.html">
+              <div class="product_image grid_a">
+                <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
               </div>
-              <div class="product_style">
-                <div class="product_image">
-                  <img src="images/product_img/RainyDays_Jacket2.png" alt="Grey windproof jacket." />
-                </div>
-                <p class="product_name">Scott's windproof jacket</p>
-                <p class="price">1000 NOK</p>
+              <p class="product_name grid_b">Storm jacket</p>
+              <p class="price brid_c">990 NOK</p>
+            </a>
+            <div class="product_style">
+              <div class="product_image grid_a">
+                <img src="images/product_img/RainyDays_Jacket7.png" alt="Olive colored cosy fleece." />
               </div>
-              <div class="product_style">
-                <div class="product_image">
-                  <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
-                </div>
-                <p class="product_name">Scott's Snowmobile jacket</p>
-                <p class="price">3599 NOK</p>
-              </div>
-              <div class="product_style">
-                <a href="product_storm_jacket.html">
-                  <div class="product_image">
-                    <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-                  </div>
-                  <p class="product_name">Storm jacket</p>
-                  <p class="price">990 NOK</p>
-                </a>
-              </div>
-              <div class="product_style">
-                <div class="product_image">
-                  <img src="images/product_img/RainyDays_Jacket7.png" alt="Olive colored cosy fleece." />
-                </div>
-                <p class="product_name">Patagonia Fleece Jacket</p>
-                <p class="price">999 NOK</p>
-              </div>
-              <div class="product_style">
-                <div class="product_image">
-                  <img src="images/product_img/RainyDays_Jacket3.png" alt="Red ski jacket with black details." />
-                </div>
-                <p class="product_name">Mens windproof ski jacket</p>
-                <p class="price">1500 NOK</p>
-              </div>
-              <div class="product_style">
-                <div class="product_image">
-                  <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
-                </div>
-                <p class="product_name">Scott's Snowmobile jacket</p>
-                <p class="price">3599 NOK</p>
-              </div>
-            </section>
+              <p class="product_name grid_b">Patagonia Fleece Jacket</p>
+              <p class="price brid_c">999 NOK</p>
+            </div>
           </section>
         </section>
       </section>
     </main>
     <footer>
       <div>
-        <h4>Shortcuts</h4>
-        <a href="shopping_cart.html">Shopping cart</a>
+        <h4 class="bebas_font">Shortcuts</h4>
+        <a class="sanse_font" href="shopping_cart.html">Shopping cart</a>
       </div>
       <div>
-        <h4>Information</h4>
-        <a href="about.html">About</a>
+        <h4 class="bebas_font">Information</h4>
+        <a class="sanse_font" href="about.html">About</a>
       </div>
       <div>
-        <h4>Support</h4>
-        <a href="contact.html">Contact</a>
+        <h4 class="bebas_font">Support</h4>
+        <a class="sanse_font" href="contact.html">Contact</a>
       </div>
     </footer>
   </body>

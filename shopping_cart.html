@@ -24,56 +24,38 @@
           <img src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
         </a>
         <div>
-          <label for="bars_menu" class="menu_button_text"><i class="fa-solid fa-bars"></i> All Categories</label>
+          <label for="bars_menu" class="menu-button"><i class="fa-solid fa-bars"></i></label>
           <input type="checkbox" id="bars_menu" />
           <nav>
-            <section class="menu_grid">
-              <div>
-                <ul>
-                  <li class="home"><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
-              <div class="product_menu_grid">
-                <div>
-                  <a href="outdoors_section.html">
-                    Outdoors
-                    <img
-                      src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
-                      alt="A woman enjoys a hot drink while sitting in the forest by a tent."
-                    />
-                  </a>
-                </div>
-                <div>
-                  <a href="#"
-                    >Skiing
-                    <img src="images/chen-gang-nRIDvqLJsuU-unsplash.jpg" alt="Four people dressed in ski equipment, on top of a snowy hill." />
-                  </a>
-                </div>
-                <div>
-                  <a href="#"
-                    >Canoeing
-                    <img
-                      src="images/kamil-kalbarczyk-lY11p3yNVxE-unsplash.jpg"
-                      alt="Man in yellow raincoat canoeing on the water, with green forest in the background and a gray sky."
-                    />
-                  </a>
-                </div>
-              </div>
+            <section class="menu_grid sanse_font">
+              <a class="home" href="index.html">Home</a>
+              <div class="border-left"></div>
+              <a href="about.html">About</a>
+              <div class="border-left"></div>
+              <a href="contact.html">Contact</a>
+              <div class="border-left"></div>
+              <a href="outdoors_section.html"> Outdoors </a>
+              <div class="border-left"></div>
+              <a href="#">Skiing</a>
+              <div class="border-left"></div>
+              <a href="#">Canoeing </a>
             </section>
           </nav>
         </div>
       </div>
-      <input type="search" id="search" name="search" placeholder="Search" class="searchbar no_searchbar" />
+      <div class="searchbar-group no-searchbar">
+        <form action="" class="search-form">
+          <input type="search" id="search" name="search" placeholder="Search" class="searchbar grid_b" />
+          <button type="submit" class="magnifying-glass grid_a"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
       <label
-        ><a href="shopping_cart.html" alt="The shopping cart button, shaped like a shopping cart." class="shop_cart_icon"
-          ><i class="fa-solid fa-cart-shopping"></i> </a
+        ><a href="shopping_cart.html" class="shop_cart_icon"><i class="fa-solid fa-cart-shopping"></i></a
       ></label>
     </header>
     <main>
-      <section class="background_image">
-        <section class="main_content_cart content_background smal_margin">
+      <section class="background_color smal_margin">
+        <section class="main_content_cart content_background">
           <h3>My Cart</h3>
           <section class="main_shopping_cart sanse_font">
             <section class="products_in_cart">
@@ -95,10 +77,10 @@
               </div>
 
               <section class="delivery_address">
-                <div class="grid_a">
+                <div class="grid_b delivery_titel">
                   <label for="delivery_menu" class="delivery_form_titel">Delivery address</label>
                 </div>
-                <div class="grid_b">
+                <div class="grid_e">
                   <input type="checkbox" id="delivery_menu" />
                   <div class="delivery_menu">
                     <div class="delivery_style">
@@ -136,45 +118,40 @@
                   </div>
                 </div>
               </section>
-              <!--
-              <section class="delivery_address">
-                <label for="delivery_menu" class="delivery_form_titel">Delivery address</label>
-                <input type="checkbox" id="delivery_menu" />
-                <div class="delivery_menu">
-                  <div class="delivery_style">
-                    <label for="first_name">First Name*</label>
-                    <input type="text" name="first_name" id="first_name" />
-                  </div>
-                  <div class="delivery_style">
-                    <label for="last_name">Last Name*</label>
-                    <input type="text" name="last_name" id="last_name" />
-                  </div>
-                  <div class="delivery_style">
-                    <label for="phone_number">Phone Number*</label>
-                    <input type="tel" name="phone_number" id="phone_number" />
-                  </div>
-                  <div class="delivery_style">
-                    <label for="email">Email*</label>
-                    <input type="email" name="email" id="email" />
-                  </div>
-                  <div class="delivery_style">
-                    <label for="address">Address*</label>
-                    <input type="text" name="address" id="address" />
-                  </div>
-                  <div class="delivery_style">
-                    <label for="city">City*</label>
-                    <input type="text" name="city" id="city" />
-                  </div>
-                  <div class="delivery_style">
-                    <label for="country">Country*</label>
-                    <input type="text" name="country" id="country" />
-                  </div>
-                  <div class="delivery_style">
-                    <label for="postal_code">Postal Code*</label>
-                    <input type="number" name="postal_code" id="postal_code" />
+
+              <section class="payment_method">
+                <div class="grid_b delivery_titel">
+                  <label for="payment_menu" class="payment_form_titel">Payment method</label>
+                </div>
+                <div class="grid_e payment-style">
+                  <input type="checkbox" id="payment_menu" class="payment_menu_check" />
+                  <div class="payment_menu">
+                    <div class="card_paypal">
+                      <input type="radio" name="payment" value="payment" id="card" class="radio_card" />
+                      <label for="card">Card</label>
+                      <div class="card">
+                        <div class="delivery_style">
+                          <label for="card_number">Card Number*</label>
+                          <input type="number" name="card_number" id="card_number" />
+                        </div>
+                        <div class="delivery_style">
+                          <label for="expiration_date">Expiration Date*</label>
+                          <input type="date" name="expiration_date" id="expiration_date" />
+                        </div>
+                        <div class="delivery_style">
+                          <label for="cvv_code">CVV code*</label>
+                          <input type="number" name="cvv_code" id="cvv_code" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card_paypal">
+                      <input type="radio" name="payment" value="payment" id="paypal" />
+                      <label for="paypal">PayPal</label>
+                    </div>
                   </div>
                 </div>
-              </section>-->
+              </section>
+              <!--
               <section class="payment_method">
                 <label for="payment_menu" class="payment_form_titel">Payment method</label>
                 <input type="checkbox" id="payment_menu" class="payment_menu_check" />
@@ -202,7 +179,7 @@
                     <label for="paypal">PayPal</label>
                   </div>
                 </div>
-              </section>
+              </section>-->
             </section>
             <section class="sum_products">
               <h3>Summary</h3>
@@ -247,16 +224,16 @@
     </main>
     <footer>
       <div>
-        <h4>Shortcuts</h4>
-        <a href="shopping_cart.html">Shopping cart</a>
+        <h4 class="bebas_font">Shortcuts</h4>
+        <a class="sanse_font" href="shopping_cart.html">Shopping cart</a>
       </div>
       <div>
-        <h4>Information</h4>
-        <a href="about.html">About</a>
+        <h4 class="bebas_font">Information</h4>
+        <a class="sanse_font" href="about.html">About</a>
       </div>
       <div>
-        <h4>Support</h4>
-        <a href="contact.html">Contact</a>
+        <h4 class="bebas_font">Support</h4>
+        <a class="sanse_font" href="contact.html">Contact</a>
       </div>
     </footer>
   </body>

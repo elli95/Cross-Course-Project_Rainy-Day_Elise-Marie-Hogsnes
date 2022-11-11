@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The about page of the Rainy Day website." />
     <title>Rainy Day | About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/media.css" />
@@ -18,56 +24,38 @@
           <img src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
         </a>
         <div>
-          <label for="bars_menu" class="menu_button_text"><i class="fa-solid fa-bars"></i> All Categories</label>
+          <label for="bars_menu" class="menu-button"><i class="fa-solid fa-bars"></i></label>
           <input type="checkbox" id="bars_menu" />
           <nav>
-            <section class="menu_grid">
-              <div>
-                <ul>
-                  <li class="home"><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
-              <div class="product_menu_grid">
-                <div>
-                  <a href="outdoors_section.html">
-                    Outdoors
-                    <img
-                      src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
-                      alt="A woman enjoys a hot drink while sitting in the forest by a tent."
-                    />
-                  </a>
-                </div>
-                <div>
-                  <a href="#"
-                    >Skiing
-                    <img src="images/chen-gang-nRIDvqLJsuU-unsplash.jpg" alt="Four people dressed in ski equipment, on top of a snowy hill." />
-                  </a>
-                </div>
-                <div>
-                  <a href="#"
-                    >Canoeing
-                    <img
-                      src="images/kamil-kalbarczyk-lY11p3yNVxE-unsplash.jpg"
-                      alt="Man in yellow raincoat canoeing on the water, with green forest in the background and a gray sky."
-                    />
-                  </a>
-                </div>
-              </div>
+            <section class="menu_grid sanse_font">
+              <a class="home" href="index.html">Home</a>
+              <div class="border-left"></div>
+              <a href="about.html">About</a>
+              <div class="border-left"></div>
+              <a href="contact.html">Contact</a>
+              <div class="border-left"></div>
+              <a href="outdoors_section.html"> Outdoors </a>
+              <div class="border-left"></div>
+              <a href="#">Skiing</a>
+              <div class="border-left"></div>
+              <a href="#">Canoeing </a>
             </section>
           </nav>
         </div>
       </div>
-      <input type="search" id="search" name="search" placeholder="Search" class="searchbar no_searchbar" />
+      <div class="searchbar-group no-searchbar">
+        <form action="" class="search-form">
+          <input type="search" id="search" name="search" placeholder="Search" class="searchbar grid_b" />
+          <button type="submit" class="magnifying-glass grid_a"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
       <label
-        ><a href="shopping_cart.html" alt="The shopping cart button, shaped like a shopping cart." class="shop_cart_icon"
-          ><i class="fa-solid fa-cart-shopping"></i> </a
+        ><a href="shopping_cart.html" class="shop_cart_icon"><i class="fa-solid fa-cart-shopping"></i></a
       ></label>
     </header>
-    <main class="image_filter">
-      <section class="background_image">
-        <section class="main_content_about_contact_success content_background smal_margin">
+    <main>
+      <section class="background_color smal_margin">
+        <section class="main_content_about_contact_success content_background">
           <h3>About Us</h3>
           <p>
             We are a pasionate team working to offer quality men’s and women’s waterproof rain jackets, suitable for any activity that life would
@@ -96,16 +84,16 @@
     </main>
     <footer>
       <div>
-        <h4>Shortcuts</h4>
-        <a href="shopping_cart.html">Shopping cart</a>
+        <h4 class="bebas_font">Shortcuts</h4>
+        <a class="sanse_font" href="shopping_cart.html">Shopping cart</a>
       </div>
       <div>
-        <h4>Information</h4>
-        <a href="about.html">About</a>
+        <h4 class="bebas_font">Information</h4>
+        <a class="sanse_font" href="about.html">About</a>
       </div>
       <div>
-        <h4>Support</h4>
-        <a href="contact.html">Contact</a>
+        <h4 class="bebas_font">Support</h4>
+        <a class="sanse_font" href="contact.html">Contact</a>
       </div>
     </footer>
   </body>

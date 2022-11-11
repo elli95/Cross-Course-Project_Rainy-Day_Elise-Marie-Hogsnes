@@ -22,9 +22,7 @@
 }
 
 .contact_form {
-    display: grid;
-    grid-gap: 20px;
-    justify-content: center;
+    display: block;
 }
 
 .contact_form_titel {
@@ -33,14 +31,17 @@
     border-radius: 5px;
     width: 308px;
     padding: 5px;
+    display: inherit;
+    left: 50%;
+    transform: translate(-50%);
+    position: relative;
 }
 
-form {
+.contact_form form {
     display: none;
     position: absolute;
-    top: 63.5%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     background: #BCBCBC;
     height: auto;
     z-index: 3;
@@ -50,7 +51,7 @@ form {
     max-width: 300px;
 }
 
-form :is(input, select, textarea) {
+.contact_form form :is(input, select, textarea) {
     width: 250px;
     border-radius: 5px;
 }
@@ -65,8 +66,9 @@ form :is(input, select, textarea) {
     display: none;
 }
 
-#contact_menu:checked ~ form {
-    display: block;
+#contact_menu:checked ~ form { 
+    display: grid;
+    justify-items: center;
 }
 
 .contact_page_map {

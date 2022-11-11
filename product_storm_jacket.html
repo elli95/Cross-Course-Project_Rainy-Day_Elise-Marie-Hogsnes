@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="css/media.css" />
@@ -21,75 +24,57 @@
           <img src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
         </a>
         <div>
-          <label for="bars_menu" class="menu_button_text"><i class="fa-solid fa-bars"></i> All Categories</label>
+          <label for="bars_menu" class="menu-button"><i class="fa-solid fa-bars"></i></label>
           <input type="checkbox" id="bars_menu" />
           <nav>
-            <section class="menu_grid">
-              <div>
-                <ul>
-                  <li class="home"><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
-              <div class="product_menu_grid">
-                <div>
-                  <a href="outdoors_section.html">
-                    Outdoors
-                    <img
-                      src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
-                      alt="A woman enjoys a hot drink while sitting in the forest by a tent."
-                    />
-                  </a>
-                </div>
-                <div>
-                  <a href="#"
-                    >Skiing
-                    <img src="images/chen-gang-nRIDvqLJsuU-unsplash.jpg" alt="Four people dressed in ski equipment, on top of a snowy hill." />
-                  </a>
-                </div>
-                <div>
-                  <a href="#"
-                    >Canoeing
-                    <img
-                      src="images/kamil-kalbarczyk-lY11p3yNVxE-unsplash.jpg"
-                      alt="Man in yellow raincoat canoeing on the water, with green forest in the background and a gray sky."
-                    />
-                  </a>
-                </div>
-              </div>
+            <section class="menu_grid sanse_font">
+              <a class="home" href="index.html">Home</a>
+              <div class="border-left"></div>
+              <a href="about.html">About</a>
+              <div class="border-left"></div>
+              <a href="contact.html">Contact</a>
+              <div class="border-left"></div>
+              <a href="outdoors_section.html"> Outdoors </a>
+              <div class="border-left"></div>
+              <a href="#">Skiing</a>
+              <div class="border-left"></div>
+              <a href="#">Canoeing </a>
             </section>
           </nav>
         </div>
       </div>
-      <input type="search" id="search" name="search" placeholder="Search" class="searchbar no_searchbar" />
+      <div class="searchbar-group no-searchbar">
+        <form action="" class="search-form">
+          <input type="search" id="search" name="search" placeholder="Search" class="searchbar grid_b" />
+          <button type="submit" class="magnifying-glass grid_a"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
       <label
-        ><a href="shopping_cart.html" alt="The shopping cart button, shaped like a shopping cart." class="shop_cart_icon"
-          ><i class="fa-solid fa-cart-shopping"></i> </a
+        ><a href="shopping_cart.html" class="shop_cart_icon"><i class="fa-solid fa-cart-shopping"></i></a
       ></label>
     </header>
     <main>
-      <section class="background_image">
-        <section class="content_background main_content_product">
-          <section class="collum_one">
+      <section class="background_color">
+        <section class="content_background content_size_products main_content_product smal_margin sanse_font">
+          <div class="grid_a product_center">
             <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-            <div class="product_description">
-              <p>About:</p>
-              <p>A Storm Jacket is a stylish, waterproof, and durable jacket for active individuals.</p>
-              <p>This jacket is made of high-quality materials that are guaranteed to keep you dry in any weather.</p>
-              <p>It is a sleek and sleek design that will keep you looking professional and stylish.</p>
+          </div>
+          <div class="grid_b product_description product_center">
+            <p>About:</p>
+            <p>A Storm Jacket is a stylish, waterproof, and durable jacket for active individuals.</p>
+            <p>This jacket is made of high-quality materials that are guaranteed to keep you dry in any weather.</p>
+            <p>It is a sleek and sleek design that will keep you looking professional and stylish.</p>
+          </div>
+          <div class="grid_c storm_product_info">
+            <div class="product_name">
+              <p>Storm Jacket</p>
             </div>
-          </section>
-          <section class="collum_two">
-            <div class="Product_info">
-              <div class="product_name">
-                <p>Storm Jacket</p>
-              </div>
-              <div class="product_price">
-                <p>Price:</p>
-                <p>990 NOK</p>
-              </div>
+            <div class="product_price">
+              <p>Price:</p>
+              <p class="bold">990 NOK</p>
             </div>
+          </div>
+          <div class="grid_d">
             <div class="color_selection">
               <div class="color_red">
                 <div class="check position"></div>
@@ -122,8 +107,12 @@
                 <p>Orange</p>
               </div>
             </div>
+          </div>
+          <div class="grid_e size_menu product_center">
+            <label for="contact_menu" class="size_bar_name">Choose a size *</label>
+            <input type="checkbox" id="contact_menu" />
+
             <div class="size_bar">
-              <label class="size_bar_name">Choose a size *</label>
               <div>
                 <input type="radio" name="product_size" value="xs" id="xs" />
                 <label class="size_bar_name_option bar_start" for="xs">XS</label>
@@ -145,25 +134,27 @@
                 <label class="size_bar_name_option bar_end" for="xl">XL</label>
               </div>
             </div>
+          </div>
+          <div class="grid_f product_button">
             <div class="add_to_cart_button">
               <a href="shopping_cart.html" class="button button_confirm">Add to cart</a>
             </div>
-          </section>
+          </div>
         </section>
       </section>
     </main>
     <footer>
       <div>
-        <h4>Shortcuts</h4>
-        <a href="shopping_cart.html">Shopping cart</a>
+        <h4 class="bebas_font">Shortcuts</h4>
+        <a class="sanse_font" href="shopping_cart.html">Shopping cart</a>
       </div>
       <div>
-        <h4>Information</h4>
-        <a href="about.html">About</a>
+        <h4 class="bebas_font">Information</h4>
+        <a class="sanse_font" href="about.html">About</a>
       </div>
       <div>
-        <h4>Support</h4>
-        <a href="contact.html">Contact</a>
+        <h4 class="bebas_font">Support</h4>
+        <a class="sanse_font" href="contact.html">Contact</a>
       </div>
     </footer>
   </body>

@@ -1,15 +1,17 @@
-@media (max-width: 520px){
+@media (max-width: 600px){
+    /*520*/
     .smal_margin {
-        margin: 130px 10px 10px 10px;
+        padding: 20px 10px 10px 10px;
     }
 
     .contact_form_titel {
         width: 270px;
     }
 
+    /*
     form {
         max-width: 260px;
-    }
+    }*/
 
     form :is(input, select, textarea) {
         width: 190px;
@@ -20,18 +22,26 @@
 
     /*header*/
     header {
-    padding: 10px;
-    grid-template-columns: 1fr 1fr 1fr;  
-    max-height: 105px;
+        padding: 10px;
+        grid-template-columns: auto 1fr auto;
+        max-height: 105px;  
+        padding-bottom: 53px;
     }
 
     header img,
+    .searchbar-group,
     .searchbar,
     .no_searchbar {
         display: flex;
         position: inherit;
         transform: none;
+        padding-bottom: 7px;
+    } 
+    
+    .product_menu_grid img {
+        padding-bottom: 0;
     }
+
 
     .logo_menu {
         display: flex;
@@ -40,27 +50,57 @@
         margin-left: 30px;
     }
 
-    nav {
-        top: 125px;
+    nav {  
+        display: flex;
+        justify-content: center;
+        top: 113px;
         left: 0;
         max-width: 100%;
         width: 100%;
     }
 
+    .menu_grid {
+        grid-template-columns: repeat(11, 1fr);
+        grid-template-rows: 1fr;
+        justify-items: center;
+    }
+    
+    .menu_grid a {
+        padding: 6px 15px 7px 15px;
+        border-top: none;
+    }
+    
+    
+    #bars_menu:checked ~ nav {
+        border: none;
+        border-radius: 0;
+    }
+    
+    .border-left {
+        display: inherit;
+        border-left: 3px solid #757373;
+    }
+
+    .menu-button {  
+        display: none;
+    }
+
+    /*
     .menu_button_text {
-    display: flex;
-    align-items: center;
-    grid-gap: 7px;   
-    font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        grid-gap: 7px;   
+        font-size: 1.1rem;
     }
 
     .menu_button_text p{
         display: flex;
-    }
+    }*/
 
+    /*
     .home {
         display: none;
-    }
+    }*/
 
     .product_menu_grid {  
         display: flex;
@@ -83,20 +123,119 @@
 
     /*footer*/
     footer {
-    display: flex;    
-    align-items: center;
-    justify-content: space-evenly;
-    padding-bottom: 20px;
-    text-align: center;
+        display: flex;    
+        align-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 20px;
+        text-align: center;
     }
 
     footer h4 {
-    font-size: 1.3rem;
-    text-decoration: underline;
-    text-transform: uppercase
+        font-size: 2rem;
+        text-decoration: underline;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    footer a {
+        font-size: 1.15rem;
+        text-decoration: none;
     }
 
     /*index*/
+    .slide-buttons .middle {
+        display: none;
+    }
+    .index_margin {
+        padding: 50px 10px 10px 10px;
+    }
+
+    .oudoors_titel_text,
+    .skiing_titel_text,
+    .canoeing_titel_text {
+        font-size: 3rem;
+        top: 45px;
+    }
+
+    .product_slide {
+        width: 520px;
+    }
+
+    /*outdoor*/
+    .outdoor-search {
+        display: none;
+    }
+
+    .filter-search {
+        justify-self: auto;
+    }
+
+    .outdoors_section_products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .outdoor_margin {  
+        padding: 50px 10px 185px 10px;
+    }
+
+    /*product*/
+    .main_content_product {
+        margin: 70px auto;
+    }
+
+    .color_selection :is(label, input) {
+        padding: 30px;
+    }
+
+    .check { 
+        height: 45px;
+        width: 21px;
+        margin-left: 16px;
+    }
+
+    /*shopping cart*/
+    .main_content_cart,
+    .main_content_product {
+        max-width: 90%;
+    }
+
+    /*contact/about/success*/
+    .main_content_about_contact_success {
+        margin: 20px auto;
+        width: 500px;
+    }
+
+    
+}
+
+
+@media (min-width: 900px){
+    .search-form input {
+        width: 500px;
+    }
+
+    .menu_grid a {
+        font-size: 1.4rem;
+        padding: 6px 25px 7px 25px;
+    }
+
+    /*index*/
+    .product_slide {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: auto;
+        gap: 2.5%;
+    }
+
+    .slide-buttons {
+        display: none;
+    }
+
+    .product_style p {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
     .top_img_index {
         display: flex;
         position: relative;
@@ -156,38 +295,90 @@
 
     .delivery_form_titel,
     .payment_form_titel {   
-        width: 450px;
+        width: 386px;
+    }
+
+    /*outdoor site*/
+
+    .filter-search {
+        align-self: flex-start;
+    }
+
+    .outdoor_filter {
+        margin: 25px;
+        margin-top: 50px;
+    }
+
+    .outdoor_cropped {  
+        height: 61%;
+        object-fit: cover;
+        object-position: 0px 0px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .oudoors_titel_text h3 {
+        font-size: 3rem;
+    }
+
+    .outdoor_section {
+    grid-template-areas: "a b" "a c" "a c";
+    }
+
+    .outdoors_section_products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Filter_style {
+        display: none;
+    }
+
+    .outdoor_filter {
+        display: grid;
+        position: inherit;
+        margin-top: 35%;
+    }
+    
+    .outdoorsection {      
+        margin: -44px -45px -60px -45px;
+    }
+
+    .outdoor_img_text {
+        top: 100px;
+    }
+
+    /*product*/
+    .main_content_product {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "a c" "a d" "a e" "b f";
+    }
+
+    .size_menu {
+        min-height: 203px;
+      }
+
+    .size_bar {
+        display: contents;
     }
 
     /*shopping cart*/
     .delivery_menu,
     .payment_menu,
     .card {
-        width: 440px;
+        width: 382px;
     }
 
-    .main_content_cart,
-    .main_content_product {
-        max-width: 80%;
+    .payment-style {
+        justify-items: inherit;
     }
 
-    /*contact/about/success*/
-    .main_content_about_contact_success {
-        margin: 20px auto;
-        max-width: 500px;
+    .products_in_cart {
+        grid-gap: 0px;
+        width: 44%;
     }
 
-    
-}
-
-
-@media (min-width: 900px){
-
-    .menu_button_text {
-        font-size: 2rem;
-    }
-
-    /*shopping cart*/
     .main_shopping_cart {
         flex-direction: row;
         grid-gap: 100px;
@@ -197,17 +388,46 @@
         grid-template-rows: repeat(3,1fr auto);
     }
 
-    .delivery_menu,
-    .payment_menu {
-        top: 288px;
+    #delivery_menu:checked ~ .delivery_menu {
+        transform: none;
+        left: unset;
     }
 
-    .card {
-        top: 88px;
-    }
-
-    .payment_menu {
-        top: 410px;  
+    .delivery_titel {
+        width: 462px;
     }
     
+}
+@media (min-width: 1140px){
+    .outdoors_section_products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .outdoor_img_text {
+        top: 118px;
+    }
+
+    .main_content_cart,
+    .main_content_product {
+        max-width: 80%;
+    }
+
+    .delivery_form_titel,
+    .payment_form_titel {   
+        width: 450px;
+    }
+
+    .delivery_menu,
+    .payment_menu,
+    .card {
+        width: 440px;
+    }
+}
+
+@media (min-width: 1300px){
+    /*product*/
+
+    .content_size_products {
+        max-width: 1200px;
+    }
 }

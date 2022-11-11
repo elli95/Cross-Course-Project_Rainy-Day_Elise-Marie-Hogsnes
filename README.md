@@ -1,6 +1,8 @@
-# Project Title
+# HTML and CSS Course Assignment by Elise Marie Hogsnes
 
-A simple overview of use/purpose.
+This is the HTML & CSS course assignment by Elise Marie Hogsnes,
+from the August 2022 frontend development class, Noroff.
+This project shows my version of the rainyDay task.
 
 ## Description
 

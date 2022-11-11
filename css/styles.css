@@ -1,4 +1,18 @@
+body {
+    animation-name: page-animation;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    background-color: #3e3e3e;
+    opacity: 0;
+}
 
+@keyframes page-animation {
+    0% {opacity: 0;}
+    20% {opacity: 0.25;}
+    50% {opacity: 0.5;}
+    75% {opacity: 0.75;}
+    100% {opacity: 1;}
+}
 
 img {
     width: 100%;
@@ -8,23 +22,55 @@ a {
     color: #000000;
 }
 
-.background_image {
-    backdrop-filter: blur(3px);
-}
+
 
 main {
-    background-image: url(../images/tony-reid-eMaS4mzaksU-unsplash.jpg);
+    position: relative;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 1;
+}
+
+
+/* reference: How to make a background-image transparent in CSS: https://www.youtube.com/watch?v=LQsjNmkqUOc */
+main::before,
+main::after,
+.background_color::before {
+    content: "";
+    position: absolute;
+     top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    z-index: 2;
+    background-position: top center;
+}
+
+main::before {
+    background-image: url(../images/tony-reid-eMaS4mzaksU-unsplash.jpg);
+    filter: blur(3px);
+    opacity: 0.8;
+}
+
+main::after {
+    background-image: url(../images/peter-conrad-lPJwSo7VeXM-unsplash.png);
+    background-size: 1200px;
+    opacity: 0.5;
+    filter: brightness(40%);
+}
+
+.background_color::before {
+    background-color: #000000;
+    opacity: 0.25;
 }
 
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     margin: 0px;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 header{
@@ -35,7 +81,7 @@ header{
 }
 
 header img,
-.searchbar {
+.searchbar-group {
     max-width: 200px;
     position: absolute;
     left: 50%;
@@ -44,14 +90,67 @@ header img,
     z-index: 3;
 }
 
+.searchbar-group {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #BCBCBC;
+    box-shadow: 0px 5px 10px 1px gray;
+    border-radius: 5px;
+    padding: 0px 5px;
+    width: max-content;
+    max-width: 100%;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.search-form input {
+    width: 245px;
+}
+
+.searchbar {
+    max-width: 500px;
+    background-color: #BCBCBC;
+    padding: 10px;
+    border: 0;
+    font-size: 1.1rem;
+}
+
+.searchbar:focus::placeholder {
+    color: transparent;
+} 
+
+.magnifying-glass {  
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 40%;
+    border: 0;
+    height: 37px;
+    width: 37px;
+    margin-right: 0px;
+    font-size: 1.3rem;
+    
+}
+
+.no-searchbar {
+    display: none;
+}
+
+.shop_cart_icon {
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+/*
 .searchbar {
     top: 200px;
     min-width: 25%;
-}
+}*/
 
-.no_searchbar {
-    display: none;
-}
+
 
 header,
 footer{
@@ -65,6 +164,7 @@ footer {
 .main_content_about_contact_success {
     max-width: 500px;
     margin: 130px auto;
+    z-index: 2;
 }
 
 .content_background {
@@ -99,17 +199,30 @@ footer {
     border-radius: 0px 0px 5px 5px;
 }
 
+.product_image {
+    display: flex;
+    justify-content: center;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    padding: 20px;
+    align-self: start;
+}
+
+.product_style img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.product_style p {
+    font-size: 1rem;
+    margin: 3px;
+    max-width: 124px;
+}
+
 /*Navigation*/
 
-.searchbar {
-    max-width: 500px;
-}
-
-.shop_cart_icon {
-    padding-right: 20px;
-    font-size: 30px;
-}
-
+/*
 .menu_button_text {
     font-size: 2rem;
 }
@@ -117,6 +230,24 @@ footer {
 .menu_button_text p {
     display: none;
     font-size: 2rem;
+}*/
+
+
+
+.product_menu_grid {  
+    display: none;
+}
+
+nav li {
+    display: block;
+    padding: 20px 30px;
+    font-size: 24px;
+    padding-left: 0;
+}
+
+.menu-button {  
+    font-size: 2rem;
+    padding-left: 10px;
 }
 
 nav{
@@ -133,19 +264,27 @@ nav{
 
 .menu_grid {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: auto;
+    padding: 10px;
+    width: 65%;
     justify-content: center;
 }
 
-.product_menu_grid {  
+.menu_grid a {
+    font-size: 1.03rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px 15px 30px;
+    border-top: 1px solid #757373;
+}
+
+.border-left {
     display: none;
 }
 
-nav li {
-    display: block;
-    padding: 20px 30px;
-    font-size: 24px;
-    padding-left: 0;
+.menu_grid .home {
+    border-top: none;
 }
 
 #bars_menu {
@@ -153,7 +292,10 @@ nav li {
 }
 
 #bars_menu:checked ~ nav {
-    display: block;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #757373;
 }
 
 /* buttons*/
@@ -189,7 +331,7 @@ font-family: 'Open Sans', sans-serif, Verdana, Tahoma;
 }
 
 .bebas_font {
-font-family: "Bebas Neue";
+    font-family: "Bebas Neue";
 }
 
 /*grid cells*/
@@ -232,21 +374,3 @@ font-family: "Bebas Neue";
 .grid_l {
     grid-area: l;
 }
-
-/*
-.background_image {
-    backdrop-filter: blur(3px);
-    background-image: url(../images/peter-conrad-lPJwSo7VeXM-unsplash.png);
-    /*
-    background-image: url(../images/peter-conrad-lPJwSo7VeXM-unsplash.jpg);
-}*/
-
-/*
-.image_filter {
-    backdrop-filter: blur(5px);
-    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(../images/peter-conrad-lPJwSo7VeXM-unsplash.jpg#filter);
-    background-size: contain;
-    background-repeat: repeat;
-    opacity: 0.33;
-    z-index: 1;
-}*/
