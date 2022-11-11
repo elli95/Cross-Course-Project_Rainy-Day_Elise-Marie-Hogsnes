@@ -1,10 +1,10 @@
 @media (max-width: 600px){
     /*520*/
-    .smal_margin {
+    .smal-margin {
         padding: 20px 10px 10px 10px;
     }
 
-    .contact_form_titel {
+    .contact-form-titel {
         width: 270px;
     }
 
@@ -31,19 +31,19 @@
     header img,
     .searchbar-group,
     .searchbar,
-    .no_searchbar {
+    .no-searchbar {
         display: flex;
         position: inherit;
         transform: none;
         padding-bottom: 7px;
     } 
     
-    .product_menu_grid img {
+    .product-menu-grid img {
         padding-bottom: 0;
     }
 
 
-    .logo_menu {
+    .logo-menu {
         display: flex;
         align-items: center;
         grid-gap: 10px;
@@ -59,26 +59,26 @@
         width: 100%;
     }
 
-    .menu_grid {
+    .menu-grid {
         grid-template-columns: repeat(11, 1fr);
         grid-template-rows: 1fr;
         justify-items: center;
     }
     
-    .menu_grid a {
+    .menu-grid a {
         padding: 6px 15px 7px 15px;
         border-top: none;
     }
     
     
-    #bars_menu:checked ~ nav {
+    #bars-menu:checked ~ nav {
         border: none;
         border-radius: 0;
     }
     
     .border-left {
         display: inherit;
-        border-left: 3px solid #757373;
+        border-left: 3px solid var(--main-border-color);
     }
 
     .menu-button {  
@@ -86,14 +86,14 @@
     }
 
     /*
-    .menu_button_text {
+    .menu-button-text {
         display: flex;
         align-items: center;
         grid-gap: 7px;   
         font-size: 1.1rem;
     }
 
-    .menu_button_text p{
+    .menu-button-text p{
         display: flex;
     }*/
 
@@ -102,7 +102,7 @@
         display: none;
     }*/
 
-    .product_menu_grid {  
+    .product-menu-grid {  
         display: flex;
         grid-gap: 5%;
         margin: 10px;
@@ -110,14 +110,14 @@
         align-self: center;
     }
     
-    .product_menu_grid a {
+    .product-menu-grid a {
         display: grid;
         background-color: #9D9D9D;
         border-radius: 10px;
         font-size: 20px;
     }
     
-    .product_menu_grid img {
+    .product-menu-grid img {
         border-radius: 0px 0px 10px 10px;
     }
 
@@ -146,18 +146,18 @@
     .slide-buttons .middle {
         display: none;
     }
-    .index_margin {
+    .index-margin {
         padding: 50px 10px 10px 10px;
     }
 
-    .oudoors_titel_text,
-    .skiing_titel_text,
-    .canoeing_titel_text {
+    .oudoors-titel-text,
+    .skiing-titel-text,
+    .canoeing-titel-text {
         font-size: 3rem;
         top: 45px;
     }
 
-    .product_slide {
+    .product-slide {
         width: 520px;
     }
 
@@ -170,20 +170,20 @@
         justify-self: auto;
     }
 
-    .outdoors_section_products {
+    .outdoors-section-products {
         grid-template-columns: repeat(3, 1fr);
     }
     
-    .outdoor_margin {  
+    .outdoor-margin {  
         padding: 50px 10px 185px 10px;
     }
 
     /*product*/
-    .main_content_product {
+    .main-content-product {
         margin: 70px auto;
     }
 
-    .color_selection :is(label, input) {
+    .color-selection :is(label, input) {
         padding: 30px;
     }
 
@@ -194,13 +194,13 @@
     }
 
     /*shopping cart*/
-    .main_content_cart,
-    .main_content_product {
+    .main-content-cart,
+    .main-content-product {
         max-width: 90%;
     }
 
     /*contact/about/success*/
-    .main_content_about_contact_success {
+    .main-content-about-contact-success {
         margin: 20px auto;
         width: 500px;
     }
@@ -214,13 +214,13 @@
         width: 500px;
     }
 
-    .menu_grid a {
+    .menu-grid a {
         font-size: 1.4rem;
         padding: 6px 25px 7px 25px;
     }
 
     /*index*/
-    .product_slide {
+    .product-slide {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         width: auto;
@@ -231,55 +231,55 @@
         display: none;
     }
 
-    .product_style p {
+    .product-style p {
         font-size: 1.5rem;
         max-width: 100%;
     }
 
-    .top_img_index {
+    .top-img-index {
         display: flex;
         position: relative;
         max-width: 1000px;
         margin: 40px auto;
     }
     
-    .top_img_index img{
+    .top-img-index img{
         border-radius: 20px;
-        outline: 2px solid #A7B5BF;
+        outline: 2px solid var(--content-img-border);
         box-shadow: 0px 5px 10px 1px gray;
     }
     
-    .top_img_index_text_1,
-    .top_img_index_text_2,
-    .top_img_index_text_3 {
+    .top-img-index-text-1,
+    .top-img-index-text-2,
+    .top-img-index-text-3 {
         position: absolute;
         font-family: "Bebas Neue";
-        color: #D9D9D9;
+        color: var(--header-footer-page-product);
         transform: translate(-50%, -50%);
     }
     
-    .top_img_index_text_1 {
+    .top-img-index-text-1 {
         left: 28%;
         top: 30%;
         font-size: 3.3rem;
-        text-shadow: 0px 5px 5px #303030;
+        text-shadow: 0px 5px 5px var(--background-dark-color);
     }
     
-    .top_img_index_text_2 {
+    .top-img-index-text-2 {
         left: 19.5%;
         top: 50%;
         font-size: 1.2rem;
     }
     
-    .top_img_index_text_3 {  
+    .top-img-index-text-3 {  
         left: 18.3%;
         top: 70%;
     }
     
-    .top_img_button {
+    .top-img-button {
         font-size: 1.4rem;
-        background-color: #D9D9D9;
-        border: 1px solid #BCBCBC;
+        background-color: var(--header-footer-page-product);
+        border: 1px solid var(--object-background);
         box-shadow: 0px 5px 10px 1px gray;
         display: flex;
         justify-content: center;
@@ -289,12 +289,12 @@
         text-decoration: none;
     }
     
-    .top_img_index h3 {
+    .top-img-index h3 {
         text-align: center;
     }
 
-    .delivery_form_titel,
-    .payment_form_titel {   
+    .delivery-form-titel,
+    .payment-form-titel {   
         width: 386px;
     }
 
@@ -304,12 +304,12 @@
         align-self: flex-start;
     }
 
-    .outdoor_filter {
+    .outdoor-filter {
         margin: 25px;
         margin-top: 50px;
     }
 
-    .outdoor_cropped {  
+    .outdoor-cropped {  
         height: 61%;
         object-fit: cover;
         object-position: 0px 0px;
@@ -317,23 +317,23 @@
         align-self: center;
     }
 
-    .oudoors_titel_text h3 {
+    .oudoors-titel-text h3 {
         font-size: 3rem;
     }
 
-    .outdoor_section {
+    .outdoor-section {
     grid-template-areas: "a b" "a c" "a c";
     }
 
-    .outdoors_section_products {
+    .outdoors-section-products {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .Filter_style {
+    .filter-style {
         display: none;
     }
 
-    .outdoor_filter {
+    .outdoor-filter {
         display: grid;
         position: inherit;
         margin-top: 35%;
@@ -343,29 +343,29 @@
         margin: -44px -45px -60px -45px;
     }
 
-    .outdoor_img_text {
+    .outdoor-img-text {
         top: 100px;
     }
 
     /*product*/
-    .main_content_product {
+    .main-content-product {
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "a c" "a d" "a e" "b f";
     }
 
-    .size_menu {
+    .size-menu {
         min-height: 203px;
       }
 
-    .size_bar {
+    .size-bar {
         display: contents;
     }
 
     /*shopping cart*/
-    .delivery_menu,
-    .payment_menu,
+    .delivery-menu,
+    .payment-menu,
     .card {
         width: 382px;
     }
@@ -374,51 +374,51 @@
         justify-items: inherit;
     }
 
-    .products_in_cart {
+    .products-in-cart {
         grid-gap: 0px;
         width: 44%;
     }
 
-    .main_shopping_cart {
+    .main-shopping-cart {
         flex-direction: row;
         grid-gap: 100px;
     }
 
-    .products_in_cart {  
+    .products-in-cart {  
         grid-template-rows: repeat(3,1fr auto);
     }
 
-    #delivery_menu:checked ~ .delivery_menu {
+    #delivery-menu:checked ~ .delivery-menu {
         transform: none;
         left: unset;
     }
 
-    .delivery_titel {
+    .delivery-titel {
         width: 462px;
     }
     
 }
 @media (min-width: 1140px){
-    .outdoors_section_products {
+    .outdoors-section-products {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .outdoor_img_text {
+    .outdoor-img-text {
         top: 118px;
     }
 
-    .main_content_cart,
-    .main_content_product {
+    .main-content-cart,
+    .main-content-product {
         max-width: 80%;
     }
 
-    .delivery_form_titel,
-    .payment_form_titel {   
+    .delivery-form-titel,
+    .payment-form-titel {   
         width: 450px;
     }
 
-    .delivery_menu,
-    .payment_menu,
+    .delivery-menu,
+    .payment-menu,
     .card {
         width: 440px;
     }
@@ -427,7 +427,7 @@
 @media (min-width: 1300px){
     /*product*/
 
-    .content_size_products {
+    .content-size-products {
         max-width: 1200px;
     }
 }

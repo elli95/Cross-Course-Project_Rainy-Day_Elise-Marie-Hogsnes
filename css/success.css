@@ -1,23 +1,23 @@
-.main_content_about_contact_success {
+.main-content-about-contact-success {
     min-height: 650px;
 }
 
-.main_content_about_contact_success > * {
+.main-content-about-contact-success > * {
     flex: 1;
 }
 
-.main_content_about_contact_success h3{
+.main-content-about-contact-success h3{
     font-size: 20px;
 }
 
 /*
-.order_nr {
+.order-nr {
     display: flex;
     justify-content: space-evenly;
     font-size: 20px;
 }*/
 
-.success_nr_grid {
+.success-nr-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "a b";
@@ -26,7 +26,7 @@
     align-content: end;
 }
 
-.success_product_grid {
+.success-product-grid {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
     grid-template-areas: "a b c";
@@ -34,14 +34,14 @@
     align-content: end;
 }
 
-.success_grid_style{
+.success-grid-style{
    display: grid;
    align-content: end;
     
 }
 
 
-.order_product {
+.order-product {
     align-items: end;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -50,12 +50,12 @@
     margin-bottom: 30px;
 }
 
-.delivery_info {
+.delivery-info {
     max-width: 60%;  
     margin-left: auto;
     margin-right: auto;
 }
 
-.continue_button {
+.continue-button {
     align-self: center;
 }

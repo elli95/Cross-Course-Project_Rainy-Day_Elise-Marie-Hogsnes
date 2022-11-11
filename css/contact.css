@@ -1,33 +1,33 @@
-.main_content_about_contact_success {
+.main-content-about-contact-success {
     min-height: 250px;
 }
 
-.main_content_about_contact_success h3 {
+.main-content-about-contact-success h3 {
     padding-top: 35px;
     max-width: 355px;
     align-self: center;
 }
 
-.main_content_about_contact_success p {
+.main-content-about-contact-success p {
     align-self: center;
 }
 
-.contact_info{  
+.contact-info{  
     width: 116px;
     align-self: center;
 }
 
-.other_p {
+.other-p {
     width: 255px;
 }
 
-.contact_form {
+.contact-form {
     display: block;
 }
 
-.contact_form_titel {
-    background: #BCBCBC;
-    border: 1px solid #707070;
+.contact-form-titel {
+    background: var(--object-background);
+    border: 1px solid var(--main-border-color);
     border-radius: 5px;
     width: 308px;
     padding: 5px;
@@ -37,46 +37,46 @@
     position: relative;
 }
 
-.contact_form form {
+.contact-form form {
     display: none;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    background: #BCBCBC;
+    background: var(--object-background);
     height: auto;
     z-index: 3;
-    border: 1px solid #707070;
+    border: 1px solid var(--main-border-color);
     border-radius: 5px;
     padding: 10px;  
     max-width: 300px;
 }
 
-.contact_form form :is(input, select, textarea) {
+.contact-form form :is(input, select, textarea) {
     width: 250px;
     border-radius: 5px;
 }
 
-.form_content {
+.form-content {
     display: block;
     padding: 20px 30px;
     padding-top: 0;
 }
 
-#contact_menu {
+#contact-menu {
     display: none;
 }
 
-#contact_menu:checked ~ form { 
+#contact-menu:checked ~ form { 
     display: grid;
     justify-items: center;
 }
 
-.contact_page_map {
+.contact-page-map {
     padding-bottom: 30px;
 }
 
-.contact_page_map iframe {
+.contact-page-map iframe {
     border-radius: 50px;
-    outline: 2px solid #BCBCBC;
-    box-shadow: 0px 5px 10px 1px gray;
+    outline: 2px solid var(--object-background);
+    box-shadow: 0px 5px 10px 1px var(--box-shoadow);
 }

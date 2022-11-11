@@ -8,43 +8,43 @@
     width: 290px;
 }*/
 
-.index_margin {
+.index-margin {
     padding: 250px 10px 10px 10px;
 }
 
-.index_page {
+.index-page {
     display: grid;
     justify-content: center;
     z-index: 2;
     position: relative;
 }
 
-.top_img_index {
+.top-img-index {
     display: none;
 }
 
-.popular_titel {
+.popular-titel {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 15px;
     margin-top: -15px;
 }
 
-.popular_titel span{
-    background-color: #d9d9d9b2;
+.popular-titel span{
+    background-color: var(--transparent-text-background);
     padding: 5px;
     border-radius: 10px;
 }
 
-.center_index {
+.center-index {
     display: grid;
     justify-items: center;
 }
 
-.popular_products,
-.outdoors_products,
-.skiing_products,
-.canoeing_produckts {
+.popular-products,
+.outdoors-products,
+.skiing-products,
+.canoeing-produckts {
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
@@ -52,7 +52,7 @@
     align-items: center;
 }
 
-.product_name {
+.product-name {
     padding-left: 10px;
 }
 
@@ -63,9 +63,9 @@
     justify-self: end;
 }
 
-.oudoors_titel,
-.skiing_titel,
-.canoeing_titel {
+.oudoors-titel,
+.skiing-titel,
+.canoeing-titel {
     position: relative;
     max-width: 1000px;
     margin-bottom: 15px;  
@@ -73,16 +73,16 @@
     margin-right: 5px;
 }
 
-.oudoors_titel img,
-.skiing_titel img,
-.canoeing_titel img{
+.oudoors-titel img,
+.skiing-titel img,
+.canoeing-titel img{
     border-radius: 20px;
-    outline: 2px solid #A7B5BF;
+    outline: 2px solid var(--content-img-border);
 }
 
-.oudoors_titel_text,
-.skiing_titel_text,
-.canoeing_titel_text {
+.oudoors-titel-text,
+.skiing-titel-text,
+.canoeing-titel-text {
     position: absolute;
     left: 50%;
     font-size: 1.5rem;
@@ -90,18 +90,18 @@
     transform: translate(-50%, -50%);
 }
 
-.oudoors_titel_text span,
-.skiing_titel_text span,
-.canoeing_titel_text span{
-    background-color: #d9d9d9b2;
+.oudoors-titel-text span,
+.skiing-titel-text span,
+.canoeing-titel-text span{
+    background-color: var(--transparent-text-background);
     padding: 5px;
     border-radius: 10px;
 }
 
-.product_style {
+.product-style {
     display: grid;
     grid-template-areas: "a" "b" "c";
-    background-color: #BCBCBC;
+    background-color: var(--object-background);
     border-radius: 10px;
     padding: 0;
     max-width: 300px;
@@ -109,7 +109,7 @@
 }
 
 /* reference: https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
-.product_slide { 
+.product-slide { 
     display: flex; 
     width: 340px;
     gap: 20px;
@@ -119,8 +119,8 @@
 
 .slide-buttons .slide-style {
     border-radius: 50%;
-    background-color: #787878;
-    border: 2px solid #BCBCBC;
+    background-color: var(--main-border-color);
+    border: 2px solid var(--object-background);
     margin: 5px;
     width: 30px;
     height: 30px;
@@ -129,15 +129,15 @@
 }
 
 .slide-buttons .slide-style:focus {
-    background-color: #BCBCBC;
-    border-color: #787878;
+    background-color: var(--object-background);
+    border-color: var(--main-border-color);
 }
 
 /*
-.product_image {
+.product-image {
     display: flex;
     justify-content: center;
-    background-color: #D9D9D9;
+    background-color: var(--header-footer-page-product);
     border-radius: 10px;
     min-width: 250px;
     padding: 20px;
@@ -145,7 +145,7 @@
 
 /*
 600+
-.menu_grid a {
+.menu-grid a {
     font-size: 1.03rem;
     text-transform: uppercase;
     text-decoration: none;
@@ -157,7 +157,7 @@ nav {
     justify-content: center;
 }
 
-.menu_grid {
+.menu-grid {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: 1fr;
@@ -166,7 +166,7 @@ nav {
     width: 65%;
 }
 
-.menu_grid a {
+.menu-grid a {
     font-size: 1.4rem;
     text-transform: uppercase;
     text-decoration: none;
@@ -174,7 +174,7 @@ nav {
     border-top: none;
 }
 
-#bars_menu:checked ~ nav {
+#bars-menu:checked ~ nav {
     display: flex;
     justify-content: center;
 }
@@ -184,5 +184,5 @@ nav {
 }
 
 .border-left {
-    border-left: 3px solid #757373;
+    border-left: 3px solid var(--main-border-color);
 }/*

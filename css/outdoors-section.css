@@ -1,10 +1,10 @@
 /*Outdoors section*/
 
-.outdoor_margin {  
+.outdoor-margin {  
     padding: 130px 10px 185px 10px;
 }
 
-.outdoor_section {
+.outdoor-section {
     display: grid;
     grid-template-rows: repeat(2, auto);
     grid-template-areas: "b" "a" "c";
@@ -18,29 +18,29 @@
 }
 
 /*
-.product_style {
+.product-style {
     margin: 6%;
 }*/
 
-.section_searchbar {
+.section-searchbar {
     left: 65%;
     top: 355px;
 }
 
-.Filter_style {
+.filter-style {
     display: block;
-    background-color: #D9D9D9;
-    outline: 2px solid #A19A8F;
+    background-color: var(--header-footer-page-product);
+    outline: 2px solid var(--main-border-color);
     border-radius: 5px;width: 115px;
     padding: 10px 15px;
     font-size: 1.1rem;
 }
 
-.outdoor_filter {
+.outdoor-filter {
     display: none;
     position: absolute;
-    background-color: #BCBCBC;
-    outline: 2px solid #A19A8F;
+    background-color: var(--object-background);
+    outline: 2px solid var(--main-border-color);
     border-radius: 5px;
     padding: 10px;
     max-width: 170px;
@@ -58,7 +58,7 @@
 .range-bar {
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: linear-gradient(90deg, #4B6721, #000);
+    background: linear-gradient(90deg, var(--slider-bar), var(--black-color));
     border-radius: 10px;
     width: 120%;
     height: 10px;
@@ -73,7 +73,7 @@
     height: 10px;
     border-radius: 50%;
     padding: 10px;
-    background: #60DB2E;
+    background: var(--strong-green-button);
 }
 
 .range-bar::-moz-range-thumb {
@@ -83,18 +83,18 @@
     height: 10px;
     border-radius: 50%;
     padding: 6px;
-    background: #60DB2E;
+    background: var(--strong-green-button);
 }
 
-#dropdown_menu {
+#dropdown-menu {
     display: none;
 }
 
-#dropdown_menu:checked ~ .outdoor_filter {
+#dropdown-menu:checked ~ .outdoor-filter {
     display: grid;
 }
 
-.price_field_area {
+.price-field-area {
     max-width: 65px;
     border-radius: 5px;
     box-decoration-break: clone;
@@ -117,12 +117,12 @@
     max-width: 140px;
 }  
 
-.outdoor_section_items {
+.outdoor-section-items {
     grid-area: 1 / 5 / row1-start / last-line;
     margin-right: 100px;
 }
 
-.oudoors_titel_text {
+.oudoors-titel-text {
     font-size: 1rem;
 }
 
@@ -133,7 +133,7 @@
 }
 
 /* reference: https://www.educative.io/answers/how-to-crop-an-image-in-css */
-.outdoor_cropped {  
+.outdoor-cropped {  
     object-fit: cover;
     object-position: 0px 0px;
     justify-self: center;
@@ -141,7 +141,7 @@
     width: 90%;
 }
 
-.outdoors_section_products {
+.outdoors-section-products {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5%;

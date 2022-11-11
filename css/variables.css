@@ -1,0 +1,18 @@
+:root {
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --header-footer-page-product: #D9D9D9;
+    --transparent-text-background: #d9d9d9b2;
+    --object-background: #BCBCBC;
+    --content-img-border: #A7B5BF;
+    --box-shoadow: #808080;
+    --main-border-color: #707070;
+    --background-dark-color: #303030;
+    --slider-bar: #4B6721;
+    --strong-green-button: #60DB2E;
+    --weake-green-button: #B6D982;
+    --red-check-back: #C90707;
+    --blue-check-back: #0569FF;
+    --yellow-check-back: #FEE504;
+    --orange-check-back: #D66700;
+}

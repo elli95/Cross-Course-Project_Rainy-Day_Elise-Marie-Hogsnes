@@ -1,24 +1,24 @@
-.main_content_about_contact_success {
+.main-content-about-contact-success {
     min-height: 250px;
 }
 
-.main_content_about_contact_success > * {
+.main-content-about-contact-success > * {
     flex: 1;
 }
 
-.main_content_about_contact_success p {
+.main-content-about-contact-success p {
     max-width: 60%;  
     margin-left: auto;
     margin-right: auto;
 }
 
-.about_map {
+.about-map {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.about_map iframe {
+.about-map iframe {
     border-radius: 50px;
-    outline: 2px solid #BCBCBC;
+    outline: 2px solid var(--object-background);
     box-shadow: 0px 5px 10px 1px gray;
 }
