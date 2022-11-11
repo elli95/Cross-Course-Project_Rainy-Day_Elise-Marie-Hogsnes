@@ -24,6 +24,10 @@ a {
     color: var(--black-color);
 }
 
+.main-content-about-contact-success p {
+    font-size: 1.3rem;
+}
+
 main {
     position: relative;
     display: flex;
