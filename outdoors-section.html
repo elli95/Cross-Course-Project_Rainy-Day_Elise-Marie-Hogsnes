@@ -44,7 +44,7 @@
           </nav>
         </div>
       </div>
-      <div class="searchbar-group">
+      <div class="searchbar-group no-searchbar">
         <form action="#" class="search-form">
           <input type="search" id="search" name="search" placeholder="Search" class="searchbar grid-b" />
           <button type="submit" class="magnifying-glass grid-a" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -57,13 +57,23 @@
     <main>
       <section class="background-color">
         <section class="outdoor-section outdoor-margin sanse-font">
+          <section class="oudoors-titel outdoorsection grid-b">
+            <div class="oudoors-titel-text outdoor-img-text bebas-font">
+              <h1><span>Outdoors</span></h1>
+            </div>
+            <img
+              class="outdoor-cropped"
+              src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
+              alt="A woman enjoys a hot drink while sitting in the forest by a tent."
+            />
+          </section>
           <section class="grid-a filter-search">
             <div>
               <label for="dropdown-menu" class="filter-style">Filter</label>
               <input type="checkbox" id="dropdown-menu" />
               <div class="outdoor-filter">
                 <div>
-                  <p>Brands</p>
+                  <h2>Brands</h2>
                   <div>
                     <input type="checkbox" name="brands" value="brands" id="brand1" />
                     <label for="brand1">Brand 1</label>
@@ -90,7 +100,7 @@
                   </div>
                 </div>
                 <div>
-                  <p>Size</p>
+                  <h2>Size</h2>
                   <div>
                     <input type="checkbox" name="size" value="size" id="xs" />
                     <label for="xs">XS</label>
@@ -113,7 +123,7 @@
                   </div>
                 </div>
                 <div>
-                  <p>Price</p>
+                  <h2>Price</h2>
                   <div class="price-field">
                     <input class="price-field-area 1" type="number" name="price-min" id="price-min" placeholder="0" />
                     <input class="price-field-area 2" type="number" name="price-max" id="price-max" placeholder="9999" />
@@ -125,22 +135,11 @@
               </div>
             </div>
             <div class="searchbar-group outdoor-search">
-              <form action="" class="search-form">
-                <input type="search" id="search" name="search" placeholder="Search" class="searchbar outdoor-searchbar grid-b" />
-                <button type="submit" class="magnifying-glass grid-a"><i class="fa-solid fa-magnifying-glass"></i></button>
+              <form action="#" class="search-form">
+                <input type="search" id="outdoor-search" name="outdoor-search" placeholder="Search" class="searchbar outdoor-searchbar grid-b" />
+                <button type="submit" class="magnifying-glass grid-a" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
               </form>
             </div>
-          </section>
-
-          <section class="oudoors-titel outdoorsection grid-b">
-            <div class="oudoors-titel-text outdoor-img-text bebas-font">
-              <h3><span>Outdoors</span></h3>
-            </div>
-            <img
-              class="outdoor-cropped"
-              src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
-              alt="A woman enjoys a hot drink while sitting in the forest by a tent."
-            />
           </section>
           <section class="outdoors-section-products grid-c">
             <div class="product-style">
