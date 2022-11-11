@@ -130,15 +130,15 @@
         text-align: center;
     }
 
-    footer h4 {
-        font-size: 2rem;
+    footer h2 {
+        font-size: 2.5rem;
         text-decoration: underline;
         text-transform: uppercase;
         margin-bottom: 5px;
     }
 
     footer a {
-        font-size: 1.15rem;
+        font-size: 1.4rem;
         text-decoration: none;
     }
 
@@ -152,8 +152,9 @@
 
     .oudoors-titel-text,
     .skiing-titel-text,
-    .canoeing-titel-text {
-        font-size: 3rem;
+    .canoeing-titel-text {  
+        font-size: 2.3rem;
+        letter-spacing: 0.1rem;
         top: 45px;
     }
 
@@ -258,10 +259,10 @@
         transform: translate(-50%, -50%);
     }
     
-    .top-img-index-text-1 {
-        left: 28%;
+    .top-img-index-text-1 {  
+        left: 27%;
         top: 30%;
-        font-size: 3.3rem;
+        font-size: 3.7rem;
         text-shadow: 0px 5px 5px var(--background-dark-color);
     }
     

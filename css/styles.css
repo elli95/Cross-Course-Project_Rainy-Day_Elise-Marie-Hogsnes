@@ -85,6 +85,10 @@ header{
     padding: 10px;
 }
 
+header img {
+    mix-blend-mode: color-burn;
+}
+
 header img,
 .searchbar-group {
     max-width: 200px;

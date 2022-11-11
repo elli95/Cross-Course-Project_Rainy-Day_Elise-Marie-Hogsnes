@@ -24,7 +24,8 @@
 }
 
 .popular-titel {
-    font-size: 3rem;
+    font-size: 3.6rem;
+    letter-spacing: 0.1rem;
     text-align: center;
     margin-bottom: 15px;
     margin-top: -15px;
@@ -186,3 +187,4 @@ nav {
 .border-left {
     border-left: 3px solid var(--main-border-color);
 }/*
+
