@@ -7,9 +7,16 @@
     z-index: 2;
 }
 
-.main-content-cart h3 {
+.main-content-cart h1 {
     font-family: "Bebas Neue";
     font-size: 2.5rem;
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 45px;
+}
+
+.sum-products h2 {
+    font-size: 2rem;
     margin-bottom: 0;
 }
 
@@ -23,7 +30,6 @@
 .main-shopping-cart > * {
     flex: 1;
 }
-
 
 .products-in-cart {  
     display: grid;

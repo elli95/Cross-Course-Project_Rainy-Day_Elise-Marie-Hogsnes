@@ -391,6 +391,7 @@
 
     .products-in-cart {  
         grid-template-rows: repeat(3,1fr auto);
+        justify-items: center;
     }
 
     #delivery-menu:checked ~ .delivery-menu {
