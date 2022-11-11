@@ -214,3 +214,8 @@
     background-color: var(--weake-green-button);
     box-shadow: 0px 5px 10px 1px gray;
 }
+
+h2,
+p {
+    font-size: 1rem;
+}

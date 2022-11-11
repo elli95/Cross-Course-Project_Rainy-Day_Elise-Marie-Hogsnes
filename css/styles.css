@@ -24,11 +24,6 @@ a {
     color: var(--black-color);
 }
 
-h1 {
-    
-}
-
-
 main {
     position: relative;
     display: flex;
