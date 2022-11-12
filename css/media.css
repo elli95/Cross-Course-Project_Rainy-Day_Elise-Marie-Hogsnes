@@ -207,7 +207,7 @@
     /*contact/about/success*/
     .main-content-about-contact-success {
         margin: 20px auto;
-        width: 500px;
+        max-width: 80%;
         padding: 20px;
     }
 
@@ -402,6 +402,11 @@
 
     .delivery-titel {
         width: 462px;
+    }
+
+    /*about*/
+    .main-content-about-contact-success {
+        max-width: 800px;
     }
     
 }
