@@ -78,7 +78,6 @@
 .skiing-titel img,
 .canoeing-titel img{
     border-radius: 20px;
-    -webkit-border-radius: 20px;
     outline: 2px solid var(--content-img-border);
 }
 
