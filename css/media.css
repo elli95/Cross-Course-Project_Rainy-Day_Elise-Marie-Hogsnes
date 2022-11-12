@@ -244,10 +244,6 @@
     grid-template-areas: "a b" "a c" "a c";
     }
     
-    .outdoor-img-edit {      
-        margin: -44px -45px -60px -45px;
-    }
-
     .outdoor-img-text {
         top: 100px;
     }

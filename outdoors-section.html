@@ -47,7 +47,10 @@
         <form action="#" class="search-form">
           <label for="search" class="wave-form-lable-fix">Search</label>
           <input type="search" id="search" name="search" placeholder="Search" class="searchbar grid-b" />
-          <button type="submit" class="magnifying-glass grid-a" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <label for="search-button" class="wave-form-lable-fix">Search button</label>
+          <button type="submit" id="search-button" class="magnifying-glass grid-a" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </form>
       </div>
       <label
@@ -131,7 +134,6 @@
                     <input class="price-field" type="number" name="price-max" id="price-max" placeholder="9999" />
                   </div>
                   <div class="price-range">
-                    <label for="price-line"></label>
                     <input type="range" id="price-line" name="price-line" min="0" max="9999" class="range-bar" />
                   </div>
                 </div>
