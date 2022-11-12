@@ -111,6 +111,18 @@ p {
     font-size: 0px;
 }
 
+.yellow-wave {
+    font-size: 0px;
+}
+
+.black-wave {
+    font-size: 0px;
+}
+
+.orange-wave {
+    font-size: 0px;
+}
+
 /* reference: https://www.tutorialspoint.com/how-to-create-a-checkmark-tick-with-css */
 .check { 
     display: flex;
