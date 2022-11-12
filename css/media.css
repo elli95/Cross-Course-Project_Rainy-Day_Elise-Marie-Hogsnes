@@ -135,6 +135,10 @@
         margin: 70px auto;
     }
 
+    .content-size-products {
+        width: 500px;
+    }
+
     .color-selection :is(label, input) {
         padding: 30px;
     }
@@ -273,6 +277,10 @@
     }
 
     /*product*/
+    .content-size-products {
+        width: auto;
+    }
+
     .main-content-product {
         display: grid;
         grid-template-rows: 1fr 1fr;

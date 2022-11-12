@@ -10,7 +10,8 @@ This project is the web version, based on html and css, of the design assignment
 This website will display an online store specializing in the sale of rain jackets and other jackets for different weather.
 You can explore the different pages that show an overview of the different products available and more information about specific products.
 Furthermore, it is also possible to simulate a purchase of a product.
-However, if you have questions, it is always possible to see what help you can get on the contact page, otherwise you can always read more about this fictitious company on their about us page.
+However, if you have questions, it is always possible to see what help you can get on the contact page,
+otherwise you can always read more about this fictitious company on their about us page.
 This is essential what the website contains, I hope you enjoy.
 
 ## Reference:
