@@ -42,6 +42,8 @@ Information and inspiration with the creation of the codes came from Noroff's cu
 
 - https://www.geeksforgeeks.org/how-to-add-google-map-inside-html-page-without-using-api-key/
 
+- https://blog.pope.tech/2020/02/28/missing-form-label-search/
+
 ### Installing
 
 - Download from https://github.com/elli95/HTML-and-CSS_CA_Elise-Marie-Hogsnes

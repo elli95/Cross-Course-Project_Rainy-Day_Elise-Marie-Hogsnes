@@ -245,6 +245,13 @@ main::after {
 .main-content-about-contact-success p {
     font-size: 1.3rem;
 }
+/* reference: https://blog.pope.tech/2020/02/28/missing-form-label-search/ */
+.wave-form-lable-fix {
+    position: absolute;
+    overflow: hidden;
+    left: -9999999px;
+    top: auto;
+}
 
 /*Navigation or menu*/
 .menu-button {  
