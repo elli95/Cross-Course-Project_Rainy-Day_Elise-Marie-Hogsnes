@@ -97,6 +97,9 @@ header img,
     transform: translate(-50%, -50%);
     z-index: 3;
 }
+.searchbar input::-webkit-contacts-auto-fill-button {
+    display: none;
+}
 
 .searchbar-group {
     display: grid;

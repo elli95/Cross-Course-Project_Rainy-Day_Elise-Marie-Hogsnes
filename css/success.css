@@ -58,5 +58,6 @@
 }
 
 .continue-button {
-    align-self: center;
+    align-self: center;  
+    margin-bottom: 20px;
 }
