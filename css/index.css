@@ -1,17 +1,12 @@
-/*Index page*/
-.searchbar-group {
-    top: 235px;
-}
-
-.index-margin {
-    padding: 250px 10px 10px 10px;
-}
-
 .index-page {
     display: grid;
     justify-content: center;
     z-index: 2;
     position: relative;
+}
+
+.index-margin {
+    padding: 250px 10px 10px 10px;
 }
 
 .top-img-index {
@@ -32,11 +27,6 @@
     border-radius: 10px;
 }
 
-.center-index {
-    display: grid;
-    justify-items: center;
-}
-
 .popular-products,
 .outdoors-products,
 .skiing-products,
@@ -46,63 +36,6 @@
     margin-bottom: 60px;
     flex-direction: column;
     align-items: center;
-}
-
-.product-name {
-    padding-left: 10px;
-}
-
-.price {
-    text-align: right;
-    padding-right: 10px;
-    font-weight: bold;
-    justify-self: end;
-}
-
-.oudoors-titel,
-.skiing-titel,
-.canoeing-titel {
-    position: relative;
-    max-width: 1000px;
-    margin-bottom: 15px;  
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.oudoors-titel img,
-.skiing-titel img,
-.canoeing-titel img{
-    border-radius: 20px;
-    outline: 2px solid var(--content-img-border);
-}
-
-.oudoors-titel-text,
-.skiing-titel-text,
-.canoeing-titel-text {
-    position: absolute;
-    left: 50%;
-    font-size: 1.5rem;
-    top: 30px;
-    transform: translate(-50%, -50%);
-}
-
-.oudoors-titel-text span,
-.skiing-titel-text span,
-.canoeing-titel-text span{
-    background-color: var(--transparent-text-background);
-    padding: 5px;
-    border-radius: 10px;
-}
-
-.product-style {
-    display: grid;
-    grid-template-areas: "a" "b" "c";
-    background-color: var(--object-background);
-    border-radius: 10px;
-    padding: 0;
-    max-width: 300px;
-    flex-shrink: 0;
-    text-decoration: none;
 }
 
 /* reference: https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
@@ -128,4 +61,9 @@
 .slide-buttons .slide-style:focus {
     background-color: var(--object-background);
     border-color: var(--main-border-color);
+}
+
+.center-index {
+    display: grid;
+    justify-items: center;
 }

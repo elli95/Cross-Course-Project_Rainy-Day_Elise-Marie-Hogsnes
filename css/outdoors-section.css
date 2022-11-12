@@ -1,9 +1,3 @@
-/*Outdoors section*/
-
-.outdoor-margin {  
-    padding: 130px 10px 185px 10px;
-}
-
 .outdoor-section {
     display: grid;
     grid-template-rows: repeat(2, auto);
@@ -17,14 +11,34 @@
     position: relative;
 }
 
-/*
-.product-style {
-    margin: 6%;
-}*/
+.outdoor-margin {  
+    padding: 130px 10px 185px 10px;
+}
 
-.section-searchbar {
-    left: 65%;
-    top: 355px;
+.outdoor-img-edit {      
+    margin: 0;
+    max-width: 1800px;
+    display: grid;
+}
+
+/* reference: https://www.educative.io/answers/how-to-crop-an-image-in-css */
+.outdoor-cropped {  
+    object-fit: cover;
+    object-position: 0px 0px;
+    justify-self: center;
+    border-radius: 15px;
+    width: 90%;
+}
+
+.filter-search {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-self: center;
+}
+
+#dropdown-menu:checked ~ .outdoor-filter {
+    display: grid;
 }
 
 .filter-style {
@@ -54,16 +68,21 @@
     font-size: 1.2rem;
 }
 
-.price-range {
-    width: 75%;
-    
+.price-field {
+    max-width: 65px;
+    border-radius: 5px;
+    box-decoration-break: clone;
 }
 
+.price-range {
+    width: 75%;  
+}
 
 /* reference: JavaScript + CSS Range Slider | Costum Value Range Slider Webdesign Tutorial https://www.youtube.com/watch?v=BrpiNUf2XCk */
 .range-bar {
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
     background: linear-gradient(90deg, var(--slider-bar), var(--black-color));
     border-radius: 10px;
     width: 120%;
@@ -92,27 +111,6 @@
     background: var(--strong-green-button);
 }
 
-#dropdown-menu {
-    display: none;
-}
-
-#dropdown-menu:checked ~ .outdoor-filter {
-    display: grid;
-}
-
-.price-field-area {
-    max-width: 65px;
-    border-radius: 5px;
-    box-decoration-break: clone;
-}
-
-.filter-search {
-    display: flex;
-    gap: 5%;
-    align-items: center;
-    justify-self: center;
-}
-
 .outdoor-search {
     position: unset;
     transform: none;
@@ -122,26 +120,6 @@
 .outdoor-searchbar {
     max-width: 140px;
 }  
-
-.outdoor-section-items {
-    grid-area: 1 / 5 / row1-start / last-line;
-    margin-right: 100px;
-}
-
-.outdoorsection {      
-    margin: 0;
-    max-width: 1800px;
-    display: grid;
-}
-
-/* reference: https://www.educative.io/answers/how-to-crop-an-image-in-css */
-.outdoor-cropped {  
-    object-fit: cover;
-    object-position: 0px 0px;
-    justify-self: center;
-    border-radius: 15px;
-    width: 90%;
-}
 
 .outdoors-section-products {
     display: grid;

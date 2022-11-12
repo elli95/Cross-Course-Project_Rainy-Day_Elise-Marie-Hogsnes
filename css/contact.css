@@ -2,12 +2,6 @@
     min-height: 250px;
 }
 
-.main-content-about-contact-success h3 {
-    padding-top: 35px;
-    max-width: 355px;
-    align-self: center;
-}
-
 .main-content-about-contact-success p {
     align-self: center;
 }
@@ -16,11 +10,6 @@
     width: 116px;
     align-self: center;
 }
-
-/*
-.other-p {
-    width: 255px;
-}*/
 
 h1 {  
     font-size: 1.6rem;
@@ -36,6 +25,11 @@ h1 {
 
 .contact-form {
     display: block;
+}
+
+#contact-menu:checked ~ form { 
+    display: grid;
+    justify-items: center;
 }
 
 .contact-form-titel {
@@ -73,15 +67,6 @@ h1 {
     display: block;
     padding: 20px 22px;
     padding-top: 0;
-}
-
-#contact-menu {
-    display: none;
-}
-
-#contact-menu:checked ~ form { 
-    display: grid;
-    justify-items: center;
 }
 
 .contact-page-map {

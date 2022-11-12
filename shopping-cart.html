@@ -54,7 +54,7 @@
       ></label>
     </header>
     <main>
-      <section class="background-color smal-margin">
+      <section class="background-color small-margin">
         <section class="main-content-cart content-background">
           <h1>My Cart</h1>
           <section class="main-shopping-cart sanse-font">
@@ -65,8 +65,8 @@
                 </div>
                 <div class="grid-b cart-info-style bottom-border"><p>Storm Jacket</p></div>
                 <div class="grid-c cart-info-style bottom-border"><p class="bold">990 NOK</p></div>
-                <div class="grid-d cart-info-style">
-                  <select id="product-quantity" name="product-quantity" class="nr-list">
+                <div class="cart-info-style">
+                  <select id="product-quantity" name="product-quantity" class="nr-list" aria-label="Amount of specific product">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -75,7 +75,6 @@
                   </select>
                 </div>
               </div>
-
               <section class="delivery-address">
                 <div class="grid-b delivery-titel">
                   <label for="delivery-menu" class="delivery-form-titel">Delivery address <i class="fa-solid fa-angle-down"></i></label>
@@ -118,13 +117,12 @@
                   </div>
                 </div>
               </section>
-
               <section class="payment-method">
                 <div class="grid-b delivery-titel">
                   <label for="payment-menu" class="payment-form-titel">Payment method <i class="fa-solid fa-angle-down"></i></label>
                 </div>
                 <div class="grid-e payment-style">
-                  <input type="checkbox" id="payment-menu" class="payment-menu-check" />
+                  <input type="checkbox" id="payment-menu" />
                   <div class="payment-menu">
                     <div class="card-paypal">
                       <input type="radio" name="payment" value="payment" id="card" class="radio-card" />
@@ -151,35 +149,6 @@
                   </div>
                 </div>
               </section>
-              <!--
-              <section class="payment-method">
-                <label for="payment-menu" class="payment-form-titel">Payment method</label>
-                <input type="checkbox" id="payment-menu" class="payment-menu-check" />
-                <div class="payment-menu">
-                  <div class="card-paypal">
-                    <input type="radio" name="payment" value="payment" id="card" class="radio-card" />
-                    <label for="card">Card</label>
-                    <div class="card">
-                      <div class="delivery-style">
-                        <label for="card-number">Card Number*</label>
-                        <input type="number" name="card-number" id="card-number" />
-                      </div>
-                      <div class="delivery-style">
-                        <label for="expiration-date">Expiration Date*</label>
-                        <input type="date" name="expiration-date" id="expiration-date" />
-                      </div>
-                      <div class="delivery-style">
-                        <label for="cvv-code">CVV code*</label>
-                        <input type="number" name="cvv-code" id="cvv-code" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-paypal">
-                    <input type="radio" name="payment" value="payment" id="paypal" />
-                    <label for="paypal">PayPal</label>
-                  </div>
-                </div>
-              </section>-->
             </section>
             <section class="sum-products">
               <h2>Summary</h2>

@@ -1,6 +1,11 @@
 @import "variables.css";
 
+/*body, header and footer*/
 body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0px;
+    min-height: 100%;
     animation-name: page-animation;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
@@ -16,17 +21,91 @@ body {
     100% {opacity: 1;}
 }
 
-img {
-    width: 100%;
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-a {
-    color: var(--black-color);
+header,
+footer{
+    background-color: var(--header-footer-page-product);
 }
 
-.main-content-about-contact-success p {
-    font-size: 1.3rem;
+header img {
+    mix-blend-mode: color-burn;
 }
+
+header img,
+.searchbar-group {
+    max-width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 125px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.searchbar-group {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--object-background);
+    box-shadow: 0px 5px 10px 1px var(--box-shoadow);
+    border-radius: 5px;
+    padding: 0px 5px;
+    width: max-content;
+    max-width: 100%;
+    top: 235px;
+}
+
+.no-searchbar {
+    display: none;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.search-form input {
+    width: 245px;
+}
+
+.searchbar {
+    max-width: 500px;
+    background-color: transparent;
+    padding: 10px;
+    border: 0;
+    font-size: 1.1rem;
+}
+
+.searchbar:focus::placeholder {
+    color: transparent;
+} 
+
+.magnifying-glass {  
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 40%;
+    border: 0;
+    height: 37px;
+    width: 37px;
+    margin-right: 0px;
+    font-size: 1.3rem;  
+}
+
+.shop-cart-icon {
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+footer {
+    display: none
+}
+
+/*main*/
 
 main {
     position: relative;
@@ -36,7 +115,6 @@ main {
     height: 100%;
     z-index: 1;
 }
-
 
 /* reference: How to make a background-image transparent in CSS: https://www.youtube.com/watch?v=LQsjNmkqUOc */
 main::before,
@@ -70,109 +148,80 @@ main::after {
     opacity: 0.25;
 }
 
-body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    margin: 0px;
-    min-height: 100%;
+.product-style p {
+    font-size: 1rem;
+    margin: 3px;
+    max-width: 124px;
 }
 
-header{
+.product-style img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.product-image {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+    justify-content: center;
+    background-color: var(--header-footer-page-product);
+    border-radius: 10px;
+    padding: 20px;
+    align-self: start;
 }
 
-header img {
-    mix-blend-mode: color-burn;
+.outdoor-titel,
+.skiing-titel,
+.canoeing-titel {
+    position: relative;
+    max-width: 1000px;
+    margin-bottom: 15px;  
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-header img,
-.searchbar-group {
-    max-width: 200px;
+.outdoor-titel img,
+.skiing-titel img,
+.canoeing-titel img{
+    border-radius: 20px;
+    outline: 2px solid var(--content-img-border);
+}
+
+.outdoor-titel-text,
+.skiing-titel-text,
+.canoeing-titel-text {
     position: absolute;
     left: 50%;
-    top: 125px;
+    font-size: 1.5rem;
+    top: 30px;
     transform: translate(-50%, -50%);
-    z-index: 3;
 }
 
-.searchbar-group {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    background-color: var(--object-background);
-    box-shadow: 0px 5px 10px 1px var(--box-shoadow);
-    border-radius: 5px;
-    padding: 0px 5px;
-    width: max-content;
-    max-width: 100%;
-}
-
-.search-form {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.search-form input {
-    width: 245px;
-}
-
-.searchbar {
-    max-width: 500px;
-    background-color: transparent;
-    padding: 10px;
-    border: 0;
-    font-size: 1.1rem;
-}
-
-.searchbar:focus::placeholder {
-    color: transparent;
-} 
-
-.magnifying-glass {  
-    background-color: transparent;
+.outdoor-titel-text span,
+.skiing-titel-text span,
+.canoeing-titel-text span{
+    background-color: var(--transparent-text-background);
     padding: 5px;
-    border-radius: 40%;
-    border: 0;
-    height: 37px;
-    width: 37px;
-    margin-right: 0px;
-    font-size: 1.3rem;
-    
+    border-radius: 10px;
 }
 
-.no-searchbar {
-    display: none;
+.product-style {
+    display: grid;
+    grid-template-areas: "a" "b" "c";
+    background-color: var(--object-background);
+    border-radius: 10px;
+    padding: 0;
+    max-width: 300px;
+    flex-shrink: 0;
 }
 
-.shop-cart-icon {
-    padding-right: 20px;
-    font-size: 30px;
+.product-name {
+    padding-left: 10px;
 }
 
-/*
-.searchbar {
-    top: 200px;
-    min-width: 25%;
-}*/
-
-
-
-header,
-footer{
-    background-color: var(--header-footer-page-product);
-}
-
-footer {
-    display: none
-}
-
-.main-content-about-contact-success {
-    max-width: 500px;
-    margin: 130px auto;
-    z-index: 2;
+.price {
+    text-align: right;
+    padding-right: 10px;
+    justify-self: end;
 }
 
 .content-background {
@@ -187,75 +236,36 @@ footer {
     box-shadow: 0px 5px 10px 1px gray;
 }
 
-.bottom-border{
-    border-bottom: 2px solid black;
+.main-content-about-contact-success {
+    max-width: 500px;
+    margin: 130px auto;
+    z-index: 2;
 }
 
-.bold {
-    font-weight: bold;
+.main-content-about-contact-success p {
+    font-size: 1.3rem;
 }
 
-.bar-start {
-    border-radius: 5px 5px 0px 0px;
-}
-
-.bar-middle{
-    border-radius: 0px;
-}
-
-.bar-end {
-    border-radius: 0px 0px 5px 5px;
-}
-
-.product-image {
-    display: flex;
-    justify-content: center;
-    background-color: var(--header-footer-page-product);
-    border-radius: 10px;
-    padding: 20px;
-    align-self: start;
-}
-
-.product-style img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-}
-
-.product-style p {
-    font-size: 1rem;
-    margin: 3px;
-    max-width: 124px;
-}
-
-/*Navigation*/
-
-/*
-.menu-button-text {
-    font-size: 2rem;
-}
-
-.menu-button-text p {
-    display: none;
-    font-size: 2rem;
-}*/
-
-
-
-.product-menu-grid {  
-    display: none;
-}
-
-nav li {
-    display: block;
-    padding: 20px 30px;
-    font-size: 24px;
-    padding-left: 0;
-}
-
+/*Navigation or menu*/
 .menu-button {  
     font-size: 2rem;
     padding-left: 10px;
+}
+
+#bars-menu,
+#dropdown-menu,
+#product-size-menu,
+#delivery-menu,
+#payment-menu,
+#contact-menu {
+    display: none;
+}
+
+#bars-menu:checked ~ nav {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid var(--main-border-color);
 }
 
 nav{
@@ -287,27 +297,15 @@ nav{
     border-top: 1px solid var(--main-border-color);
 }
 
-.border-left {
-    display: none;
-}
-
 .menu-grid .home {
     border-top: none;
 }
 
-#bars-menu {
+.border-left {
     display: none;
 }
 
-#bars-menu:checked ~ nav {
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    border: 1px solid var(--main-border-color);
-}
-
 /* buttons*/
-
 .button {
     border: 1px solid var(--slider-bar);
     box-shadow: 0px 5px 10px 1px var(--box-shoadow);
@@ -322,17 +320,33 @@ nav{
 }
 
 .button-confirm {
-background-color: var(--strong-green-button);
-font-family: "Bebas Neue";
-font-size: 24px;
+    background-color: var(--strong-green-button);
+    font-family: "Bebas Neue";
+    font-size: 24px;
 }
 
 .button-continue {
-background-color: var(--weake-green-button);
-font-family: 'Open Sans', sans-serif, Verdana, Tahoma;
+    background-color: var(--weake-green-button);
+    font-family: 'Open Sans', sans-serif, Verdana, Tahoma;
 }
 
-/*font type*/
+/*img, text and font*/
+img {
+    width: 100%;
+}
+
+a {
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bottom-border{
+    border-bottom: 2px solid black;
+}
 
 .sanse-font {
     font-family: 'Open Sans', sans-serif, Verdana, Tahoma;

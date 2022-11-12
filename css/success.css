@@ -10,51 +10,32 @@
     font-size: 2.4rem;
 }
 
-
-/*
-.order-nr {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 20px;
-}*/
-
 .success-nr-grid {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "a b";
     padding-right: 5%;
     padding-left: 5%;
-    align-content: end;
 }
 
+.success-nr-grid,
+.success-grid-style,
 .success-product-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-areas: "a b c";
-    padding: 10%;
-    align-content: end;
-}
-
-.success-grid-style{
    display: grid;
    align-content: end;
     
 }
 
-
-.order-product {
-    align-items: end;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-bottom: 30px;
+.success-product-grid {
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: "a b c";
+    padding: 10%;
 }
 
 .delivery-info {
     max-width: 60%;  
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 20px;
 }
 
 .continue-button {

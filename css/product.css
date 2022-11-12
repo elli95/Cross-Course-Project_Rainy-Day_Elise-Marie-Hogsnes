@@ -9,33 +9,20 @@
     z-index: 2;
 }
 
+.storm-product-info,
+.product-center,
+.product-button {
+    justify-self: center;
+    align-self: center;
+}
+
 .grid-a img {
     width: 75%;
 }
 
-.product-description {
-    background-color: var(--object-background);
-    border-radius: 10px;
-    padding: 10px;
-    max-width: 340px;
-    text-align: left;
+.storm-product-info {
+    min-width: 82%;
 }
-
-.Product-info {
-    display: grid;
-    justify-content: center;
-}
-
-    .product-center,
-    .storm-product-info,
-    .product-button {
-        justify-self: center;
-        align-self: center;
-    }
-
-    .storm-product-info {
-        min-width: 82%;
-    }
 
 .product-name,
 .product-price,
@@ -56,6 +43,14 @@
     padding-top: 0;
 }
 
+.product-description {
+    background-color: var(--object-background);
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 340px;
+    text-align: left;
+}
+
 .color-selection input,
 .size-bar input {
     position: absolute;
@@ -72,6 +67,20 @@
     box-shadow: 0px 5px 10px 1px gray;
     border: 1px solid var(--black-color);   
     position: inherit;
+}
+
+h2,
+p {
+    font-size: 1rem;
+}
+
+.color-red label,
+.color-blue label,
+.color-yellow label,
+.color-black label,
+.color-orange label {
+   position: relative;
+   z-index: 3;
 }
 
 .color-red label{
@@ -94,11 +103,6 @@
     background-color: var(--orange-check-back);
 }
 
-.color-selection p {
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
-}
 
 /* reference: https://www.tutorialspoint.com/how-to-create-a-checkmark-tick-with-css */
 .check { 
@@ -118,60 +122,12 @@
   border-right: 8px solid var(--white-color);
 }
 
-.color-red label,
-.color-blue label,
-.color-yellow label,
-.color-black label,
-.color-orange label {
-   position: relative;
-   z-index: 3;
-}
-
-#contact-menu {
-    display: none;
-}
-
-#contact-menu:checked ~ .size-bar {
-    display: block;
-}
-
-.size-bar {
-    display: none;
-    position: absolute;
-    background: var(--header-footer-page-product);
-    width: 40%;
-    max-width: 150px;
-    height: auto;
-    z-index: 4;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: center;
-}
-
-.product-menu-grid {  
-    display: none;
-}
-
-.size-dropdown {
-    display: block;
-    padding: 20px 30px;
-    font-size: 24px;
-    padding-left: 0;
-}
-
-#bars-menu {
-    display: none;
-}
-
-#bars-menu:checked ~ nav {
-    display: block;
-}
-
 .size-menu {
     margin-bottom: 15px;
+}
+
+#product-size-menu:checked ~ .size-bar {
+    display: block;
 }
 
 .size-bar-name,
@@ -186,6 +142,22 @@
     padding: 5px;
 }
 
+.size-bar {
+    display: none;
+    position: absolute;
+    background: var(--header-footer-page-product);
+    width: 40%;
+    max-width: 150px;
+    height: auto;
+    z-index: 4;
+}
+
+.size-bar-name-option:hover,
+.size-bar input:checked + label {
+    background-color: var(--weake-green-button);
+    box-shadow: 0px 5px 10px 1px gray;
+}
+
 .bar-start {
     border-radius: 5px 5px 0px 0px;
 }
@@ -196,26 +168,4 @@
 
 .bar-end {
     border-radius: 0px 0px 5px 5px;
-}
-
-/*
-.size-bar-name-option:hover {
-    background-color: var(--weake-green-button);
-    box-shadow: 0px 5px 10px 1px gray;
-}
-
-.size-bar input:checked + label {
-    background-color: var(--weake-green-button);
-    box-shadow: 0px 5px 10px 1px gray;
-}*/
-
-.size-bar-name-option:hover,
-.size-bar input:checked + label {
-    background-color: var(--weake-green-button);
-    box-shadow: 0px 5px 10px 1px gray;
-}
-
-h2,
-p {
-    font-size: 1rem;
 }
