@@ -22,21 +22,9 @@ An in-depth paragraph about your project and overview of use.
 
 ### Executing program
 
-- hosted link
-
-OR
-
-- How to run the program
-- Step-by-step bullets
-
-code blocks for commands
-
-## Help
-
-Any advice for common problems or issues.
-
-- command to run if the program contains helper info
+Hosted link:
+https://friendly-zuccutto-172753.netlify.app/index.html
 
 ## Authors
 
-Contributors' names and contact info
+Elise Marie Hogsnes

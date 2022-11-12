@@ -102,6 +102,7 @@
     padding: 0;
     max-width: 300px;
     flex-shrink: 0;
+    text-decoration: none;
 }
 
 /* reference: https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
