@@ -369,6 +369,10 @@
         display: contents;
     }
 
+    .angle-down-icon {
+        display: none;
+    }
+
     /*shopping cart*/
     .delivery-menu,
     .payment-menu,
