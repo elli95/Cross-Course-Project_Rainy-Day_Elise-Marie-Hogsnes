@@ -98,7 +98,7 @@ header img,
     z-index: 3;
 }
 .searchbar::-webkit-contacts-auto-fill-button {
-    visibility: hidden
+    display: none;
 }
 
 .searchbar-group {
