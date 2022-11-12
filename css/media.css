@@ -408,6 +408,11 @@
     .main-content-about-contact-success {
         max-width: 800px;
     }
+
+    /*contact*/
+    .contact-width {
+        width: 800px;
+    }
     
 }
 @media (min-width: 1140px){

@@ -17,8 +17,21 @@
     align-self: center;
 }
 
+/*
 .other-p {
     width: 255px;
+}*/
+
+h1 {  
+    font-size: 1.6rem;
+}
+
+.p-margin {
+    margin-bottom: 0px;
+}
+
+.p-max-width {
+    max-width: 55%;
 }
 
 .contact-form {
@@ -58,7 +71,7 @@
 
 .form-content {
     display: block;
-    padding: 20px 30px;
+    padding: 20px 22px;
     padding-top: 0;
 }
 
