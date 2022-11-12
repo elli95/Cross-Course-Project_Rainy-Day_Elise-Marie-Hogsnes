@@ -104,13 +104,11 @@ p {
 }
 
 .red-wave {
-    color: var(--red-check-back);
     font-size: 0px;
 }
 
 .blue-wave {
-    color: var(--blue-check-back);
-    font-size: 1px;
+    font-size: 0px;
 }
 
 /* reference: https://www.tutorialspoint.com/how-to-create-a-checkmark-tick-with-css */
