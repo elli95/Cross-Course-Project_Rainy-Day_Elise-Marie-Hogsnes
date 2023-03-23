@@ -149,6 +149,15 @@
     }
 
     /*contact/about/success*/
+    .success-product-grid {
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: repeat(2,auto);
+    }
+
+    .success-product-grid img{
+        width: 60%;
+    }
+
     .main-content-about-contact-success {
         margin: 20px auto;
         max-width: 80%;
@@ -334,9 +343,19 @@
         width: 44%;
     }
 
+    /*success*/
+    .success-product-grid {
+        grid-template-columns: repeat(6,auto);
+    }
+
+    .success-product-grid,
+    .success-total {
+        grid-gap: 20px;
+    }
+
     /*about*/
     .main-content-about-contact-success {
-        max-width: 800px;
+        max-width: fit-content;
     }
 
     /*contact*/
@@ -344,6 +363,23 @@
         width: 800px;
     }
     
+}
+@media (min-width: 1000px){
+    .product-success{
+        position: relative;
+    }
+    .success-jacket-name {
+        left: -65px;
+    }
+    .success-jacket-size{
+        left: -55px;
+    }
+    .success-jacket-color{
+        left: -25px;
+    }
+    .success-jacket-amount{
+        left: -15px;
+    }
 }
 
 @media (min-width: 1140px){

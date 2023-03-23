@@ -43,10 +43,6 @@
     text-transform: uppercase;
 }
 
-.font-style-color {
-    text-transform: capitalize;
-}
-
 .cart-info-style {
     display: flex;
     justify-content: space-around;

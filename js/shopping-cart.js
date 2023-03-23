@@ -19,7 +19,7 @@ function productsInCartPage(){
                                         </div>
                                         <div class="grid-b cart-info-style bottom-border"><p>${jacket.name}</p>
                                         <p class="font-style-size">${jacket.size}</p>
-                                        <p class="font-style-color">${jacket.color}</p></div>
+                                        <p class="font-style-text-transform">${jacket.color}</p></div>
                                         <div class="grid-c cart-info-style bottom-border"><p class="bold">${jacket.price * jacket.productAmount} NOK</p></div>
                                         <div class="cart-info-style">
                                         <button id="minusProductAmount" name="${jacket.name}" class="minus">-</button>

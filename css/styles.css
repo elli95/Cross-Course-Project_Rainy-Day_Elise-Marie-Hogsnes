@@ -275,6 +275,10 @@ main::after {
     justify-self: end;
 }
 
+.font-style-text-transform {
+    text-transform: capitalize;
+}
+
 .content-background {
     justify-content: center;
     text-align: center;
