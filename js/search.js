@@ -30,7 +30,7 @@ function searchResultsList(result){
     searchResult.innerHTML = "";
     Object.values(result).forEach(function(searchList) {
         searchResult.innerHTML += ` <a class="search-list-products" href="product-storm-jacket.html?name=${searchList.name}">
-                                    <div class=""><img src="images/product_img/${searchList.img}" alt="${searchList.description}" /></div>
+                                    <img class="search-img" src="images/product_img/${searchList.img}" alt="${searchList.description}" />
                                     <p>${searchList.name}</p>
                                     </a>
                                   `;

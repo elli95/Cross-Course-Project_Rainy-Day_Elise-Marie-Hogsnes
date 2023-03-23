@@ -171,6 +171,24 @@
         width: 500px;
     }
 
+    .searchbar-group {
+        width: unset;
+    }
+
+    .search-list {
+        width: 547px;
+    }
+
+    .search-list-products{
+        width: 500px;
+        gap: 50px;
+        padding-left: 150px;
+    }
+    
+    .search-list-products:hover {
+        width: 500px;
+    }
+
     .menu-grid a {
         font-size: 1.4rem;
         padding: 6px 25px 7px 25px;
