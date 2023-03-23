@@ -13,22 +13,36 @@ let jacketItem = JSON.parse(localStorage.getItem("SHOPPING CART")) || [];
 function productsInCartPage(){
     productsInCart.innerHTML = "";
     jacketItem.forEach(function(jacket) {
-            productsInCart.innerHTML += `<div class="products-in-cart-items">
-                                        <div class="grid-a cart-info-style bottom-border">
-                                        <img src="images/product_img/${jacket.img}" alt="${jacket.description}"/>
-                                        </div>
-                                        <div class="grid-b cart-info-style bottom-border"><p>${jacket.name}</p>
+            productsInCart.innerHTML += `<div class="products-in-cart-items bottom-border">
+                                        <img class="cart-info-style" src="images/product_img/${jacket.img}" alt="${jacket.description}"/>
+                                        <p class="cart-info-style">${jacket.name}</p>
                                         <p class="font-style-size">${jacket.size}</p>
-                                        <p class="font-style-text-transform">${jacket.color}</p></div>
-                                        <div class="grid-c cart-info-style bottom-border"><p class="bold">${jacket.price * jacket.productAmount} NOK</p></div>
-                                        <div class="cart-info-style">
-                                        <button id="minusProductAmount" name="${jacket.name}" class="minus">-</button>
-                                        <div>${jacket.productAmount}</div>
-                                        <button id="plussProductAmount" name="${jacket.name}" class="pluss">+</button>
+                                        <p class="font-style-text-transform">${jacket.color}</p>
+                                        <p class="cart-info-style bold">${jacket.price * jacket.productAmount} NOK</p>
+                                        <div class="cart-info-style amount-buttons">
+                                        <button id="minusProductAmount" name="${jacket.name}" class="minus amount-buttons-style"> - </button>
+                                        <div class="product-amount-style">${jacket.productAmount}</div>
+                                        <button id="plussProductAmount" name="${jacket.name}" class="pluss amount-buttons-style">+</button>
                                         </div>
                                         </div>
                                         `;
                                     });
+
+                                    // `<div class="products-in-cart-items">
+                                    //     <div class="grid-a cart-info-style bottom-border">
+                                    //     <img src="images/product_img/${jacket.img}" alt="${jacket.description}"/>
+                                    //     </div>
+                                    //     <div class="grid-b cart-info-style bottom-border"><p>${jacket.name}</p>
+                                    //     <p class="font-style-size">${jacket.size}</p>
+                                    //     <p class="font-style-text-transform">${jacket.color}</p></div>
+                                    //     <div class="grid-c cart-info-style bottom-border"><p class="bold">${jacket.price * jacket.productAmount} NOK</p></div>
+                                    //     <div class="cart-info-style">
+                                    //     <button id="minusProductAmount" name="${jacket.name}" class="minus">-</button>
+                                    //     <div>${jacket.productAmount}</div>
+                                    //     <button id="plussProductAmount" name="${jacket.name}" class="pluss">+</button>
+                                    //     </div>
+                                    //     </div>
+                                    //     `;
                                     
         const plussCartProductAmount = document.querySelectorAll("#plussProductAmount");
         for (let i = 0; i < plussCartProductAmount.length; i++) {
@@ -57,25 +71,19 @@ function minusEditProductAmount(){
     const jacket = jacketItem.find((jacketItem) => jacketItem.name === produktName);
 
     jacketItem.forEach(function(jacket) {
-        if(produktName === jacket.name){
+        if(produktName === jacket.name && jacket.productAmount > 0 ){
             console.log("new",jacket);
             jacket.productAmount--;
             
         }
+
         if(jacket.productAmount === 0){
-                
-                console.log("Suprise",jacket.name);
-                console.log("Suprise",jacketItem);
-                
-    // let result = jacketList.filter(jacketName => jacketName.name.toLowerCase().includes(value));
-                var filtered = jacketItem.filter(jacketItem => 
-                    jacketItem.name !== jacket.name);
-                
-                    console.log("Suprise1",filtered);
-                    delete filtered[0];
-                console.log("Suprise2",filtered);
-                // delete jacket[1];
+            const jacketToDelete = jacketItem.indexOf(jacket);
+            console.log("jacketToDelete",jacketToDelete);
+            if (jacketToDelete > -1) { // only splice array when item is found
+                jacketItem.splice(jacketToDelete, 1); // 2nd parameter means remove one item only
             }
+        }
     });
 
     console.log("Suprise",jacketItem);

@@ -167,7 +167,6 @@ p {
 
 .size-bar {
     display: none;
-    position: absolute;
     background: var(--header-footer-page-product);
     width: 40%;
     max-width: 150px;

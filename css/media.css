@@ -332,6 +332,11 @@
         justify-items: center;
     }
 
+    .products-in-cart-items {
+        grid-template-columns: repeat(6,auto);
+        grid-gap: 20px;
+    }
+
     .delivery-titel {
         width: 462px;
     }
@@ -423,7 +428,11 @@
     
     /*shopping cart*/
     .main-content-cart {
-        max-width: 80%;
+        max-width: fit-content;
+    }
+
+    .main-content-cart img {
+        width: 50%;
     }
 
     .delivery-form-titel,
@@ -435,5 +444,11 @@
     .payment-menu,
     .card {
         width: 440px;
+    }
+}
+
+@media (min-width: 1600px){
+    .main-shopping-cart {
+        padding: 0px 250px;
     }
 }
