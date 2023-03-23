@@ -46,7 +46,7 @@ h1 {
 
 .contact-form form {
     display: none;
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translate(-50%);
     background: var(--object-background);
@@ -61,6 +61,7 @@ h1 {
 .contact-form form :is(input, select, textarea) {
     width: 250px;
     border-radius: 5px;
+    padding: 5px;
 }
 
 .form-content {
@@ -77,4 +78,18 @@ h1 {
     border-radius: 50px;
     outline: 2px solid var(--object-background);
     box-shadow: 0px 5px 10px 1px var(--box-shoadow);
+}
+
+.submission-success {
+    border: 3px solid #2efd2e;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #e6ffe6;
+}
+
+.submission-fail {  
+    border: 3px solid red;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #ffecec;
 }

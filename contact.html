@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/media.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <script type="module" src="js/search.js" defer></script>
+    <script src="js/contact.js" defer></script>
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for my site -->
     <script>
@@ -64,16 +67,19 @@
           </nav>
         </div>
       </div>
-      <div class="searchbar-group no-searchbar">
-        <form action="#" class="search-form">
-          <label for="search" class="wave-form-lable-fix">Search</label>
-          <input type="search" id="search" name="search" placeholder="Search" class="searchbar grid-b" />
-          <label for="search-button" class="wave-form-lable-fix">Magnifying glass</label>
-          <button type="submit" id="search-button" class="magnifying-glass grid-a" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-      </div>
+      <section>
+        <div class="searchbar-group">
+          <form action="#" class="search-form">
+            <label for="search" class="wave-form-lable-fix">Search</label>
+            <input type="search" id="search-bar-input" name="search" placeholder="Search" class="searchbar grid-b" />
+            <label for="search-button" class="wave-form-lable-fix">Magnifying glass</label>
+            <button type="submit" id="search-button" class="magnifying-glass grid-a" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <div class="search-list" id="search-result-list"></div>
+      </section>
       <label
         ><a href="shopping-cart.html" class="shop-cart-icon" aria-label="Shopping cart"
           ><i class="fa-solid fa-cart-shopping"><span class="wave-form-lable-fix">Shopping Cart</span></i></a
@@ -89,7 +95,7 @@
           </h1>
           <p>Please call us at</p>
           <p class="bold">(+12) 34 56 78 90</p>
-          <p class="p-margin">Mondey - friday</p>
+          <p class="p-margin">Monday - friday</p>
           <p>08:00-19:00</p>
           <p class="p-max-width">Or fill in our form and we will contact you as soon as possible</p>
           <section class="contact-form">
@@ -97,25 +103,34 @@
             <input type="checkbox" id="contact-menu" />
             <form method="post">
               <div class="form-content">
+                <div id="error-message"></div>
+                <div id="form-Submission-Message"></div>
                 <div>
                   <label for="name">Name</label>
                   <input type="text" name="name" id="name" />
+                  <div class="error-message-style" id="name-error">Please enter your name.</div>
                 </div>
                 <div>
                   <label for="email">Email</label>
                   <input type="text" name="email" id="email" />
+                  <div class="error-message-style" id="email-error">Please enter a valid email.</div>
                 </div>
                 <div>
                   <label for="subject">Subject</label>
                   <select id="subject" name="Subject">
+                    <option value="Please select an option">Please select an option</option>
                     <option value="Damage item">Damage item</option>
                     <option value="Not delivered">Not delivered</option>
                     <option value="Other">Other</option>
                   </select>
+                  <div class="error-message-style" id="subject-error">Please select an option.</div>
                 </div>
                 <div>
                   <label for="message">Message</label>
                   <textarea name="message" id="message" cols="30" rows="3"></textarea>
+                  <div class="error-message-style" id="message-error">
+                    Please write some text about the situation you need help with, so we can assist you more easily.
+                  </div>
                 </div>
               </div>
               <div class="contact-form">

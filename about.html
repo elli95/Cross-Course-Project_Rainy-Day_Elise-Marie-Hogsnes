@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/media.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <script type="module" src="js/search.js" defer></script>
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for my site -->
     <script>
@@ -61,16 +63,19 @@
           </nav>
         </div>
       </div>
-      <div class="searchbar-group no-searchbar">
-        <form action="#" class="search-form">
-          <label for="search" class="wave-form-lable-fix">Search</label>
-          <input type="search" id="search" name="search" placeholder="Search" class="searchbar grid-b" />
-          <label for="search-button" class="wave-form-lable-fix">Magnifying glass</label>
-          <button type="submit" id="search-button" class="magnifying-glass grid-a" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-      </div>
+      <section>
+        <div class="searchbar-group">
+          <form action="#" class="search-form">
+            <label for="search" class="wave-form-lable-fix">Search</label>
+            <input type="search" id="search-bar-input" name="search" placeholder="Search" class="searchbar grid-b" />
+            <label for="search-button" class="wave-form-lable-fix">Magnifying glass</label>
+            <button type="submit" id="search-button" class="magnifying-glass grid-a" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <div class="search-list" id="search-result-list"></div>
+      </section>
       <label
         ><a href="shopping-cart.html" class="shop-cart-icon" aria-label="Shopping cart"
           ><i class="fa-solid fa-cart-shopping"><span class="wave-form-lable-fix">Shopping Cart</span></i></a

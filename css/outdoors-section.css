@@ -121,9 +121,10 @@
     max-width: 140px;
 }  
 
+/*
 .outdoors-section-products {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5%;
     justify-content: center;
-}
+}*/

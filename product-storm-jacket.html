@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="css/media.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <script type="module" src="js/search.js" defer></script>
+    <script src="js/product-information.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for my site -->
     <script>
@@ -61,16 +64,19 @@
           </nav>
         </div>
       </div>
-      <div class="searchbar-group no-searchbar">
-        <form action="#" class="search-form">
-          <label for="search" class="wave-form-lable-fix">Search</label>
-          <input type="search" id="search" name="search" placeholder="Search" class="searchbar grid-b" />
-          <label for="search-button" class="wave-form-lable-fix">Magnifying glass</label>
-          <button type="submit" id="search-button" class="magnifying-glass grid-a" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-      </div>
+      <section>
+        <div class="searchbar-group">
+          <form action="#" class="search-form">
+            <label for="search" class="wave-form-lable-fix">Search</label>
+            <input type="search" id="search-bar-input" name="search" placeholder="Search" class="searchbar grid-b" />
+            <label for="search-button" class="wave-form-lable-fix">Magnifying glass</label>
+            <button type="submit" id="search-button" class="magnifying-glass grid-a" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <div class="search-list" id="search-result-list"></div>
+      </section>
       <label
         ><a href="shopping-cart.html" class="shop-cart-icon" aria-label="Shopping cart"
           ><i class="fa-solid fa-cart-shopping"><span class="wave-form-lable-fix">Shopping Cart</span></i></a
@@ -79,20 +85,9 @@
     </header>
     <main>
       <section class="background-color">
-        <section class="content-background content-size-products main-content-product small-margin sanse-font">
-          <div class="grid-c storm-product-info">
-            <div class="product-name">
-              <h1>Storm Jacket</h1>
-            </div>
-            <div class="product-price">
-              <p>Price:</p>
-              <p class="bold">990 NOK</p>
-            </div>
-          </div>
-          <div class="grid-a product-center">
-            <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-          </div>
-          <div class="grid-b product-description product-center">
+        <section class="content-background content-size-products main-content-product small-margin sanse-font" id="product-content">
+          <div class="loading"></div>
+          <!-- <div class="grid-b product-description product-center">
             <h2>About:</h2>
             <p>A Storm Jacket is a stylish, waterproof, and durable jacket for active individuals.</p>
             <p>This jacket is made of high-quality materials that are guaranteed to keep you dry in any weather.</p>
@@ -161,9 +156,11 @@
           </div>
           <div class="grid-f product-button">
             <div class="add-to-cart-button">
-              <a href="shopping-cart.html" class="button button-confirm">Add to cart</a>
+              <button class="button button-confirm" id="cart-button">Add to cart</button>
+              <a href="shopping-cart.html" class="button button-confirm">View Shopping Cart</a>
+               <a href="shopping-cart.html" class="button button-confirm" onclick="addToShoppingCart()">Add to cart</a> 
             </div>
-          </div>
+          </div> -->
         </section>
       </section>
     </main>

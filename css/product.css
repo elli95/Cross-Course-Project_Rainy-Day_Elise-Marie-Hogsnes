@@ -35,6 +35,10 @@
     justify-content: center;
 }
 
+.add-to-cart-button {
+    flex-direction: column;
+}
+
 .product-price {
     border-top: 2px solid black;
     grid-gap: 50%;

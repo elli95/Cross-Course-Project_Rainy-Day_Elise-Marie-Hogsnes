@@ -22,6 +22,7 @@
     .searchbar-group,
     .no-searchbar {
         display: flex;
+        flex-direction: column;
         position: inherit;
         transform: none;
         padding-bottom: 7px;
@@ -68,24 +69,12 @@
         border-left: 3px solid var(--main-border-color);
     }
 
-    footer {
-        display: flex;    
-        align-items: center;
-        justify-content: space-evenly;
-        padding-bottom: 20px;
-        text-align: center;
-    }
-
     footer h2 {
         font-size: 2.5rem;
-        text-decoration: underline;
-        text-transform: uppercase;
-        margin-bottom: 5px;
     }
 
     footer a {
         font-size: 1.4rem;
-        text-decoration: none;
     }
 
     /*index*/
@@ -126,9 +115,14 @@
         display: none;
     }
 
-    .outdoors-section-products {
+    .content {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /*
+    .outdoors-section-products {
+        grid-template-columns: repeat(3, 1fr);
+    }*/
 
     /*product*/
     .main-content-product {
@@ -307,7 +301,7 @@
     }
 
     .products-in-cart {  
-        grid-template-rows: repeat(3,1fr auto);
+        /* grid-template-rows: repeat(3,1fr auto); */
         justify-items: center;
     }
 
@@ -336,7 +330,7 @@
     }
 
     .products-in-cart {
-        grid-gap: 0px;
+        grid-gap: 10px;
         width: 44%;
     }
 
@@ -358,9 +352,15 @@
         top: 118px;
     }
 
+    .content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /*
     .outdoors-section-products {
         grid-template-columns: repeat(4, 1fr);
     }
+    */
 
     /*product*/
     .content-size-products {

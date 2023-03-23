@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/media.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <script type="module" src="js/search.js" defer></script>
+    <script src="js/index.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for my site -->
     <script>
@@ -40,7 +43,7 @@
     <header>
       <div class="logo-menu">
         <a href="index.html">
-          <img src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
+          <img class="logo-img" src="/images/RainyDays_Logo.png" alt="Rainy Day Logo, Pushing the comfort zone" />
         </a>
         <div>
           <label for="bars-menu" class="menu-button"
@@ -59,21 +62,24 @@
               <div class="border-left"></div>
               <a href="outdoors-section.html">Skiing</a>
               <div class="border-left"></div>
-              <a href="outdoors-section.html">Canoeing </a>
+              <a href="canoeing-section.html">Canoeing </a>
             </section>
           </nav>
         </div>
       </div>
-      <div class="searchbar-group">
-        <form action="#" class="search-form">
-          <label for="search" class="wave-form-lable-fix">Search</label>
-          <input type="search" id="search" name="search" placeholder="Search" class="searchbar grid-b" />
-          <label for="search-button" class="wave-form-lable-fix">Magnifying glass</label>
-          <button type="submit" id="search-button" class="magnifying-glass grid-a" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-      </div>
+      <section>
+        <div class="searchbar-group">
+          <form action="#" class="search-form">
+            <label for="search" class="wave-form-lable-fix">Search</label>
+            <input type="search" id="search-bar-input" name="search" placeholder="Search" class="searchbar grid-b" />
+            <label for="search-button" class="wave-form-lable-fix">Magnifying glass</label>
+            <button type="submit" id="search-button" class="magnifying-glass grid-a" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <div class="search-list" id="search-result-list"></div>
+      </section>
       <label
         ><a href="shopping-cart.html" class="shop-cart-icon" aria-label="Shopping cart"
           ><i class="fa-solid fa-cart-shopping"><span class="wave-form-lable-fix">Shopping Cart</span></i></a
@@ -103,6 +109,10 @@
           <section>
             <h2 class="popular-titel bebas-font"><span>Popular</span></h2>
             <section class="popular-products">
+              <section class="product-slide" id="popular-content">
+                <div class="loading"></div>
+              </section>
+              <!--
               <div class="product-slide">
                 <a class="product-style" id="left" href="product-storm-jacket.html">
                   <div class="product-image grid-a">
@@ -140,6 +150,7 @@
                   <p class="price bold brid-c">1000 NOK</p>
                 </a>
               </div>
+            -->
               <!-- reference: https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/#aa-with-a-handful-of-lines-of-css-we-can-set-them-next-to-each-other-and-let-them-scroll -->
               <div class="slide-buttons">
                 <a href="#left" class="slide-style" aria-label="Slide to the leftmost product"></a>
@@ -158,7 +169,10 @@
               </a>
             </div>
             <section class="outdoors-products">
-              <div class="product-slide">
+              <section class="product-slide" id="outdoor-content">
+                <div class="loading"></div>
+              </section>
+              <!-- <div class="product-slide">
                 <a class="product-style" id="o-left" href="product-storm-jacket.html">
                   <div class="product-image grid-a">
                     <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
@@ -194,7 +208,7 @@
                   <p class="product-name grid-b">Patagonia Fleece Jacket</p>
                   <p class="price bold brid-c">999 NOK</p>
                 </a>
-              </div>
+              </div>-->
               <div class="slide-buttons">
                 <a href="#o-left" class="slide-style" aria-label="Slide to the leftmost product"></a>
                 <a href="#o-middle" class="slide-style middle" aria-label="Slide to the middle product"></a>
@@ -212,7 +226,10 @@
               </a>
             </div>
             <section class="skiing-products">
-              <div class="product-slide">
+              <section class="product-slide" id="skiing-content">
+                <div class="loading"></div>
+              </section>
+              <!-- <div class="product-slide">
                 <a class="product-style" id="s-left" href="product-storm-jacket.html">
                   <div class="product-image grid-a">
                     <img src="images/product_img/RainyDays_Jacket5.png" alt="Grey allround biker jacket." />
@@ -248,7 +265,7 @@
                   <p class="product-name grid-b">Storm jacket</p>
                   <p class="price bold brid-c">990 NOK</p>
                 </a>
-              </div>
+              </div> -->
               <div class="slide-buttons">
                 <a href="#s-left" class="slide-style" aria-label="Slide to the leftmost product"></a>
                 <a href="#s-middle" class="slide-style middle" aria-label="Slide to the middle product"></a>
@@ -269,7 +286,10 @@
               </a>
             </div>
             <section class="canoeing-produckts">
-              <div class="product-slide">
+              <section class="product-slide" id="canoeing-content">
+                <div class="loading"></div>
+              </section>
+              <!-- <div class="product-slide">
                 <a class="product-style" id="c-left" href="product-storm-jacket.html">
                   <div class="product-image grid-a">
                     <img src="images/product_img/RainyDays_Jacket2.png" alt="Grey windproof jacket." />
@@ -305,7 +325,7 @@
                   <p class="product-name grid-b">Mens windproof ski jacket</p>
                   <p class="price bold brid-c">1500 NOK</p>
                 </a>
-              </div>
+              </div> -->
               <div class="slide-buttons">
                 <a href="#c-left" class="slide-style" aria-label="Slide to the leftmost product"></a>
                 <a href="#c-middle" class="slide-style middle" aria-label="Slide to the middle product"></a>

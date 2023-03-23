@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Rainy Day - Fill out the information needed and you will soon be the new owner of you stylish product." />
+    <meta name="description" content="Rainy Day - Fill out the information needed and you will soon be the new owner of your stylish product." />
     <title>Rainy Day | Shopping cart</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/shopping-cart.css" />
     <link rel="stylesheet" href="css/media.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <script type="module" src="js/search.js" defer></script>
+    <script type="module" src="js/shopping-cart-payment-check.js" defer></script>
+    <script src="js/shopping-cart.js" type="module" defer></script>
+    <!-- <script src="js/product-information.js" type="module" defer></script> -->
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for my site -->
     <script>
@@ -61,16 +66,19 @@
           </nav>
         </div>
       </div>
-      <div class="searchbar-group no-searchbar">
-        <form action="#" class="search-form">
-          <label for="search" class="wave-form-lable-fix">Search</label>
-          <input type="search" id="search" name="search" placeholder="Search" class="searchbar grid-b" />
-          <label for="search-button" class="wave-form-lable-fix">Magnifying glass</label>
-          <button type="submit" id="search-button" class="magnifying-glass grid-a" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-      </div>
+      <section>
+        <div class="searchbar-group">
+          <form action="#" class="search-form">
+            <label for="search" class="wave-form-lable-fix">Search</label>
+            <input type="search" id="search-bar-input" name="search" placeholder="Search" class="searchbar grid-b" />
+            <label for="search-button" class="wave-form-lable-fix">Magnifying glass</label>
+            <button type="submit" id="search-button" class="magnifying-glass grid-a" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <div class="search-list" id="search-result-list"></div>
+      </section>
       <label
         ><a href="shopping-cart.html" class="shop-cart-icon" aria-label="Shopping cart"
           ><i class="fa-solid fa-cart-shopping"><span class="wave-form-lable-fix">Shopping Cart</span></i></a
@@ -78,6 +86,186 @@
       >
     </header>
     <main>
+      <section class="background-color small-margin">
+        <section class="main-content-cart content-background">
+          <h1>My Cart</h1>
+          <section class="main-shopping-cart sanse-font">
+            <section class="products-in-cart">
+              <div id="products-in-cart"></div>
+
+              <section class="sum-info product-sum-price"></section>
+              <!-- <div class="products-in-cart-items">
+                <div class="grid-a cart-info-style bottom-border">
+                  <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+                </div>
+                <div class="grid-b cart-info-style bottom-border"><p>Storm Jacket</p></div>
+                <div class="grid-c cart-info-style bottom-border"><p class="bold">990 NOK</p></div>
+                <div class="cart-info-style">
+                  <select id="product-quantity" name="product-quantity" class="nr-list" aria-label="Amount of specific product">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div> -->
+              <section class="delivery-address">
+                <div class="grid-b delivery-titel">
+                  <label for="delivery-menu" class="delivery-form-titel">Delivery address <i class="fa-solid fa-angle-down"></i></label>
+                </div>
+                <div class="grid-e">
+                  <input type="checkbox" id="delivery-menu" />
+                  <div class="delivery-menu">
+                    <div class="delivery-style">
+                      <label for="first-name">First Name*</label>
+                      <input type="text" name="first-name" id="first-name" />
+                    </div>
+                    <div class="error-message-style" id="first-name-error">Please enter your first name.</div>
+                    <div class="delivery-style">
+                      <label for="last-name">Last Name*</label>
+                      <input type="text" name="last-name" id="last-name" />
+                    </div>
+                    <div class="error-message-style" id="last-name-error">Please enter last name.</div>
+                    <div class="delivery-style">
+                      <label for="phone-number">Phone Number*</label>
+                      <input type="tel" name="phone-number" id="phone-number" />
+                    </div>
+                    <div class="error-message-style" id="phone-number-error">Please enter phone number.</div>
+                    <div class="delivery-style">
+                      <label for="email">Email*</label>
+                      <input type="email" name="email" id="email" />
+                    </div>
+                    <div class="error-message-style" id="email-error">Please enter a valid email.</div>
+                    <div class="delivery-style">
+                      <label for="address">Address*</label>
+                      <input type="text" name="address" id="address" />
+                    </div>
+                    <div class="error-message-style" id="address-error">Please enter a valid address.</div>
+                    <div class="delivery-style">
+                      <label for="city">City*</label>
+                      <input type="text" name="city" id="city" />
+                    </div>
+                    <div class="error-message-style" id="city-error">Please enter the city for delivery.</div>
+                    <div class="delivery-style">
+                      <label for="country">Country*</label>
+                      <input type="text" name="country" id="country" />
+                    </div>
+                    <div class="error-message-style" id="country-error">Please enter the country for delivery.</div>
+                    <div class="delivery-style">
+                      <label for="postal-code">Postal Code*</label>
+                      <input type="number" name="postal-code" id="postal-code" />
+                    </div>
+                    <div class="error-message-style" id="postal-code-error">Please enter a valid postal code for delivery.</div>
+                  </div>
+                  <div id="error-message"></div>
+                </div>
+              </section>
+              <section class="payment-method">
+                <div class="grid-b delivery-titel">
+                  <label for="payment-menu" class="payment-form-titel">Payment method <i class="fa-solid fa-angle-down"></i></label>
+                </div>
+                <div class="grid-e payment-style">
+                  <input type="checkbox" id="payment-menu" />
+                  <div class="payment-menu">
+                    <div class="card-paypal">
+                      <input type="radio" name="payment" value="payment" id="card" class="radio-card" />
+                      <label for="card">Card</label>
+                      <div class="card">
+                        <div class="delivery-style">
+                          <label for="card-number">Card Number*</label>
+                          <input type="number" name="card-number" id="card-number" />
+                        </div>
+                        <div class="error-message-style" id="card-number-error">Please enter a valid card Number.</div>
+                        <div class="delivery-style">
+                          <label for="expiration-date">Expiration Date*</label>
+                          <input type="date" name="expiration-date" id="expiration-date" />
+                        </div>
+                        <div class="error-message-style" id="expiration-date-error">Please enter a valid expiration date for your card.</div>
+                        <div class="delivery-style">
+                          <label for="cvv-code">CVV code*</label>
+                          <input type="number" name="cvv-code" id="cvv-code" />
+                        </div>
+                        <div class="error-message-style" id="cvv-code-error">Please enter a valid cvv code from your card.</div>
+                      </div>
+                      <div id="error-message-Card"></div>
+                    </div>
+                    <div class="card-paypal">
+                      <input type="radio" name="payment" value="payment" id="paypal" />
+                      <label for="paypal">PayPal</label>
+                    </div>
+                  </div>
+                  <div id="checkout-Message"></div>
+                </div>
+              </section>
+              <section class="cart-buttons">
+                <button class="button button-confirm" id="checkout">Checkout</button>
+                <!-- <a href="checkout-success.html" class="button button-confirm" id="checkout">Checkout</a> -->
+                <a href="index.html" class="button button-continue">Continue shopping</a>
+              </section>
+            </section>
+            <!-- 
+            <section class="sum-products"> -->
+            <!-- <h2>Summary</h2> -->
+            <!--
+              <section class="sum-info"> 
+                <div class="grid-a bottom-border">
+                  <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
+                </div>
+                <div class="cart-info-style grid-b bottom-border">
+                  <p>Storm Jacket</p>
+                </div>
+                <div class="cart-info-style grid-c bottom-border">
+                  <p class="bold">990 NOK</p>
+                </div>
+                <div class="cart-info-style grid-e">
+                  <p>Sub total</p>
+                </div>
+                <div class="cart-info-style grid-f">
+                  <p class="cart-info-style bold">990 NOK</p>
+                </div>
+                <div class="grid-g bottom-border"></div>
+                <div class="cart-info-style grid-h bottom-border">
+                  <p>Shipping</p>
+                </div>
+                <div class="cart-info-style grid-i bottom-border">
+                  <p class="cart-info-style bold">Free</p>
+                </div>
+                <div class="cart-info-style grid-k">
+                  <p>Total</p>
+                </div>
+                <div class="cart-info-style grid-l">
+                  <p class="bold">990 NOK</p>
+                </div> 
+              </section>-->
+            <!-- <section class="cart-buttons">
+                <a href="checkout-success.html" class="button button-confirm">Checkout</a>
+                <a href="index.html" class="button button-continue">Continue shopping</a>
+              </section> -->
+            <!-- </section> -->
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <h2 class="bebas-font">Shortcuts</h2>
+        <a class="sanse-font" href="shopping-cart.html">Shopping cart</a>
+      </div>
+      <div>
+        <h2 class="bebas-font">Information</h2>
+        <a class="sanse-font" href="about.html">About</a>
+      </div>
+      <div>
+        <h2 class="bebas-font">Support</h2>
+        <a class="sanse-font" href="contact.html">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!--
+  <main>
       <section class="background-color small-margin">
         <section class="main-content-cart content-background">
           <h1>My Cart</h1>
@@ -215,19 +403,4 @@
         </section>
       </section>
     </main>
-    <footer>
-      <div>
-        <h2 class="bebas-font">Shortcuts</h2>
-        <a class="sanse-font" href="shopping-cart.html">Shopping cart</a>
-      </div>
-      <div>
-        <h2 class="bebas-font">Information</h2>
-        <a class="sanse-font" href="about.html">About</a>
-      </div>
-      <div>
-        <h2 class="bebas-font">Support</h2>
-        <a class="sanse-font" href="contact.html">Contact</a>
-      </div>
-    </footer>
-  </body>
-</html>
+-->
