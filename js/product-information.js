@@ -176,7 +176,7 @@ const addToCartReaction = document.querySelector("#add-to-rart-reaction");
 function addToCartButtonReaction(){
     let result = jacketList.filter(jacketName => jacketName.name === productName);
     Object.values(result).forEach(function(product) {
-        addToCartReaction.innerHTML = `<p>${product.name} has been added to the shopping cart!</p>`;
+        addToCartReaction.innerHTML = `<p class="submission-success">${product.name} has been added to the shopping cart!</p>`;
     });
 }
 

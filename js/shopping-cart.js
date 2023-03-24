@@ -2,27 +2,30 @@
 //import {shoppingCart} from "./product-information.js";
 
 const productsInCart = document.querySelector("#products-in-cart");
-console.log(productsInCart);
 const productsInCartSumProducts = document.querySelector(".sum-info");
 const productsInCartSumPrice = document.querySelector(".product-sum-price");
 
 let jacketItem = JSON.parse(localStorage.getItem("SHOPPING CART")) || [];
+console.log("start---",jacketItem);
 
 
 
 function productsInCartPage(){
+    
+    jacketItem.forEach((jacket, idNumber) => jacket.id = idNumber);
+
     productsInCart.innerHTML = "";
     jacketItem.forEach(function(jacket) {
             productsInCart.innerHTML += `<div class="products-in-cart-items bottom-border">
                                         <img class="cart-info-style" src="images/product_img/${jacket.img}" alt="${jacket.description}"/>
                                         <p class="cart-info-style">${jacket.name}</p>
                                         <p class="font-style-size">${jacket.size}</p>
-                                        <p class="font-style-text-transform">${jacket.color}</p>
+                                        <p class="font-style-text-transform" id="jacket-color">${jacket.color}</p>
                                         <p class="cart-info-style bold">${jacket.price * jacket.productAmount} NOK</p>
                                         <div class="cart-info-style amount-buttons">
-                                        <button id="minusProductAmount" name="${jacket.name}" class="minus amount-buttons-style"> - </button>
+                                        <button id="minusProductAmount" name="${jacket.id}" class="minus amount-buttons-style"> - </button>
                                         <div class="product-amount-style">${jacket.productAmount}</div>
-                                        <button id="plussProductAmount" name="${jacket.name}" class="pluss amount-buttons-style">+</button>
+                                        <button id="plussProductAmount" name="${jacket.id}" class="pluss amount-buttons-style">+</button>
                                         </div>
                                         </div>
                                         `;
@@ -42,6 +45,11 @@ function productsInCartPage(){
                                     //     <button id="plussProductAmount" name="${jacket.name}" class="pluss">+</button>
                                     //     </div>
                                     //     </div>
+
+
+                                    
+                                    // <p class="font-style-size" id="jacket-size" name="${jacket.size}">${jacket.size}</p>
+                                    // <p class="font-style-text-transform" id="jacket-color" name="${jacket.color}">${jacket.color}</p>
                                     //     `;
                                     
         const plussCartProductAmount = document.querySelectorAll("#plussProductAmount");
@@ -54,7 +62,7 @@ function productsInCartPage(){
             minusCartProductAmount[i].addEventListener("click", minusEditProductAmount);
         }
 
-        productsInCartPageSumPrice();
+    // addNewValue();
 }
 productsInCartPage();
 
@@ -66,22 +74,24 @@ function updateProducts() {
     productsInCartPage();
 }
 
+// function addNewValue(){
+//     jacketItem.forEach((jacket, idNumber) => jacket.id = idNumber)
+//     // console.log("OOOOOOOOOOOOOOOOOOOOO",jacketItem);
+//     // console.log("OOOOOOOOOOOOOOOOOOOOO",jacketItem);
+// }
+// addNewValue();
+
 function minusEditProductAmount(){
     let produktName = this.name;
-    const jacket = jacketItem.find((jacketItem) => jacketItem.name === produktName);
 
     jacketItem.forEach(function(jacket) {
-        if(produktName === jacket.name && jacket.productAmount > 0 ){
-            console.log("new",jacket);
+        if(parseInt(produktName) === jacket.id && jacket.productAmount > 0){
             jacket.productAmount--;
-            
         }
-
         if(jacket.productAmount === 0){
             const jacketToDelete = jacketItem.indexOf(jacket);
-            console.log("jacketToDelete",jacketToDelete);
-            if (jacketToDelete > -1) { // only splice array when item is found
-                jacketItem.splice(jacketToDelete, 1); // 2nd parameter means remove one item only
+            if (jacketToDelete > -1) { 
+                jacketItem.splice(jacketToDelete, 1);
             }
         }
     });
@@ -91,12 +101,11 @@ function minusEditProductAmount(){
 }
 
 function plussEditProductAmount(){
-    let produktName = this.name;
-    const jacket = jacketItem.find((jacketItem) => jacketItem.name === produktName);
-
+    let produktId = this.name;
+    const jacket = jacketItem.find((jacketItem) => jacketItem.id === parseInt(produktId));
+    
     jacketItem.forEach(function(jacket) {
-        if(produktName === jacket.name){
-            console.log("new",jacket);
+        if(parseInt(produktId) === jacket.id){
             jacket.productAmount++;
         }
     });
@@ -107,6 +116,9 @@ function plussEditProductAmount(){
 
 function shoppingCartUpdate(){
     localStorage.setItem("SHOPPING CART", JSON.stringify(jacketItem));
+    if(jacketItem.length === 0){
+        location.href = "https://friendly-zuccutto-172753.netlify.app/index.html";
+    }
 }
 
 
@@ -140,6 +152,81 @@ function productsInCartPageSumPrice(){
                                     `;
 }
 productsInCartPageSumPrice();
+
+
+
+    // for(let i = 0; i < jacketItem.length; i++){
+    //     let jacketInfoSum = jacketItem[i].name + " " + jacketItem[i].color + " " + jacketItem[i].size;
+    //     console.log("OOOOOOOOOOOOOOOOOOOOO new",jacketInfoSum);
+
+    //     const jacketI = jacketInfoSum === produktName;
+    //     console.log("---------------produktName--------------",jacketI);
+    //     jacketI.jacketInfoSum--;
+    // }
+    // const jacketI = jacketItem.find((jacketList) => jacketList.jackenInfo === produktName);
+    // console.log("---------------produktName--------------",jacketI);
+    // if(jacketI){
+    //             console.log("new",jacketI);
+    //             jacketI.productAmount--;
+                
+    // }
+
+    // let jacketInfoSum = jacketItem.name + " " + jacketItem.color + " " + jacketItem.size;
+    // console.log("jacketInfoSum-------------",jacketInfoSum);
+
+    // for(let i = 0; i < jacketItem.length; i++){
+    //     // console.log("jacketItem++",jacketItem[i].name + " " + jacketItem[i].color + " " + jacketItem[i].size);
+        
+    //     let jacketInfoSum = jacketItem[i].name + " " + jacketItem[i].color + " " + jacketItem[i].size;
+        
+    //     // const jacketItems = jacketItem.find((jacketList) => jacketList.name === productName);
+                
+    //     // shoppingCart.push({...jacketItems, color: lastcolor.color, size: lastsize.size, productAmount: 1});
+    //     // // jacketItem.push();
+    //     // console.log("jacketItemjacketItemjacketItemjacketItem",jacketItem);
+    //     console.log("999jacketInfoSum",jacketInfoSum);
+    //     let jackenInfoComparison = produktName === jacketInfoSum;
+    //     console.log("jackenInfoComparison",jackenInfoComparison);
+
+    //     if(jackenInfoComparison){
+    //         console.log("new",jackenInfoComparison);
+    //         // jacket.productAmount--;
+            
+    //     }
+    // }
+    // let jacketInfo = [produktName];
+    // // jacketInfo.push({produktName});
+    // console.log("jacketInfo",jacketInfo);
+
+    // let jacketInfoSum = jacketItem.filter(jacketName => jacketName.size + jacketName.color);
+    // console.log("jacketInfoSum",jacketInfoSum);
+    // const jacket = jacketItem.find((jacketItem) => jacketItem.name + jacketItem.size + jacketItem.color);
+    // console.log("44444jacketInfoSum",jacket);
+    // console.log("jacketInfoSum",jacketItem.name + jacketItem.size + jacketItem.color === produktName);
+    // // const jacket = jacketItem.find((jacketItem) => jacketItem.name === produktName);
+    // // console.log("jacketjacketjacketjacketjacket",jacket);
+    // let jacketName = jacketItem.filter(jacketName => jacketName.name === produktName);
+    // console.log("jacketNamejacketNamejacketNamejacketNamejacketNamejacketName",jacketName);
+    // // let jacketType = jacketName.filter(jacketName => jacketName.size === produktColor && jacketName.color === produktSize);
+
+    // let jacketType = jacketName.filter(jacketName => jacketName.size === lastsize.size && jacketName.color === lastcolor.color);
+    // console.log("jacketTypejacketTypejacketTypejacketTypejacketType",jacketType);
+
+    // jacketItem.forEach(function(jacket) {
+    //     if(produktName === jacket.name && jacket.productAmount > 0 ){
+    //         console.log("new",jacket);
+    //         jacket.productAmount--;
+            
+    //     }
+
+    //     if(jacket.productAmount === 0){
+    //         const jacketToDelete = jacketItem.indexOf(jacket);
+    //         console.log("jacketToDelete",jacketToDelete);
+    //         if (jacketToDelete > -1) { // only splice array when item is found
+    //             jacketItem.splice(jacketToDelete, 0);
+    //         }
+    //     }
+    // });
 
 // const checkout = document.querySelector("#checkout");
 // const errorMessage = document.querySelector("#error-message");

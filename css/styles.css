@@ -425,6 +425,20 @@ a {
     color: red;
 }
 
+.submission-success {
+    border: 3px solid #2efd2e;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #e6ffe6;
+}
+
+.submission-fail {  
+    border: 3px solid red;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #ffecec;
+}
+
 /*grid cells*/
 .grid-a {
     grid-area: a;
