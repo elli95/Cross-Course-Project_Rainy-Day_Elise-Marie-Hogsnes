@@ -99,7 +99,7 @@ function loadProduct(){
                                             <div class="error-message-style" id="size-error">Please select a size.</div>
                                             </div>
                                             <div class="grid-f product-button">
-                                            <div id="add-to-rart-reaction"></div>
+                                            <p class="submission-success product-page-success" id="product-page-success">${product.name} has been added to the shopping cart!</p>
                                             <div class="add-to-cart-button">
                                             <button class="button button-confirm" id="cart-button">Add to cart</button>
                                             <a href="shopping-cart.html" class="button button-confirm" id="view-shopping-cart-btn">View Shopping Cart</a>
@@ -165,20 +165,14 @@ shoppingCartUpdate();
 
 addToCartButton.addEventListener("click", addToShoppingCart);
 addToCartButton.addEventListener("click", productFormValidator);
-addToCartButton.addEventListener("click", addToCartButtonReaction);
+// addToCartButton.addEventListener("click", addToCartButtonReaction);
 addToCartButton.addEventListener("click", shoppingCartAmount);
 
 const colorError = document.querySelector("#color-error");
 const sizeError = document.querySelector("#size-error");
 
-const addToCartReaction = document.querySelector("#add-to-rart-reaction");
+const addToCartReaction = document.querySelector("#product-page-success");
 
-function addToCartButtonReaction(){
-    let result = jacketList.filter(jacketName => jacketName.name === productName);
-    Object.values(result).forEach(function(product) {
-        addToCartReaction.innerHTML = `<p class="submission-success">${product.name} has been added to the shopping cart!</p>`;
-    });
-}
 
 function productFormValidator(){
     if(color.length) {
@@ -211,10 +205,38 @@ function addToShoppingCart(){
         const jacketItems = jacketList.find((jacketList) => jacketList.name === productName);
                 
         shoppingCart.push({...jacketItems, color: lastcolor.color, size: lastsize.size, productAmount: 1});
+        // reactionTime()
+        // timedReaction()
+        // timedReaction(function(timedReaction){
+        addToCartReaction.style.display = "block";
+        // }, 100);
+        
+        // Object.values(shoppingCart).forEach(function(product) {
+        //     addToCartReaction.innerHTML = `<p class="submission-success">${product.name} has been added to the shopping cart!</p>`;
+        // });
     }
     shoppingCartUpdate();
 }
 
+// function reactionTime(){
+//     timedReaction(function(){
+//                 addToCartReaction.style.display = "block";
+//             }, 100);
+// }
+
+// function timedReaction(timedReaction){
+//     let reaction = addToCartReaction.style.display = "block";
+//     timedReaction = setTimeout(reaction, 200);
+// }
+
+// function addToCartButtonReaction(){
+//     let result = jacketList.filter(jacketName => jacketName.name === productName);
+//     if(jacketType){
+//         Object.values(result).forEach(function(product) {
+//             addToCartReaction.innerHTML = `<p class="submission-success">${product.name} has been added to the shopping cart!</p>`;
+//         });
+//     }
+// }
 
 
 function shoppingCartUpdate(){
