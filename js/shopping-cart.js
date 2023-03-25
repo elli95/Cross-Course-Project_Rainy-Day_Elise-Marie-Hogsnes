@@ -39,6 +39,7 @@ function productsInCartPage(){
         for (let i = 0; i < minusCartProductAmount.length; i++) {
             minusCartProductAmount[i].addEventListener("click", minusEditProductAmount);
         }
+        productsInCartPageSumPrice();
 }
 productsInCartPage();
 
