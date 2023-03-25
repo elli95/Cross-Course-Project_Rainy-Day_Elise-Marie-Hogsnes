@@ -80,11 +80,9 @@
         </div>
         <div class="search-list" id="search-result-list"></div>
       </section>
-      <label
-        ><a href="shopping-cart.html" class="shop-cart-icon" aria-label="Shopping cart"
-          ><i class="fa-solid fa-cart-shopping"><span class="wave-form-lable-fix">Shopping Cart</span></i></a
-        ></label
-      >
+      <label id="shopping-cart-button" class="shop-cart-icon" aria-label="Shopping cart">
+        <i class="fa-solid fa-cart-shopping"><span class="wave-form-lable-fix">Shopping Cart</span></i>
+      </label>
     </header>
     <main>
       <section class="background-color small-margin">
@@ -117,7 +115,7 @@
                 </div>
                 <div>
                   <label for="subject">Subject</label>
-                  <select id="subject" name="Subject">
+                  <select class="subject" id="subject" name="Subject">
                     <option value="Please select an option">Please select an option</option>
                     <option value="Damage item">Damage item</option>
                     <option value="Not delivered">Not delivered</option>
@@ -158,7 +156,7 @@
     <footer>
       <div>
         <h2 class="bebas-font">Shortcuts</h2>
-        <a class="sanse-font" href="shopping-cart.html">Shopping cart</a>
+        <p class="sanse-font" id="shopping-cart-button">Shopping cart</p>
       </div>
       <div>
         <h2 class="bebas-font">Information</h2>

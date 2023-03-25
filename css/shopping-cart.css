@@ -49,6 +49,8 @@
 
 .amount-buttons-style{
     border-radius: 25%;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .minus {
@@ -115,6 +117,7 @@
     border-radius: 5px;
     min-width: 85%;
     padding: 5px;
+    cursor: pointer;
 }
 
 .delivery-menu,
@@ -155,6 +158,10 @@
     display: flex;
     width: 0;
     padding-left: 30%;
+}
+
+.card-paypal label{ 
+    cursor: pointer;
 }
 
 .radio-card {

@@ -5,8 +5,6 @@ const outdoorContainer = document.querySelector("#outdoor-content");
 const skiingContainer = document.querySelector("#skiing-content");
 const canoeingContainer = document.querySelector("#canoeing-content");
 
-//const indexPage = indexProductContainer1 ||= indexProductContainer2;
-
 function loadProductsIndex(){
     try{
 
@@ -14,8 +12,6 @@ function loadProductsIndex(){
     outdoorContainer.innerHTML = "";
     skiingContainer.innerHTML = "";
     canoeingContainer.innerHTML = "";
-    
-    //const insexProducts = jacketList.length = 5;
     
     
     console.log(jacketList);
@@ -47,8 +43,10 @@ function loadProductsIndex(){
     }
     catch (error) {
         console.log(error);
-        indexProductContainer1.innerHTML = error;
-        indexProductContainer2.innerHTML = error;
+        popularContainer.innerHTML = error;
+        outdoorContainer.innerHTML = error;
+        skiingContainer.innerHTML = error;
+        canoeingContainer.innerHTML = error;
     }
 }
 

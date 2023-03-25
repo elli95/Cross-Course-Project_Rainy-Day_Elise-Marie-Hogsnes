@@ -79,11 +79,9 @@
         </div>
         <div class="search-list" id="search-result-list"></div>
       </section>
-      <label
-        ><a href="shopping-cart.html" class="shop-cart-icon" aria-label="Shopping cart"
-          ><i class="fa-solid fa-cart-shopping"><span class="wave-form-lable-fix">Shopping Cart</span></i></a
-        ></label
-      >
+      <label id="shopping-cart-button" class="shop-cart-icon" aria-label="Shopping cart">
+        <i class="fa-solid fa-cart-shopping"><span class="wave-form-lable-fix">Shopping Cart</span></i>
+      </label>
     </header>
     <main>
       <section class="background-color small-margin">
@@ -94,22 +92,7 @@
               <div id="products-in-cart"></div>
 
               <section class="sum-info product-sum-price"></section>
-              <!-- <div class="products-in-cart-items">
-                <div class="grid-a cart-info-style bottom-border">
-                  <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-                </div>
-                <div class="grid-b cart-info-style bottom-border"><p>Storm Jacket</p></div>
-                <div class="grid-c cart-info-style bottom-border"><p class="bold">990 NOK</p></div>
-                <div class="cart-info-style">
-                  <select id="product-quantity" name="product-quantity" class="nr-list" aria-label="Amount of specific product">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                </div>
-              </div> -->
+
               <section class="delivery-address">
                 <div class="grid-b delivery-titel">
                   <label for="delivery-menu" class="delivery-form-titel">Delivery address <i class="fa-solid fa-angle-down"></i></label>
@@ -195,54 +178,14 @@
                       <label for="paypal">PayPal</label>
                     </div>
                   </div>
-                  <div id="checkout-Message"></div>
                 </div>
               </section>
               <section class="cart-buttons">
+                <div id="checkout-Message"></div>
                 <button class="button button-confirm" id="checkout">Checkout</button>
-                <!-- <a href="checkout-success.html" class="button button-confirm" id="checkout">Checkout</a> -->
                 <a href="index.html" class="button button-continue">Continue shopping</a>
               </section>
             </section>
-            <!-- 
-            <section class="sum-products"> -->
-            <!-- <h2>Summary</h2> -->
-            <!--
-              <section class="sum-info"> 
-                <div class="grid-a bottom-border">
-                  <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-                </div>
-                <div class="cart-info-style grid-b bottom-border">
-                  <p>Storm Jacket</p>
-                </div>
-                <div class="cart-info-style grid-c bottom-border">
-                  <p class="bold">990 NOK</p>
-                </div>
-                <div class="cart-info-style grid-e">
-                  <p>Sub total</p>
-                </div>
-                <div class="cart-info-style grid-f">
-                  <p class="cart-info-style bold">990 NOK</p>
-                </div>
-                <div class="grid-g bottom-border"></div>
-                <div class="cart-info-style grid-h bottom-border">
-                  <p>Shipping</p>
-                </div>
-                <div class="cart-info-style grid-i bottom-border">
-                  <p class="cart-info-style bold">Free</p>
-                </div>
-                <div class="cart-info-style grid-k">
-                  <p>Total</p>
-                </div>
-                <div class="cart-info-style grid-l">
-                  <p class="bold">990 NOK</p>
-                </div> 
-              </section>-->
-            <!-- <section class="cart-buttons">
-                <a href="checkout-success.html" class="button button-confirm">Checkout</a>
-                <a href="index.html" class="button button-continue">Continue shopping</a>
-              </section> -->
-            <!-- </section> -->
           </section>
         </section>
       </section>
@@ -250,7 +193,7 @@
     <footer>
       <div>
         <h2 class="bebas-font">Shortcuts</h2>
-        <a class="sanse-font" href="shopping-cart.html">Shopping cart</a>
+        <p class="sanse-font" id="shopping-cart-button">Shopping cart</p>
       </div>
       <div>
         <h2 class="bebas-font">Information</h2>
@@ -263,144 +206,3 @@
     </footer>
   </body>
 </html>
-
-<!--
-  <main>
-      <section class="background-color small-margin">
-        <section class="main-content-cart content-background">
-          <h1>My Cart</h1>
-          <section class="main-shopping-cart sanse-font">
-            <section class="products-in-cart">
-              <div class="products-in-cart-items">
-                <div class="grid-a cart-info-style bottom-border">
-                  <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-                </div>
-                <div class="grid-b cart-info-style bottom-border"><p>Storm Jacket</p></div>
-                <div class="grid-c cart-info-style bottom-border"><p class="bold">990 NOK</p></div>
-                <div class="cart-info-style">
-                  <select id="product-quantity" name="product-quantity" class="nr-list" aria-label="Amount of specific product">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                </div>
-              </div>
-              <section class="delivery-address">
-                <div class="grid-b delivery-titel">
-                  <label for="delivery-menu" class="delivery-form-titel">Delivery address <i class="fa-solid fa-angle-down"></i></label>
-                </div>
-                <div class="grid-e">
-                  <input type="checkbox" id="delivery-menu" />
-                  <div class="delivery-menu">
-                    <div class="delivery-style">
-                      <label for="first-name">First Name*</label>
-                      <input type="text" name="first-name" id="first-name" />
-                    </div>
-                    <div class="delivery-style">
-                      <label for="last-name">Last Name*</label>
-                      <input type="text" name="last-name" id="last-name" />
-                    </div>
-                    <div class="delivery-style">
-                      <label for="phone-number">Phone Number*</label>
-                      <input type="tel" name="phone-number" id="phone-number" />
-                    </div>
-                    <div class="delivery-style">
-                      <label for="email">Email*</label>
-                      <input type="email" name="email" id="email" />
-                    </div>
-                    <div class="delivery-style">
-                      <label for="address">Address*</label>
-                      <input type="text" name="address" id="address" />
-                    </div>
-                    <div class="delivery-style">
-                      <label for="city">City*</label>
-                      <input type="text" name="city" id="city" />
-                    </div>
-                    <div class="delivery-style">
-                      <label for="country">Country*</label>
-                      <input type="text" name="country" id="country" />
-                    </div>
-                    <div class="delivery-style">
-                      <label for="postal-code">Postal Code*</label>
-                      <input type="number" name="postal-code" id="postal-code" />
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="payment-method">
-                <div class="grid-b delivery-titel">
-                  <label for="payment-menu" class="payment-form-titel">Payment method <i class="fa-solid fa-angle-down"></i></label>
-                </div>
-                <div class="grid-e payment-style">
-                  <input type="checkbox" id="payment-menu" />
-                  <div class="payment-menu">
-                    <div class="card-paypal">
-                      <input type="radio" name="payment" value="payment" id="card" class="radio-card" />
-                      <label for="card">Card</label>
-                      <div class="card">
-                        <div class="delivery-style">
-                          <label for="card-number">Card Number*</label>
-                          <input type="number" name="card-number" id="card-number" />
-                        </div>
-                        <div class="delivery-style">
-                          <label for="expiration-date">Expiration Date*</label>
-                          <input type="date" name="expiration-date" id="expiration-date" />
-                        </div>
-                        <div class="delivery-style">
-                          <label for="cvv-code">CVV code*</label>
-                          <input type="number" name="cvv-code" id="cvv-code" />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-paypal">
-                      <input type="radio" name="payment" value="payment" id="paypal" />
-                      <label for="paypal">PayPal</label>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </section>
-            <section class="sum-products">
-              <h2>Summary</h2>
-              <section class="sum-info">
-                <div class="grid-a bottom-border">
-                  <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-                </div>
-                <div class="cart-info-style grid-b bottom-border">
-                  <p>Storm Jacket</p>
-                </div>
-                <div class="cart-info-style grid-c bottom-border">
-                  <p class="bold">990 NOK</p>
-                </div>
-                <div class="cart-info-style grid-e">
-                  <p>Sub total</p>
-                </div>
-                <div class="cart-info-style grid-f">
-                  <p class="cart-info-style bold">990 NOK</p>
-                </div>
-                <div class="grid-g bottom-border"></div>
-                <div class="cart-info-style grid-h bottom-border">
-                  <p>Shipping</p>
-                </div>
-                <div class="cart-info-style grid-i bottom-border">
-                  <p class="cart-info-style bold">Free</p>
-                </div>
-                <div class="cart-info-style grid-k">
-                  <p>Total</p>
-                </div>
-                <div class="cart-info-style grid-l">
-                  <p class="bold">990 NOK</p>
-                </div>
-              </section>
-              <section class="cart-buttons">
-                <a href="checkout-success.html" class="button button-confirm">Checkout</a>
-                <a href="index.html" class="button button-continue">Continue shopping</a>
-              </section>
-            </section>
-          </section>
-        </section>
-      </section>
-    </main>
--->

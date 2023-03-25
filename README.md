@@ -1,6 +1,6 @@
 # HTML and CSS Course Assignment by Elise Marie Hogsnes
 
-This is the HTML & CSS course assignment by Elise Marie Hogsnes,
+This is the HTML & CSS course assignment (autumn 2022) and part of the Interaction Design assignment (spring 2023) by Elise Marie Hogsnes,
 from the August 2022 frontend development class, Noroff.
 This project shows my version of the rainyDay task.
 
@@ -44,6 +44,13 @@ Information and inspiration with the creation of the codes came from Noroff's cu
 - https://www.geeksforgeeks.org/how-to-add-google-map-inside-html-page-without-using-api-key/
 
 - https://blog.pope.tech/2020/02/28/missing-form-label-search/
+
+js Information and inspiration
+
+- function structure from https://content.noroff.dev/javascript-1/form-validation.html#regular-expressions
+- Create a Shopping Cart With Vanilla JavaScript | ES6 https://www.youtube.com/watch?v=UcrypywtAm0
+- Email address validation pattern from https://regexr.com/3e48o
+- Sum of values in an object array https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#sum_of_values_in_an_object_array
 
 ### Installing
 

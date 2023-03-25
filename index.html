@@ -21,6 +21,7 @@
     <link rel="icon" href="data:;base64,=" />
     <script type="module" src="js/search.js" defer></script>
     <script src="js/index.js" type="module" defer></script>
+    <script src="js/is-cart-full.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/b0b0906e7d.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for my site -->
     <script>
@@ -62,7 +63,7 @@
               <div class="border-left"></div>
               <a href="outdoors-section.html">Skiing</a>
               <div class="border-left"></div>
-              <a href="canoeing-section.html">Canoeing </a>
+              <a href="outdoors-section.html">Canoeing </a>
             </section>
           </nav>
         </div>
@@ -80,11 +81,9 @@
         </div>
         <div class="search-list" id="search-result-list"></div>
       </section>
-      <label
-        ><a href="shopping-cart.html" class="shop-cart-icon" aria-label="Shopping cart"
-          ><i class="fa-solid fa-cart-shopping"><span class="wave-form-lable-fix">Shopping Cart</span></i></a
-        ></label
-      >
+      <label id="shopping-cart-button" class="shop-cart-icon" aria-label="Shopping cart">
+        <i class="fa-solid fa-cart-shopping"><span class="wave-form-lable-fix">Shopping Cart</span></i>
+      </label>
     </header>
     <main>
       <section class="background-color">
@@ -112,45 +111,7 @@
               <section class="product-slide" id="popular-content">
                 <div class="loading"></div>
               </section>
-              <!--
-              <div class="product-slide">
-                <a class="product-style" id="left" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket1.png" alt="A thick orange, black and silver raincoat" />
-                  </div>
-                  <p class="product-name grid-b">Float Coat</p>
-                  <p class="price bold brid-c">2999 NOK</p>
-                </a>
-                <a class="product-style" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-                  </div>
-                  <p class="product-name grid-b">Storm jacket</p>
-                  <p class="price bold brid-c">990 NOK</p>
-                </a>
-                <a class="product-style" id="middle" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket3.png" alt="Red ski jacket with black details." />
-                  </div>
-                  <p class="product-name grid-b">Mens windproof ski jacket</p>
-                  <p class="price bold brid-c">1500 NOK</p>
-                </a>
-                <a class="product-style" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
-                  </div>
-                  <p class="product-name grid-b">Scott's Snowmobile jacket</p>
-                  <p class="price bold brid-c">3599 NOK</p>
-                </a>
-                <a class="product-style" id="right" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket2.png" alt="Grey windproof jacket." />
-                  </div>
-                  <p class="product-name grid-b">Scott's windproof jacket</p>
-                  <p class="price bold brid-c">1000 NOK</p>
-                </a>
-              </div>
-            -->
+
               <!-- reference: https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/#aa-with-a-handful-of-lines-of-css-we-can-set-them-next-to-each-other-and-let-them-scroll -->
               <div class="slide-buttons">
                 <a href="#left" class="slide-style" aria-label="Slide to the leftmost product"></a>
@@ -172,43 +133,7 @@
               <section class="product-slide" id="outdoor-content">
                 <div class="loading"></div>
               </section>
-              <!-- <div class="product-slide">
-                <a class="product-style" id="o-left" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
-                  </div>
-                  <p class="product-name grid-b">Scott's Snowmobile jacket</p>
-                  <p class="price bold brid-c">3599 NOK</p>
-                </a>
-                <a class="product-style" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket1.png" alt="A thick orange, black and silver raincoat" />
-                  </div>
-                  <p class="product-name grid-b">Float Coat</p>
-                  <p class="price bold brid-c">2999 NOK</p>
-                </a>
-                <a class="product-style" id="o-middle" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket2.png" alt="Grey windproof jacket." />
-                  </div>
-                  <p class="product-name grid-b">Scott's windproof jacket</p>
-                  <p class="price bold brid-c">1000 NOK</p>
-                </a>
-                <a class="product-style" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket3.png" alt="Red ski jacket with black details." />
-                  </div>
-                  <p class="product-name grid-b">Mens windproof ski jacket</p>
-                  <p class="price bold brid-c">1500 NOK</p>
-                </a>
-                <a class="product-style" id="o-right" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket7.png" alt="Olive colored cosy fleece." />
-                  </div>
-                  <p class="product-name grid-b">Patagonia Fleece Jacket</p>
-                  <p class="price bold brid-c">999 NOK</p>
-                </a>
-              </div>-->
+
               <div class="slide-buttons">
                 <a href="#o-left" class="slide-style" aria-label="Slide to the leftmost product"></a>
                 <a href="#o-middle" class="slide-style middle" aria-label="Slide to the middle product"></a>
@@ -229,43 +154,7 @@
               <section class="product-slide" id="skiing-content">
                 <div class="loading"></div>
               </section>
-              <!-- <div class="product-slide">
-                <a class="product-style" id="s-left" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket5.png" alt="Grey allround biker jacket." />
-                  </div>
-                  <p class="product-name grid-b">Monsun jacket</p>
-                  <p class="price bold brid-c">500 NOK</p>
-                </a>
-                <a class="product-style" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket7.png" alt="Olive colored cosy fleece." />
-                  </div>
-                  <p class="product-name grid-b">Patagonia Fleece Jacket</p>
-                  <p class="price bold brid-c">999 NOK</p>
-                </a>
-                <a class="product-style" id="s-middle" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket3.png" alt="Red ski jacket with black details." />
-                  </div>
-                  <p class="product-name grid-b">Mens windproof ski jacket</p>
-                  <p class="price bold brid-c">1500 NOK</p>
-                </a>
-                <a class="product-style" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
-                  </div>
-                  <p class="product-name grid-b">Scott's Snowmobile jacket</p>
-                  <p class="price bold brid-c">3599 NOK</p>
-                </a>
-                <a class="product-style" href="product-storm-jacket.html" id="s-right">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-                  </div>
-                  <p class="product-name grid-b">Storm jacket</p>
-                  <p class="price bold brid-c">990 NOK</p>
-                </a>
-              </div> -->
+
               <div class="slide-buttons">
                 <a href="#s-left" class="slide-style" aria-label="Slide to the leftmost product"></a>
                 <a href="#s-middle" class="slide-style middle" aria-label="Slide to the middle product"></a>
@@ -289,43 +178,7 @@
               <section class="product-slide" id="canoeing-content">
                 <div class="loading"></div>
               </section>
-              <!-- <div class="product-slide">
-                <a class="product-style" id="c-left" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket2.png" alt="Grey windproof jacket." />
-                  </div>
-                  <p class="product-name grid-b">Scott's windproof jacket</p>
-                  <p class="price bold brid-c">1000 NOK</p>
-                </a>
-                <a class="product-style" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket4.png" alt="Black winter jacket with white details." />
-                  </div>
-                  <p class="product-name grid-b">Scott's Snowmobile jacket</p>
-                  <p class="price bold brid-c">3599 NOK</p>
-                </a>
-                <a class="product-style" href="product-storm-jacket.html" id="c-middle">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket6.png" alt="Black winter jacket with grey details." />
-                  </div>
-                  <p class="product-name grid-b">Storm jacket</p>
-                  <p class="price bold brid-c">990 NOK</p>
-                </a>
-                <a class="product-style" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket1.png" alt="A thick orange, black and silver raincoat" />
-                  </div>
-                  <p class="product-name grid-b">Float Coat</p>
-                  <p class="price bold brid-c">2999 NOK</p>
-                </a>
-                <a class="product-style" id="c-right" href="product-storm-jacket.html">
-                  <div class="product-image grid-a">
-                    <img src="images/product_img/RainyDays_Jacket3.png" alt="Red ski jacket with black details." />
-                  </div>
-                  <p class="product-name grid-b">Mens windproof ski jacket</p>
-                  <p class="price bold brid-c">1500 NOK</p>
-                </a>
-              </div> -->
+
               <div class="slide-buttons">
                 <a href="#c-left" class="slide-style" aria-label="Slide to the leftmost product"></a>
                 <a href="#c-middle" class="slide-style middle" aria-label="Slide to the middle product"></a>
@@ -339,7 +192,7 @@
     <footer>
       <div>
         <h2 class="bebas-font">Shortcuts</h2>
-        <a class="sanse-font" href="shopping-cart.html">Shopping cart</a>
+        <p class="sanse-font" id="shopping-cart-button">Shopping cart</p>
       </div>
       <div>
         <h2 class="bebas-font">Information</h2>

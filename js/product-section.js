@@ -22,14 +22,3 @@ function loadProducts(){
 }
 
 loadProducts();
-
-
-/*
-css:
-  grid-template-columns: repeat(4, 1fr);
-  display: grid;
-  grid-gap: 5%;
-  justify-content: center;
-
-  arr.length
-*/

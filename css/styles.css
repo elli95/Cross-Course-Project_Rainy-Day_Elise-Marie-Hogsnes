@@ -129,6 +129,7 @@ header img{
 .shop-cart-icon {
     padding-right: 20px;
     font-size: 30px;
+    cursor: pointer;
 }
 
 footer {
@@ -146,8 +147,14 @@ footer h2 {
     margin-bottom: 5px;
 }
 
-footer a {
+footer a,
+footer p {
     font-size: 1.1rem;
+}
+
+footer p {
+    margin: 0px;
+    cursor: pointer;
 }
 
 /*main*/
@@ -387,6 +394,7 @@ nav{
     background-color: var(--strong-green-button);
     font-family: "Bebas Neue";
     font-size: 24px;
+    cursor: pointer;
 }
 
 .button-continue {

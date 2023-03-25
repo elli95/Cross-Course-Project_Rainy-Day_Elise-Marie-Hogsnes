@@ -23,20 +23,3 @@ function Checkout(){
     `;
 }
 Checkout();
-
-
-
-// purchasedProducts.innerHTML += `<div class="success-product-grid">
-// <div class="grid-a bottom-border success-grid-style">
-// <img src="images/product_img/${jacket.img}" alt="${jacket.description}" />
-// </div>
-// <div class="grid-b bottom-border success-grid-style product-info">
-// <p>${jacket.name}</p>
-// <p>${jacket.color}</p>
-// <p>${jacket.size}</p>
-// </div>
-// <div class="grid-c bottom-border success-grid-style product-price">
-// <p>${jacket.productAmount}</p>
-// <p class="bold">${jacket.price * jacket.productAmount} NOK</p>
-// </div>
-// </div>

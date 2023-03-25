@@ -65,6 +65,7 @@
     display: flex;
     border-radius: 10px;
     padding: 25px;
+    cursor: pointer;
 }
 
 .color-selection input:checked + label {
@@ -163,6 +164,7 @@ p {
     border: 1px solid var(--main-border-color);
     border-radius: 5px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .size-bar {
