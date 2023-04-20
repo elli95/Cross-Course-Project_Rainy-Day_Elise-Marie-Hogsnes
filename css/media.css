@@ -1,3 +1,9 @@
+@media (max-width: 440px){
+    .popular-titel { 
+        font-size: 2.9rem;
+    }
+}
+
 @media (max-width: 600px){
     .small-margin {
         padding: 20px 10px 10px 10px;
@@ -251,9 +257,11 @@
 
     .product-slide {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        /* grid-template-columns: repeat(5, 1fr); */
         width: auto;
         gap: 2.5%;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
     }
 
     .product-style p {
@@ -267,7 +275,7 @@
 
     /*outdoor site*/
     .outdoor-section {
-    grid-template-areas: "a b" "a c" "a c";
+    grid-template-areas: "b b" "a c" "a c";
     }
     
     .outdoor-img-text {
@@ -307,7 +315,10 @@
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "a c" "a d" "a e" "b f";
+        grid-template-areas: "b a" 
+        "b c" 
+        "b d" 
+        "b e";
     }
 
     .size-menu {

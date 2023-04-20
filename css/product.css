@@ -1,7 +1,7 @@
 .main-content-product {
     display: grid;
     grid-template-rows: auto;
-    grid-template-areas: "a" "c" "d" "e" "f" "b";
+    grid-template-areas: "a" "b" "c" "d" "e";
     grid-gap: 15px;
     max-width: 1200px;
     padding: 20px;
@@ -45,6 +45,17 @@
     padding: 10px;
     padding-top: 10px;
     padding-top: 0;
+}
+
+.product-name-price-content{
+    display: grid;
+}
+
+.product-info-content {
+    display: grid;
+    grid-template-areas:
+    "a" 
+    "b";
 }
 
 .product-description {

@@ -83,8 +83,80 @@
     </header>
     <main>
       <section class="background-color">
-        <section class="content-background content-size-products main-content-product small-margin sanse-font" id="product-content">
-          <div class="loading"></div>
+        <section class="content-background content-size-products main-content-product small-margin sanse-font">
+          <div id="product-name-price-content" class="grid-a product-name-price-content">
+            <div class="loading"></div>
+          </div>
+          <div id="product-info-content" class="grid-b product-info-content">
+            <div class="loading"></div>
+          </div>
+          <div class="color-selection grid-c">
+            <div class="color-red">
+              <div class="check"></div>
+              <input type="radio" name="product-color" value="red" id="red" aria-label="Red" />
+              <label for="red" class="red-wave" id="red">Red</label>
+              <h2>Red</h2>
+            </div>
+            <div class="color-blue">
+              <div class="check"></div>
+              <input type="radio" name="product-color" value="blue" id="blue" aria-label="Blue" />
+              <label for="blue" class="blue-wave" id="blue">Blue</label>
+              <h2>Blue</h2>
+            </div>
+            <div class="color-yellow">
+              <div class="check"></div>
+              <input type="radio" name="product-color" value="yellow" id="yellow" aria-label="Yellow" />
+              <label for="yellow" class="yellow-wave" id="yellow">Yellow</label>
+              <h2>Yellow</h2>
+            </div>
+            <div class="color-black">
+              <div class="check lblack"></div>
+              <input type="radio" name="product-color" value="black" id="black" aria-label="Black" />
+              <label for="black" class="black-wave" id="black">Black</label>
+              <h2>Black</h2>
+            </div>
+            <div class="color-orange">
+              <div class="check"></div>
+              <input type="radio" name="product-color" value="orange" id="orange" aria-label="Orange" />
+              <label for="orange" class="orange-wave" id="orange">Orange</label>
+              <h2>Orange</h2>
+            </div>
+          </div>
+          <div class="error-message-style" id="color-error">Please select a color.</div>
+
+          <div class="grid-d size-menu product-center">
+            <label for="product-size-menu" class="size-bar-name">Choose a size * <i class="fa-solid fa-angle-down angle-down-icon"></i></label>
+            <input type="checkbox" id="product-size-menu" />
+            <div class="size-bar">
+              <div>
+                <input type="radio" name="product-size" value="xs" id="xs" />
+                <label class="size-bar-name-option bar-start xs" for="xs" id="xs">XS</label>
+              </div>
+              <div>
+                <input type="radio" name="product-size" value="s" id="s" />
+                <label class="size-bar-name-option bar-middle" for="s">S</label>
+              </div>
+              <div>
+                <input type="radio" name="product-size" value="m" id="m" />
+                <label class="size-bar-name-option bar-middle" for="m">M</label>
+              </div>
+              <div>
+                <input type="radio" name="product-size" value="l" id="l" />
+                <label class="size-bar-name-option bar-middle" for="l">L</label>
+              </div>
+              <div>
+                <input type="radio" name="product-size" value="xl" id="xl" />
+                <label class="size-bar-name-option bar-end" for="xl">XL</label>
+              </div>
+            </div>
+            <div class="error-message-style" id="size-error">Please select a size.</div>
+          </div>
+          <div class="grid-e product-button">
+            <div class="add-to-cart-button">
+              <button class="button button-confirm" id="cart-button">Add to cart</button>
+              <a href="shopping-cart.html" class="button button-confirm" id="view-shopping-cart-btn">View Shopping Cart</a>
+            </div>
+          </div>
         </section>
       </section>
     </main>

@@ -1,5 +1,25 @@
 const purchasedProducts = document.querySelector("#purchased-products");
 
+// const apiBase = "http://content-management-systemscaelise-marie-hogsnes.local";
+// const woocommerceBase = "/wp-json/wc/store";
+// const cartBase = "/cart/items";
+
+// const shoppingCartBase = apiBase + woocommerceBase + cartBase;
+
+// async function getShoppingCart(){
+//     try{
+//         const response = await fetch(shoppingCartBase);
+//         const data = await response.json();
+//         console.log("url info", data);
+    
+//         return data;
+//     }
+//     catch (error) {
+//         console.log(error);
+//         purchasedProducts.innerHTML = error;
+//     }
+// }
+
 function Checkout(){
     let jacketItem = JSON.parse(localStorage.getItem("SHOPPING CART"));
     console.log(jacketItem);
@@ -9,7 +29,7 @@ function Checkout(){
 
     Object.values(jacketItem).forEach(function(jacket) {
         purchasedProducts.innerHTML += `<div class="success-product-grid bottom-border font-style-text-transform">
-                                        <img class="success-grid-style" src="images/product_img/${jacket.img}" alt="${jacket.description}" />
+                                        <img class="success-grid-style" src="${jacket.images[0].src}" alt="${jacket.images[0].alt}" />
                                         <p class="success-grid-style product-success success-jacket-name">${jacket.name}</p>
                                         <p class="success-grid-style product-success success-jacket-size">${jacket.size}</p>
                                         <p class="success-grid-style product-success success-jacket-color">${jacket.color}</p>

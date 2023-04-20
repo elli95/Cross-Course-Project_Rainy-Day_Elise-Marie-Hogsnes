@@ -1,7 +1,12 @@
-import {jacketList} from "./products.js";
+// import {jacketList} from "./products.js";
 
+const apiBase = "https://rainydays.elisemariehogsnes.no";
+const woocommerceBase = "/wp-json/wc/store";
+const ProductBase = "/products";
 
-console.log("hello", jacketList);
+const allProductBase = apiBase + woocommerceBase + ProductBase;
+console.log("hello", allProductBase);
+// console.log("hello", jacketList);
 
 const searchInput = document.querySelector("#search-bar-input");
 const searchResult = document.querySelector("#search-result-list");
@@ -14,21 +19,61 @@ for (let i = 0; i < shoppingCartButton.length; i++) {
 searchInput.addEventListener("input", inputContent);
 document.addEventListener("click", noSearchList);
 
-function inputContent(inputText){
-    const value = inputText.target.value.toLowerCase();
-    console.log(value);
-
-    let result = jacketList.filter(jacketName => jacketName.name.toLowerCase().includes(value));
+async function inputContent(inputText){
+        try{
+            const response = await fetch(allProductBase);
+            const data = await response.json();
+            console.log("url info", data);
     
-    console.log(result);
-    searchResultsList(result)
+            const value = inputText.target.value.toLowerCase();
+            console.log(value);
+    
+            let result = data.filter(jacketName => jacketName.name.toLowerCase().includes(value));
+            console.log(result);
+            searchResultsList(result)
+        }
+        catch (error) {
+            console.log(error);
+            searchResult.innerHTML = error;
+        }
 }
+
+// async function productApi(url){
+//     try{
+//         const response = await fetch(url);
+//         const data = await response.json();
+//         console.log("url info", data);
+
+//         inputContent(value);
+//         console.log("aaaaaaaa",value);
+
+//         let result = allProductBase.filter(jacketName => jacketName.name.toLowerCase().includes(value));
+//         console.log(result);
+//         searchResultsList(result)
+//     }
+//     catch (error) {
+//         console.log(error);
+//         searchResult.innerHTML = error;
+//     }
+// }
+
+
+// function inputContent(inputText){
+//     const value = inputText.target.value.toLowerCase();
+//     console.log(value);
+
+//     // let result = jacketList.filter(jacketName => jacketName.name.toLowerCase().includes(value));
+//     let result = allProductBase.filter(jacketName => jacketName.name.toLowerCase().includes(value));
+    
+//     console.log(result);
+//     searchResultsList(result)
+// }
 
 function searchResultsList(result){
     searchResult.innerHTML = "";
     Object.values(result).forEach(function(searchList) {
-        searchResult.innerHTML += ` <a class="search-list-products" href="product-storm-jacket.html?name=${searchList.name}">
-                                    <img class="search-img" src="images/product_img/${searchList.img}" alt="${searchList.description}" />
+        searchResult.innerHTML += ` <a class="search-list-products" href="product-storm-jacket.html?id=${searchList.id}">
+                                    <img class="search-img" src="${searchList.images[0].src}" alt="${searchList.images[0].alt}" />
                                     <p>${searchList.name}</p>
                                     </a>
                                   `;

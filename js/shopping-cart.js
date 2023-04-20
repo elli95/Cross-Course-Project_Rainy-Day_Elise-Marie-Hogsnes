@@ -7,20 +7,41 @@ const productsInCartSumPrice = document.querySelector(".product-sum-price");
 let jacketItem = JSON.parse(localStorage.getItem("SHOPPING CART")) || [];
 console.log("start---",jacketItem);
 
+// const apiBase = "http://content-management-systemscaelise-marie-hogsnes.local";
+// const woocommerceBase = "/wp-json/wc/store";
+// const cartBase = "/cart/items";
+
+// const shoppingCartBase = apiBase + woocommerceBase + cartBase;
+
+// async function getShoppingCart(){
+//     try{
+//         const response = await fetch(shoppingCartBase);
+//         const data = await response.json();
+//         console.log("url info", data);
+    
+//         return data;
+//     }
+//     catch (error) {
+//         console.log(error);
+//         purchasedProducts.innerHTML = error;
+//     }
+// }
 
 
 function productsInCartPage(){
-    
+    console.log("Cart",jacketItem);
+
     jacketItem.forEach((jacket, idNumber) => jacket.id = idNumber);
 
     productsInCart.innerHTML = "";
     jacketItem.forEach(function(jacket) {
+    console.log("priceeeeee",jacket.price_html);
             productsInCart.innerHTML += `<div class="products-in-cart-items bottom-border">
-                                        <img class="cart-info-style" src="images/product_img/${jacket.img}" alt="${jacket.description}"/>
+                                        <img class="cart-info-style" src="${jacket.images[0].src}" alt="${jacket.images[0].alt}"/>
                                         <p class="cart-info-style">${jacket.name}</p>
                                         <p class="font-style-size">${jacket.size}</p>
                                         <p class="font-style-text-transform" id="jacket-color">${jacket.color}</p>
-                                        <p class="cart-info-style bold">${jacket.price * jacket.productAmount} NOK</p>
+                                        <p class="cart-info-style bold">${jacket.prices.price * jacket.productAmount} NOK</p>
                                         <div class="cart-info-style amount-buttons">
                                         <button id="minusProductAmount" name="${jacket.id}" class="minus amount-buttons-style bold">-</button>
                                         <div class="product-amount-style">${jacket.productAmount}</div>
@@ -44,7 +65,7 @@ function productsInCartPage(){
 productsInCartPage();
 
 
-console.log("helo my frien",jacketItem);
+// console.log("helo my frien",jacketItem);
 
 function updateProducts() {
     shoppingCartUpdate();
@@ -91,11 +112,11 @@ function shoppingCartUpdate(){
     }
 }
 
-
 function productsInCartPageSumPrice(){
     //Reference: Sum of values in an object array https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#sum_of_values_in_an_object_array
+
     const productSum = jacketItem.reduce(
-        (sumPrices, productPrice) => sumPrices + productPrice.price * productPrice.productAmount, 0,);
+        (sumPrices, productPrice) => sumPrices + productPrice.prices.price * productPrice.productAmount, 0,);
 
           console.log("sum",productSum);
 
