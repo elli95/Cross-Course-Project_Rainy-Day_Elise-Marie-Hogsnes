@@ -26,7 +26,7 @@ async function getFeaturedProducts(url){
         popularContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                       <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                       <p class="product-name grid-b">${jacketList.name}</p>
-                                      <p class="price bold brid-c">${jacketList.price_html}</p>
+                                      <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                       </a>`;
                                     });
         }
@@ -55,17 +55,17 @@ async function getProducts(url){
         outdoorContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                       <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                       <p class="product-name grid-b">${jacketList.name}</p>
-                                      <p class="price bold brid-c">${jacketList.price_html}</p>
+                                      <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                       </a>`;
         skiingContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                       <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                       <p class="product-name grid-b">${jacketList.name}</p>
-                                      <p class="price bold brid-c">${jacketList.price_html}</p>
+                                      <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                       </a>`;
         canoeingContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                       <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                       <p class="product-name grid-b">${jacketList.name}</p>
-                                      <p class="price bold brid-c">${jacketList.price_html}</p>
+                                      <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                       </a>`;
             });
         }

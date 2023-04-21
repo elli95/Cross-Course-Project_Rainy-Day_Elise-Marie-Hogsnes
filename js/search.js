@@ -1,4 +1,3 @@
-// import {jacketList} from "./products.js";
 
 const apiBase = "https://rainydays.elisemariehogsnes.no";
 const woocommerceBase = "/wp-json/wc/store";
@@ -6,7 +5,6 @@ const ProductBase = "/products";
 
 const allProductBase = apiBase + woocommerceBase + ProductBase;
 console.log("hello", allProductBase);
-// console.log("hello", jacketList);
 
 const searchInput = document.querySelector("#search-bar-input");
 const searchResult = document.querySelector("#search-result-list");
@@ -37,37 +35,6 @@ async function inputContent(inputText){
             searchResult.innerHTML = error;
         }
 }
-
-// async function productApi(url){
-//     try{
-//         const response = await fetch(url);
-//         const data = await response.json();
-//         console.log("url info", data);
-
-//         inputContent(value);
-//         console.log("aaaaaaaa",value);
-
-//         let result = allProductBase.filter(jacketName => jacketName.name.toLowerCase().includes(value));
-//         console.log(result);
-//         searchResultsList(result)
-//     }
-//     catch (error) {
-//         console.log(error);
-//         searchResult.innerHTML = error;
-//     }
-// }
-
-
-// function inputContent(inputText){
-//     const value = inputText.target.value.toLowerCase();
-//     console.log(value);
-
-//     // let result = jacketList.filter(jacketName => jacketName.name.toLowerCase().includes(value));
-//     let result = allProductBase.filter(jacketName => jacketName.name.toLowerCase().includes(value));
-    
-//     console.log(result);
-//     searchResultsList(result)
-// }
 
 function searchResultsList(result){
     searchResult.innerHTML = "";

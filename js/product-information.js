@@ -10,6 +10,7 @@ console.log("---",productId);
 
 const productNamePriceContainer = document.querySelector("#product-name-price-content");
 const productInfoContainer = document.querySelector("#product-info-content");
+const addToCartReactionContainer = document.querySelector("#add-to-cart-reaction");
 
 const apiBase = "https://rainydays.elisemariehogsnes.no";
 const woocommerceBase = "/wp-json/wc/store";
@@ -45,7 +46,7 @@ async function loadProduct(){
                                                     </div>
                                                     <div class="product-price">
                                                         <p>Price:</p>
-                                                        <p class="bold">${productInfo.price_html} NOK</p>
+                                                        <p class="bold">${productInfo.prices.price/100} NOK</p>
                                                 </div>
                                       `;
                                       
@@ -128,8 +129,6 @@ addToCartButton.addEventListener("click", shoppingCartAmount);
 const colorError = document.querySelector("#color-error");
 const sizeError = document.querySelector("#size-error");
 
-const addToCartReaction = document.querySelector("#product-page-success");
-
 
 function productFormValidator(){
     if(color.length) {
@@ -147,50 +146,29 @@ function productFormValidator(){
     }
 }
 
-// const shoppingCart = "http://content-management-systemscaelise-marie-hogsnes.local/wp-json/wc/store/cart/items";
-
-// async function getShoppingCart(){
-//     try{
-//         const response = await fetch(shoppingCart);
-//         const data = await response.json();
-//         console.log("getShoppingCart", data);
-        
-//         return data;
-//     }
-//     catch (error) {
-//         console.log(error);
-//         purchasedProducts.innerHTML = error;
-//     }
-// }
-
 async function addToShoppingCart(){ 
     
     const productInfo = await getProductInfo();
-    console.log("ppppp", productInfo)
+    console.log("ppppp", productInfo.name);
+    console.log("ppppp", productInfo);
 
     let lastcolor = color[color.length - 1];
     let lastsize = size[size.length - 1];
 
-    // let jacketName = shoppingCart.filter(jacketName => jacketName.name === productName);
-    // let jacketType = jacketName.filter(jacketName => jacketName.size === lastsize.size && jacketName.color === lastcolor.color);
+    let productIdFilter = localShoppingCart.filter(jacketId => jacketId.id === Number.parseInt(productId));
+    let productstyleFilter = productIdFilter.filter(jacketstyle => jacketstyle.color === lastcolor.color && jacketstyle.size === lastsize.size);
 
-    // if(jacketType.length > 0){
-    //     alert("A jacket with the same color and size is already in the shopping cart. Choose something else or change the product in the shopping cart.");
-        
-    // }
-    // else {
-    //     const jacketItems = jacketList.find((jacketList) => jacketList.name === productName);
+    if(productstyleFilter.length > 0){
+            alert("A jacket with the same color and size is already in the shopping cart. Choose something else or change the product in the shopping cart.");
                 
-    // localShoppingCart.push({productInfo, color: lastcolor.color, size: lastsize.size, productAmount: 1});
+    }
+    else {
+        console.log("thisdfsdfsdgahafdhsdfhdfhdhgdfgs2");
         localShoppingCart.push({...productInfo, color: lastcolor.color, size: lastsize.size, productAmount: 1});
-        // addToCartReaction.style.display = "block";
-    // }
+        addToCartReactionContainer.innerHTML += `<p class="submission-success product-page-success" id="product-page-success">${productInfo.name} has been added to the shopping cart!</p>`
+    }
     shoppingCartUpdate();
 }
-
-/* <div class="grid-f product-button">
-<p class="submission-success product-page-success" id="product-page-success">${productInfo.name} has been added to the shopping cart!</p>
-<div class="add-to-cart-button"></div> */
 
 function shoppingCartUpdate(){
     localStorage.setItem("SHOPPING CART", JSON.stringify(localShoppingCart));
@@ -207,19 +185,6 @@ function shoppingCartAmount(){
     }
 }
 shoppingCartAmount();
-
-// async function shoppingCartAmount(){
-//     const shoppingCart = await getShoppingCart();
-//     const shoppingCartBtn = document.querySelector("#view-shopping-cart-btn");
-//     console.log(shoppingCart.length);
-    
-//     if(shoppingCart.length === 0){
-//         shoppingCartBtn.style.display = "none"
-//     } else {
-//         shoppingCartBtn.style.display = "flex"
-//     }
-// }
-// shoppingCartAmount();
 
 
 

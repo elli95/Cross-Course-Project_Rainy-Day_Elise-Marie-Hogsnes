@@ -22,7 +22,7 @@ async function loadProducts(){
         productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                   <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                   <p class="product-name grid-b">${jacketList.name}</p>
-                                  <p class="price bold brid-c">${jacketList.price_html}</p>
+                                  <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                   </a>`;
         });
     }
@@ -68,7 +68,7 @@ async function featuredFilter(featuredBase){
             productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                       <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                       <p class="product-name grid-b">${jacketList.name}</p>
-                                      <p class="price bold brid-c">${jacketList.price_html}</p>
+                                      <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                       </a>`;
         });
     }
@@ -116,7 +116,7 @@ function scottJacketFilter(productInfo){
                 productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                           <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                           <p class="product-name grid-b">${jacketList.name}</p>
-                                          <p class="price bold brid-c">${jacketList.price_html}</p>
+                                          <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                           </a>`;
             }
             else{
@@ -152,7 +152,7 @@ function windproofJacketFilter(productInfo){
                 productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                           <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                           <p class="product-name grid-b">${jacketList.name}</p>
-                                          <p class="price bold brid-c">${jacketList.price_html}</p>
+                                          <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                           </a>`;
             }
             else{
@@ -188,7 +188,7 @@ function fleeceFilter(productInfo){
                 productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                           <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                           <p class="product-name grid-b">${jacketList.name}</p>
-                                          <p class="price bold brid-c">${jacketList.price_html}</p>
+                                          <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                           </a>`;
             }
             else{
@@ -224,7 +224,7 @@ function coatFilter(productInfo){
                 productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                           <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                           <p class="product-name grid-b">${jacketList.name}</p>
-                                          <p class="price bold brid-c">${jacketList.price_html}</p>
+                                          <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                           </a>`;
             }
             else{
@@ -265,12 +265,13 @@ async function sizeFilterXS(){
 
 function sizeXS(productsize){
     Object.values(productsize).forEach(function(jacketList){
+        //Reference: How to Use the flat() and flatMap() Methods to Flatten Arrays in JavaScript  https://www.freecodecamp.org/news/flat-and-flatmap-javascript-array-methods/
         const sizePath = jacketList.attributes.flatMap(size=>size.terms.flatMap(sizeType=>sizeType.name));
         if(sizePath.includes("XS")){
             productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                       <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                       <p class="product-name grid-b">${jacketList.name}</p>
-                                      <p class="price bold brid-c">${jacketList.price_html}</p>
+                                      <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                       </a>`;
         }
         else{
@@ -298,7 +299,7 @@ function sizeS(productsize){
             productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                       <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                       <p class="product-name grid-b">${jacketList.name}</p>
-                                      <p class="price bold brid-c">${jacketList.price_html}</p>
+                                      <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                       </a>`;
         }
         else{
@@ -326,7 +327,7 @@ function sizeM(productsize){
             productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                       <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                       <p class="product-name grid-b">${jacketList.name}</p>
-                                      <p class="price bold brid-c">${jacketList.price_html}</p>
+                                      <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                       </a>`;
         }
         else{
@@ -354,7 +355,7 @@ function sizeL(productsize){
             productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                       <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                       <p class="product-name grid-b">${jacketList.name}</p>
-                                      <p class="price bold brid-c">${jacketList.price_html}</p>
+                                      <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                       </a>`;
         }
         else{
@@ -382,7 +383,7 @@ function sizeXL(productsize){
             productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${jacketList.id}">
                                       <div class="product-image grid-a"><img src="${jacketList.images[0].src}" alt="${jacketList.images[0].alt}" /></div>
                                       <p class="product-name grid-b">${jacketList.name}</p>
-                                      <p class="price bold brid-c">${jacketList.price_html}</p>
+                                      <p class="price bold brid-c">${jacketList.prices.price/100} NOK</p>
                                       </a>`;
         }
         else{
@@ -392,17 +393,84 @@ function sizeXL(productsize){
     });
 }
 
+const minPrice = document.querySelector("#price-min");
+minPrice.addEventListener("change", filterPriceMin);
+const maxPrice = document.querySelector("#price-max");
+maxPrice.addEventListener("change", filterPriceMax);
 
-// sizeFilter()
+async function priceFilter(){
+    const productsList = await getProducts();
+    productContainer.innerHTML = "";
+    return productsList;
+}
 
-// function sizeXS(jacketList){
-//     if(sizePath.includes("XS")){
-//         console.log("----------------WIN---------------", jacketList);
-//     }
-//     else{
-//         console.log("Fail");
-//     }
+async function filterPriceMin(inputText){
+    const productPriceList = await priceFilter();
+    console.log("productPriceList",productPriceList);
+    const minValue = inputText.target.value;
+    console.log(minValue);
+    // priceFilter();
+    // return minValue;
+    Object.values(productPriceList).forEach(function(products){
+    console.log(products);
+    if(products.prices.price/100 > minValue){
+                    productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${products.id}">
+                    <div class="product-image grid-a"><img src="${products.images[0].src}" alt="${products.images[0].alt}" /></div>
+                    <p class="product-name grid-b">${products.name}</p>
+                    <p class="price bold brid-c">${products.prices.price/100} NOK</p>
+                    </a>`;
+                }
+    });
+}
+
+async function filterPriceMax(inputText){
+    // const maxValue = inputText.target.value;
+    // console.log(maxValue);
+    // // priceFilter();
+    // return maxValue;
+    const productPriceList = await priceFilter();
+    console.log("productPriceList",productPriceList);
+    const maxValue = inputText.target.value;
+    console.log(maxValue);
+    Object.values(productPriceList).forEach(function(products){
+    console.log(products);
+    if(products.prices.price/100 < maxValue){
+                    productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${products.id}">
+                    <div class="product-image grid-a"><img src="${products.images[0].src}" alt="${products.images[0].alt}" /></div>
+                    <p class="product-name grid-b">${products.name}</p>
+                    <p class="price bold brid-c">${products.prices.price/100} NOK</p>
+                    </a>`;
+                }
+    });
+}
+
+// async function priceFilter(minValue, maxValue){
+//     const productsList = await getProducts();
+//     // let minPrice = filterPriceMin();
+//     // console.log("minPrice",minPrice);
+//     // console.log("minPrice",maxValue);
+//     productContainer.innerHTML = "";
+//     Object.values(productsList).forEach(function(products){
+    
+//     let productPrices = products.prices.price/100;
+
+//     console.log("hello",productPrices > 1500);
+//         if(productPrices > minValue && productPrices < maxValue){
+//             productContainer.innerHTML += `<a class="product-style" href="product-storm-jacket.html?id=${products.id}">
+//             <div class="product-image grid-a"><img src="${products.images[0].src}" alt="${products.images[0].alt}" /></div>
+//             <p class="product-name grid-b">${products.name}</p>
+//             <p class="price bold brid-c">${products.prices.price/100} NOK</p>
+//             </a>`;
+//         }
+//         else{
+
+//         }
+//     });
 // }
+
+
+
+
 
 // async function getProducts(){
 //     try{

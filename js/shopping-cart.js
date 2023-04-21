@@ -41,7 +41,7 @@ function productsInCartPage(){
                                         <p class="cart-info-style">${jacket.name}</p>
                                         <p class="font-style-size">${jacket.size}</p>
                                         <p class="font-style-text-transform" id="jacket-color">${jacket.color}</p>
-                                        <p class="cart-info-style bold">${jacket.prices.price * jacket.productAmount} NOK</p>
+                                        <p class="cart-info-style bold">${jacket.prices.price/100 * jacket.productAmount} NOK</p>
                                         <div class="cart-info-style amount-buttons">
                                         <button id="minusProductAmount" name="${jacket.id}" class="minus amount-buttons-style bold">-</button>
                                         <div class="product-amount-style">${jacket.productAmount}</div>
@@ -116,7 +116,7 @@ function productsInCartPageSumPrice(){
     //Reference: Sum of values in an object array https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#sum_of_values_in_an_object_array
 
     const productSum = jacketItem.reduce(
-        (sumPrices, productPrice) => sumPrices + productPrice.prices.price * productPrice.productAmount, 0,);
+        (sumPrices, productPrice) => sumPrices + productPrice.prices.price/100 * productPrice.productAmount, 0,);
 
           console.log("sum",productSum);
 

@@ -1,6 +1,6 @@
 # HTML and CSS Course Assignment by Elise Marie Hogsnes
 
-This is the HTML & CSS course assignment (autumn 2022) and part of the Interaction Design assignment (spring 2023) by Elise Marie Hogsnes,
+This is the HTML & CSS course assignment (autumn 2022) and part of the Content Management Systems assignment (spring 2023) by Elise Marie Hogsnes,
 from the August 2022 frontend development class, Noroff.
 This project shows my version of the rainyDay task.
 
@@ -51,6 +51,7 @@ js Information and inspiration
 - Create a Shopping Cart With Vanilla JavaScript | ES6 https://www.youtube.com/watch?v=UcrypywtAm0
 - Email address validation pattern from https://regexr.com/3e48o
 - Sum of values in an object array https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#sum_of_values_in_an_object_array
+- How to Use the flat() and flatMap() Methods to Flatten Arrays in JavaScript https://www.freecodecamp.org/news/flat-and-flatmap-javascript-array-methods/
 
 ### Installing
 
@@ -59,8 +60,21 @@ js Information and inspiration
 
 ### Executing program
 
-Hosted link:
-https://friendly-zuccutto-172753.netlify.app/index.html
+Website link:
+
+- https://friendly-zuccutto-172753.netlify.app/index.html
+
+Api hosted by:
+
+- one.com
+
+Hosted WordPress API Endpoint:
+
+- https://rainydays.elisemariehogsnes.no/wp-json/wc/store/products
+
+GitHub repository:
+
+- https://github.com/elli95/HTML-and-CSS_CA_Elise-Marie-Hogsnes
 
 ## Authors
 

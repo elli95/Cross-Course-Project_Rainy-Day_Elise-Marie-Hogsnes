@@ -25,7 +25,7 @@ function Checkout(){
     console.log(jacketItem);
 
     const productSum = jacketItem.reduce(
-        (sumPrices, productPrice) => sumPrices + productPrice.price * productPrice.productAmount, 0,);
+        (sumPrices, productPrice) => sumPrices + productPrice.prices.price/100 * productPrice.productAmount, 0,);
 
     Object.values(jacketItem).forEach(function(jacket) {
         purchasedProducts.innerHTML += `<div class="success-product-grid bottom-border font-style-text-transform">
@@ -34,7 +34,7 @@ function Checkout(){
                                         <p class="success-grid-style product-success success-jacket-size">${jacket.size}</p>
                                         <p class="success-grid-style product-success success-jacket-color">${jacket.color}</p>
                                         <p class="success-grid-style product-price product-success success-jacket-amount">${jacket.productAmount}x</p>
-                                        <p class="bold success-grid-style product-price">${jacket.price * jacket.productAmount} NOK</p>
+                                        <p class="bold success-grid-style product-price">${jacket.prices.price/100 * jacket.productAmount} NOK</p>
                                         `;
     }); 
     purchasedProducts.innerHTML += `<div class="bottom-border success-total">
