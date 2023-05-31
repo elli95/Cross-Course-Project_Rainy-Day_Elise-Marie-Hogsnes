@@ -130,7 +130,9 @@ My Figma Prototype:
 * [Mobile](https://www.figma.com/file/r73uopdhFEVRZuHskAlOd3/Rainy-Days?node-id=0%3A1)
 
 All images outside the files within the assignment were taken from [Unsplash](https://unsplash.com/)
+
 All image editing was done with [paint.net](https://www.getpaint.net/) and [FastStone Photo Resizer](https://www.faststone.org/FSResizerDetail.htm).
+
 Icons were sourced from [Font Awesome](https://fontawesome.com)
 
 Information and inspiration with the creation of the codes came from Noroff's curriculum and various websites linked below.
