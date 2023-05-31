@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 #  Cross Course Project - Rainy Day
-[![Product Name Screen Shot][project-screenshot]](https://friendly-zuccutto-172753.netlify.app/index.html)
+[![Rainy Day - Screen Shot][project-screenshot]](https://friendly-zuccutto-172753.netlify.app/index.html)
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
