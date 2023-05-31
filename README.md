@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 #  Cross Course Project - Rainy Day
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][project-screenshot]](https://friendly-zuccutto-172753.netlify.app/index.html)
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -157,3 +157,5 @@ Information and inspiration with the creation of the codes came from Noroff's cu
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+[project-screenshot]: images/project-screenshot.png
