@@ -34,7 +34,7 @@
 <!-- 
 [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-This is the Cross Course Project Rainy Day, made during my first year of education at noroff, autumn 2022 - spring 2023.
+This is the Cross Course Project - Rainy Day, made during my first year of education at noroff, autumn 2022 - spring 2023.
 
 This project is the web version of a design assignment carried out during noroff's first semester (spring 2022), based on html, css and javascript.
 This website displays an online store specializing in the sale of outdoor jackets for different weather.
