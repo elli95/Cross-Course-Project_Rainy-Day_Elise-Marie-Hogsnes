@@ -135,6 +135,8 @@ All image editing was done with [paint.net](https://www.getpaint.net/) and [Fast
 
 Icons were sourced from [Font Awesome](https://fontawesome.com).
 
+Api hosted by [one.com](one.com)
+
 Information and inspiration with the creation of the codes came from Noroff's curriculum and various websites linked below.
 
 * [You can get pretty far in making a slider with just HTML and CSS](https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/)
@@ -150,7 +152,6 @@ Information and inspiration with the creation of the codes came from Noroff's cu
 * [Email address validation pattern from](https://regexr.com/3e48o)
 * [Sum of values in an object array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#sum_of_values_in_an_object_array)
 * [How to Use the flat() and flatMap() Methods to Flatten Arrays in JavaScript](https://www.freecodecamp.org/news/flat-and-flatmap-javascript-array-methods/)
-* Api hosted by [one.com](one.com)
 * [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
