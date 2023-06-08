@@ -54,7 +54,7 @@ View the live version [here](https://friendly-zuccutto-172753.netlify.app/index.
 
 [![My Skills](https://skillicons.dev/icons?i=js) JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-[![My Skills](https://skillicons.dev/icons?i=wordpress) Wordpress](https://wordpress.com/hosting/?aff=13357&url=https://wordpress.com/hosting/)
+[![My Skills](https://skillicons.dev/icons?i=wordpress) Wordpress Rest Api](https://wordpress.com/hosting/?aff=13357&url=https://wordpress.com/hosting/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
