@@ -52,7 +52,7 @@ View the live version [here](https://friendly-zuccutto-172753.netlify.app/index.
 
 ### Built With
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,wordpress)]
+![My Skills](https://skillicons.dev/icons?i=html,css,js,wordpress)
 <!-- This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples. -->
 
 <!-- * [![Visual studio code][Next.js]][Next-url] -->
