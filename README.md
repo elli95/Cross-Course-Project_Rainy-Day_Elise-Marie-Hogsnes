@@ -14,7 +14,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#Installing">Installing</a></li>
+        <li><a href="#Installation">Installation</a></li>
 <!--         <li><a href="#installation">Installation</a></li> -->
       </ul>
     </li>
@@ -62,7 +62,7 @@ View the live version [here](https://friendly-zuccutto-172753.netlify.app/index.
 
 <!-- GETTING STARTED -->
 ## Getting Started
-###Installing
+### Installation
 1. Clone the repo:
 
 ```bash
