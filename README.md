@@ -14,7 +14,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#Installing">Installing</a></li>
 <!--         <li><a href="#installation">Installation</a></li> -->
       </ul>
     </li>
@@ -71,7 +71,7 @@ git clone https://github.com/elli95/Cross-Course-Project_Rainy-Day_Elise-Marie-H
 
 2. Open the folder with a code editor (ex. visual studio code)
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- ### Prerequisites
 
