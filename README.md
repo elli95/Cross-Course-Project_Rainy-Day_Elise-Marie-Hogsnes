@@ -46,11 +46,11 @@ View the live version [here](https://friendly-zuccutto-172753.netlify.app/index.
 ### Built With
 
 
-* [![My Skills](https://skillicons.dev/icons?i=figma)Figma](https://www.figma.com/)
-[![My Skills](https://skillicons.dev/icons?i=html)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![My Skills](https://skillicons.dev/icons?i=css)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![My Skills](https://skillicons.dev/icons?i=js)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![My Skills](https://skillicons.dev/icons?i=wordpress)](https://wordpress.com/hosting/?aff=13357&url=https://wordpress.com/hosting/)
+[![My Skills](https://skillicons.dev/icons?i=figma) Figma](https://www.figma.com/)
+[![My Skills](https://skillicons.dev/icons?i=html) HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![My Skills](https://skillicons.dev/icons?i=css) CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![My Skills](https://skillicons.dev/icons?i=js) JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![My Skills](https://skillicons.dev/icons?i=wordpress) Wordpress](https://wordpress.com/hosting/?aff=13357&url=https://wordpress.com/hosting/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
