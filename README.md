@@ -7,9 +7,9 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-<!--       <ul>
+    <ul>
         <li><a href="#built-with">Built With</a></li>
-      </ul> -->
+      </ul> 
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -50,9 +50,10 @@ View the live version [here](https://friendly-zuccutto-172753.netlify.app/index.
 
 
 
-<!-- ### Built With
+### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,wordpress)](https://skillicons.dev)
+<!-- This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples. -->
 
 <!-- * [![Visual studio code][Next.js]][Next-url] -->
 
@@ -61,20 +62,15 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
+#Installing
 1. Clone the repo:
 
 ```bash
 git clone https://github.com/elli95/Cross-Course-Project_Rainy-Day_Elise-Marie-Hogsnes
 ```
 
-2. Open with visual studio code.
+2. Open the folder with a code editor (ex. visual studio code)
 
-3. Open with live server
-
-or
-
-2. Deploy to Netlify.
 
 
 ### Prerequisites
