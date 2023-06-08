@@ -112,6 +112,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Contact
 
 Elise Marie Hogsnes - [Linkedin.com](https://www.linkedin.com/in/elise-marie-hogsnes-77b13b1aa/)
+
 [elise-marie.h@hotmail.com](mailto:elise-marie.h@hotmail.com)
 
 <!-- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
