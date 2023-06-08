@@ -161,4 +161,4 @@ Information and inspiration with the creation of the codes came from Noroff's cu
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-[project-screenshot]: images/rainydays-screenshot.png
+[project-screenshot]: images/rainydays-screenshot.webp
