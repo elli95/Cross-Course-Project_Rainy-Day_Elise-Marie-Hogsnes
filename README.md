@@ -46,7 +46,7 @@ View the live version [here](https://friendly-zuccutto-172753.netlify.app/index.
 ### Built With
 
 
-[![My Skills](https://skillicons.dev/icons?i=figma)](https://www.figma.com/)Figma
+* [![My Skills](https://skillicons.dev/icons?i=figma)Figma](https://www.figma.com/)
 [![My Skills](https://skillicons.dev/icons?i=html)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![My Skills](https://skillicons.dev/icons?i=css)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![My Skills](https://skillicons.dev/icons?i=js)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
