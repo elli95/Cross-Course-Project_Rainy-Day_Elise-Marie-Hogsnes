@@ -36,7 +36,7 @@
 
 This is the Cross Course Project - Rainy Day, made during my first year of education at noroff, autumn 2022 - spring 2023.
 
-This project is the web version of a design assignment carried out during noroff's first semester (spring 2022), based on html, css and javascript.
+This project is the web version of a design assignment carried out during noroff's first semester (spring 2022), based on html, css, javascript and wordpress headless and rest api.
 This website displays an online store specializing in the sale of outdoor jackets for different weather.
 You can explore the different pages that show an overview of the different products available and more information about specific products.
 Furthermore, it is also possible to simulate a purchase of a product.
@@ -52,12 +52,12 @@ View the live version [here](https://friendly-zuccutto-172753.netlify.app/index.
 
 ### Built With
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,wordpress)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,wordpress)]
 <!-- This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples. -->
 
 <!-- * [![Visual studio code][Next.js]][Next-url] -->
 
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
@@ -73,9 +73,9 @@ git clone https://github.com/elli95/Cross-Course-Project_Rainy-Day_Elise-Marie-H
 
 
 
-### Prerequisites
+<!-- ### Prerequisites
 
-Instal Live Server by Ritwick Dey
+Instal Live Server by Ritwick Dey -->
 
 <!-- ### Installation
 
@@ -112,6 +112,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Contact
 
 Elise Marie Hogsnes - [Linkedin.com](https://www.linkedin.com/in/elise-marie-hogsnes-77b13b1aa/)
+[elise-marie.h@hotmail.com](mailto:elise-marie.h@hotmail.com)
 
 <!-- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
 
